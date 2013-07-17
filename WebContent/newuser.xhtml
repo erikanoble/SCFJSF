@@ -1,49 +1,53 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:p="http://primefaces.org/ui"> 
+      xmlns:p="http://primefaces.org/ui">
+<!--
+  Created by IntelliJ IDEA.
+  User: tb189431e
+  Date: 7/5/13
+  Time: 2:04 PM
+-->
+<h:head></h:head>
 
-<h:head><title>Create New User</title></h:head> 
-<h:body> 
-	<f:view>
-		<h:form id="newuserform">
-			<p:panelGrid id="panelGrid" columns="1">
-				<f:facet name="header">New User Form</f:facet>
-			
-				<h:outputLabel id="netidLabel" value="NetID:" for="netid"/>
-				<p:inputText id="netid" value="#{userBackingBean.netid}" />
-				
-				<h:outputLabel id="fnameLabel" value="First Name:" for="fname"/>
-				<p:inputText id="fname" value="#{userBackingBean.fname}"/>
-				
-				<h:outputLabel id="lnameLabel" value="Last name:" for="lname" />
-				<p:inputText id="lname" value="#{userBackingBean.lname}" />
-				
-				<h:outputLabel id="schoolLabel" value="School:" for="school" />
-				<p:inputText id="school" value="#{userBackingBean.school}" />
-				
-				<h:outputLabel id="departmentLabel" value="Department:" for="department" />
-				<p:inputText id="department" value="#{userBackingBean.department}" />
-				
-				<h:outputLabel id="phoneLabel" value="Phone:" for="phone" />
-				<p:inputText id="phone" value="#{userBackingBean.phone}" />
-				
-				<h:outputLabel id="emailLabel" value="Email:" />
-				<p:inputText id="email" value="#{userBackingBean.email}" />
-				
-				<h:outputLabel id="usertypeLabel" value="User Type:" />
-				<h:selectOneMenu id="usertypes" value="#{userBackingBean.usertype}">
-					<f:selectItems id="usertype" value="#{userTypeBackingBean.userTypes}"
-								var="row"
-								itemLabel="#{row.description}"
-								itemValue="#row.usertype_id}" />
-				</h:selectOneMenu>
-				
-				<p:commandButton id="uButton" action="#userBackingBean.newUserAction}" value="Create User" />
-			</p:panelGrid>
-		</h:form>
-	</f:view>
-</h:body> 
+    <f:view>
+        <h:panelGrid id="panelGrid" columns="1">
+        <h:form id="newuserform">
+            <h:panelGroup id="netidPanel">
+                <h:outputLabel id="netidLabel" value="NetID:" for="netid" />
+                <p:inputText id="netid" value="#{userBackingBean.netid}" />
+            </h:panelGroup>
+
+            <h:outputLabel id="fnameLabel" value="First Name:" />
+            <p:inputText id="fname" value="#{userBackingBean.fname}" />
+
+            <h:outputLabel id="lnameLabel" value="Last Name:" />
+            <p:inputText id="lname" value="#{userBackingBean.lname}" />
+
+            <h:outputLabel id="schoolLabel" value="School:" />
+            <p:inputText id="school" value="#{userBackingBean.school}" />
+
+            <h:outputLabel id="departmentLabel" value="Department:" />
+            <p:inputText id="department" value="#{userBackingBean.department}" />
+
+            <h:outputLabel id="phoneLabel" value="Phone:" />
+            <p:inputText id="phone" value="#{userBackingBean.phone}" />
+
+            <h:outputLabel id="emailLabel" value="Email:" />
+            <p:inputText id="email" value="#{userBackingBean.email}" />
+
+            <h:outputLabel id="usertypeLabel" value="User Type:" />
+            <h:selectOneMenu id="usertypes" value="#{userBackingBean.usertype}">
+                <f:selectItems id="usertype" value="#{usertypeBackingBean.userTypes}"
+                               var="row"
+                               itemLabel="#{row.description}"
+                               itemValue="#{row.usertype_id}"  />
+            </h:selectOneMenu>
+
+            <p:commandButton id="uButton" action="#{userBackingBean.newUserAction}" value="Create Usertype" />
+        </h:form>
+        </h:panelGrid>
+    </f:view>
 </html>

@@ -2,16 +2,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"> 
 
 <h:head>Go to your Destination</h:head> 
 <h:body styleClass="body"> 
 	<f:view>
 		<h:form>
-			<h:commandLink action="#{indexBackingBean.listUserTypesAction}" value="List User-Types" />
-			<h:commandLink action="#{indexBackingBean.listUsersAction}" value="List Users" />
-			<h:commandLink action="#{indexBackingBean.addUserTypesAction}" value="Create User-Types" />
-			<h:commandLink action="#{indexBackingBean.addUsersAction}" value="Create User-Types" />
+			<p:tabMenu activeIndex="0">
+			<p:menuitem value="List User-Types" url="/usertypes.xhtml" icon="ui-icon-search" action="#{indexBackingBean.listUserTypesAction}"/>
+			<p:menuitem value="List Users" url="/users.xhtml" icon="ui-icon-search" action="#{indexBackingBean.listUsersAction}"/>
+			<p:menuitem value="Create User-Types" url="/newusertype.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addUserTypesAction}"/>
+			<p:menuitem value="Create User" url="/newuser.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addUsersAction}" />
+			
+			</p:tabMenu>
+
 		</h:form>
 	</f:view>
 </h:body> 

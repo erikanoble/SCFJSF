@@ -6,6 +6,7 @@ import edu.umt.db.Application;
 import edu.umt.db.User;
 import edu.umt.db.UserType;
 import edu.umt.db.DatabaseManager;
+import java.math.BigInteger;
 
 public class MockObjectFactory {
 	private static final String USERTYPE = "USERTYPE";
@@ -50,7 +51,7 @@ public class MockObjectFactory {
 		user.setNetid(currentTime.substring(beginIndex, lastIndex));
 	
 		user.setDepartment("IT");
-		user.setPhone(2436985);
+		user.setPhone(new BigInteger("2436985"));
 		user.setEmail("jim.smith@umontana.edu");
 		user.setSchool("CAS");
 	}

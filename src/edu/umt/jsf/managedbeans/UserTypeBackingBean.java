@@ -29,14 +29,12 @@ public class UserTypeBackingBean {
 	}
 	
 	
-	public String newUserTypeAction(){
+	public String newUserTypeAction() throws Exception{
 		UserType ut = new UserType();
 		ut.setDescription(this.getDescription());
-		try{
+		
 			DatabaseManager.insertUsertype(ut);
-		}catch(Exception e){
-			e.printStackTrace();
-		}
+		
 		return "ok";
 	}
 	

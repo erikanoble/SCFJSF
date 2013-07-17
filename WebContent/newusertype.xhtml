@@ -10,8 +10,8 @@
 	<f:view>
 		<h:form id="newusertypeform">
 			<h:outputLabel id="descriptionLabel" value="Description:" for="usertype"/>
-			<p:inputText id="usertype" value="#{userTypeBackingBean.description}" />
-			<p:commandButton id="utButton" action="{userTypeBackingBean.newUserTypeAction}" value="Create Usertype" />
+			<p:inputText id="usertype" value="#{usertypeBackingBean.description}" />
+			<p:commandButton id="utButton" action="#{usertypeBackingBean.newUserTypeAction}" ajax="false" value="Create Usertype" />
 		</h:form>
 	</f:view>
 </h:body> 

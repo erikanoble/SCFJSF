@@ -1,8 +1,11 @@
 package edu.umt.jsf.managedbeans;
 
 import edu.umt.db.*;
+import java.util.Iterator;
+import java.util.LinkedHashMap;  
 import java.util.List;
-
+import java.util.Map;
+import java.math.BigInteger;
 public class UserBackingBean {
 	private List<User> users;
 	private User user;
@@ -15,10 +18,11 @@ public class UserBackingBean {
 	private String school;
 	private int usertype;
 	
-	
+	//How does this connect?
 	public List<User> getUsers() {
 		return DatabaseManager.getUsers();
 	}
+	
 	public void setUsers(List<User> users) {
 		this.users = users;
 	}
@@ -77,5 +81,22 @@ public class UserBackingBean {
 		this.usertype = usertype;
 	}
 	
+	public String newUserAction() throws Exception{
+		User u = new User();
+		u.setFname(this.fname);
+		u.setLname(this.lname);
+		u.setSchool(this.school);
+		u.setDepartment(this.department);
+		u.setEmail(this.email);
+		u.setPhone(new BigInteger(this.phone.toString()));
+		u.setNetid(this.netid);
+		u.setUsertype(DatabaseManager.getUserType(this.usertype));
+		try{
+			DatabaseManager.insertUser(u);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return "new-user-created";
+	}
 	
 }
