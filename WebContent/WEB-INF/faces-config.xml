@@ -47,6 +47,12 @@
   </navigation-rule>
   <navigation-rule>
   	<navigation-case>
+  		<from-outcome>new-application</from-outcome>
+  		<to-view-id>/newapplication.xhtml</to-view-id>
+  	</navigation-case>
+  </navigation-rule>
+  <navigation-rule>
+  	<navigation-case>
  		<from-outcome>list-usertypes</from-outcome>
  		<to-view-id>/usertypes.xhtml</to-view-id>
   	</navigation-case>
@@ -55,6 +61,12 @@
   	<navigation-case>
  		<from-outcome>list-users</from-outcome>
  		<to-view-id>/users.xhtml</to-view-id>
+  	</navigation-case>
+  </navigation-rule>
+  <navigation-rule>
+  	<navigation-case>
+  		<from-outcome>list-applications</from-outcome>
+  		<to-view-id>/applications.xhtml</to-view-id>
   	</navigation-case>
   </navigation-rule>
 </faces-config>
