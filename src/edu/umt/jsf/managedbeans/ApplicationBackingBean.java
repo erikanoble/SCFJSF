@@ -6,6 +6,7 @@ import java.util.List;
 
 public class ApplicationBackingBean {
 	private List<Application> applications;
+	private Application application;
 	private String index_charge;
 	private String balance;
 	private String request_amount;
@@ -25,6 +26,12 @@ public class ApplicationBackingBean {
 	}
 	public void setApplications(List<Application> applications) {
 		this.applications = applications;
+	}
+	public Application getApplication() {
+		return application;
+	}
+	public void setApplication(Application application) {
+		this.application = application;
 	}
 	public String getIndex_charge() {
 		return index_charge;
