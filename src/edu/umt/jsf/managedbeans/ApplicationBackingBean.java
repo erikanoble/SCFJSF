@@ -22,7 +22,7 @@ public class ApplicationBackingBean {
 	
 	
 	public List<Application> getApplications() {
-		return applications;
+		return DatabaseManager.getApplications();
 	}
 	public void setApplications(List<Application> applications) {
 		this.applications = applications;
