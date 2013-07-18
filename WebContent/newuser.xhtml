@@ -13,25 +13,26 @@
 				<f:facet name="header">New User Form</f:facet>
 			
 				<h:outputLabel id="netidLabel" value="NetID:" for="netid"/>
-				<p:inputText id="netid" value="#{userBackingBean.netid}" />
+				<p:inputText id="netid" value="#{userBackingBean.netid}" required="true"/>
 				
 				<h:outputLabel id="fnameLabel" value="First Name:" for="fname"/>
-				<p:inputText id="fname" value="#{userBackingBean.fname}"/>
+				<p:inputText id="fname" value="#{userBackingBean.fname}" required="true"/>
 				
 				<h:outputLabel id="lnameLabel" value="Last name:" for="lname" />
-				<p:inputText id="lname" value="#{userBackingBean.lname}" />
+				<p:inputText id="lname" value="#{userBackingBean.lname}" required="true"/>
 				
 				<h:outputLabel id="schoolLabel" value="School:" for="school" />
-				<p:inputText id="school" value="#{userBackingBean.school}" />
+				<p:inputText id="school" value="#{userBackingBean.school}" required="true"/>
 				
 				<h:outputLabel id="departmentLabel" value="Department:" for="department" />
-				<p:inputText id="department" value="#{userBackingBean.department}" />
+				<p:inputText id="department" value="#{userBackingBean.department}" required="true"/>
 				
 				<h:outputLabel id="phoneLabel" value="Phone:" for="phone" />
-				<p:inputText id="phone" value="#{userBackingBean.phone}" />
+				<!-- required="true" still allows the submit. It changes the blank string to 0 -->
+				<p:inputText id="phone" value="#{userBackingBean.phone}" required="true"/>
 				
 				<h:outputLabel id="emailLabel" value="Email:" />
-				<p:inputText id="email" value="#{userBackingBean.email}" />
+				<p:inputText id="email" value="#{userBackingBean.email}" required="true"/>
 				
 				<h:outputLabel id="usertypeLabel" value="User Type:" />
 				<h:selectOneMenu id="usertypes" value="#{userBackingBean.usertype}">
@@ -41,7 +42,7 @@
 								itemValue="#{row.usertype_id}" />
 				</h:selectOneMenu>
 				
-				<p:commandButton id="uButton" actionListener="#{userBackingBean.newUserAction}" ajax="false" value="Create User" />
+				<p:commandButton id="uButton" actionListener="#{userBackingBean.newUserAction}" action="#{userBackingBean.newUserAction}" ajax="false" value="Create User" />
 			</p:panelGrid>
 		</h:form>
 	</f:view>
