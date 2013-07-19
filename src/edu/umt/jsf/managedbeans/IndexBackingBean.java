@@ -9,12 +9,21 @@ public class IndexBackingBean {
 		public String listUsersAction(){
 			return "list-users";
 		}
+	
+		public String listApplicationsAction(){
+			return "list-applications";
+		}
 		
-		public String addUserTypeAction(){
+		public String addUserTypesAction(){
 			return "new-usertype";
 		}
 		
-		public String addUserAction(){
+		public String addUsersAction(){
 			return "new-user";
 		}
+		
+		public String addApplicationsAction(){
+			return "new-application";
+		}
+	
 }

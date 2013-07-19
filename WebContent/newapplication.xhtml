@@ -1,11 +1,92 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
 
-<h:head></h:head> 
-<body> 
+<h:head>Create new Application</h:head>
+<h:body>
+	<f:view>
+		<h:form id="newapplicationform">
+			<p:panelGrid id="panelGrid" columns="1">
+				<f:facet name="header"><h:panelGroup>New Application</h:panelGroup></f:facet>
 
-</body> 
+				<h:outputLabel id="userLabel" value="Requester:" for="user" />
+		 			<h:selectOneMenu id="users" value="#{applicationBackingBean.user}">
+					<f:selectItems id="user" value="#{userBackingBean.users}"
+								var="row"
+								itemLabel="#{row.netid}"
+								itemValue="#{row.user_id}"/>
+				</h:selectOneMenu>
+		 
+				<h:outputLabel id="index_chargeLabel" value="Index Charged:"
+					for="index_charge" />
+				<p:inputText id="index_charge"
+					value="#{applicationBackingBean.index_charge}" required="true" />
+
+				<h:outputLabel id="balanceLabel" value="Balance:" for="balance" />
+				<p:inputText id="balance" value="#{applicationBackingBean.balance}"
+					required="true" />
+
+				<h:outputLabel id="request_amountLabel" value="Request Amount:"
+					for="request_amount" />
+				<p:inputText id="request_amount"
+					value="#{applicationBackingBean.request_amount}" required="true" />
+
+				<h:outputLabel id="outiside_fundsLabel"
+					value="Outside Funds Provided:" for="outside_funds" />
+				<p:inputText id="outside_funds"
+					value="#{applicationBackingBean.outside_funds}" />
+
+				<h:outputLabel id="equipment_descriptionLabel"
+					value="Equipment Description:" for="equipment_description" />
+				<p:inputTextarea id="equipment_description"
+					value="#{applicationBackingBean.equipment_description}"
+					required="true" />
+
+				<h:outputLabel id="use_descriptionLabel"
+					value="Use of Equipment Description:" for="use_description" />
+				<p:inputTextarea id="use_description"
+					value="#{applicationBackingBean.use_description}" required="true" />
+
+				<h:outputLabel id="maintenance_responsibilityLabel"
+					value="Maintenance Responsibility:"
+					for="maintenance_responsibility" />
+				<p:inputText id="maintenance_responsibility"
+					value="#{applicationBackingBean.maintenance_responsibility}"
+					required="true" />
+
+				<h:outputLabel id="new_connectionsLabel" value="New Connections:"
+					for="new_connections" />
+				<p:selectOneRadio id="new_connections"
+					value="#{applicationBackingBean.new_connections}" required="true">
+					<f:selectItem itemLabel="Yes" itemValue="Yes" />
+					<f:selectItem itemLabel="No" itemValue="No" />
+				</p:selectOneRadio>
+
+				<h:outputLabel id="provided_byLabel" value="Provided By:"
+					for="provided_by" />
+				<p:inputText id="provided_by"
+					value="#{applicationBackingBean.provided_by}" />
+
+				<h:outputLabel id="pilotLabel" value="Is this a pilot:" for="pilot" />
+				<p:selectOneRadio id="pilot" value="#{applicationBackingBean.pilot}"
+					required="true">
+					<f:selectItem itemLabel="Yes" itemValue="Yes" />
+					<f:selectItem itemLabel="No" itemValue="No" />
+				</p:selectOneRadio>
+
+				<h:outputLabel id="pilot_summaryLabel" value="Summary of Pilot:"
+					for="pilot_summary" />
+				<p:inputTextarea id="pilot_summary"
+					value="#{applicationBackingBean.pilot_summary}" />
+
+				<p:commandButton id="uButton"
+					actionListener="#{applicationBackingBean.newApplicationAction}" action="#{applicationBackingBean.newApplicationAction}"
+					ajax="false" value="Create Application" />
+			</p:panelGrid>
+		</h:form>
+	</f:view>
+</h:body>
 </html>

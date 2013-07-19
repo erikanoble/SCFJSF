@@ -12,6 +12,12 @@
 			<p:dataTable id="applications" var="record" value="#{applicationBackingBean.applications}">
 				<p:column>
 					<f:facet name="header">
+						<h:outputText value="Application Id:"/>
+					</f:facet>
+					<h:outputText value="#{record.application_id}"/>
+				</p:column>
+				<p:column>
+					<f:facet name="header">
 						<h:outputText value="Index to Charge:" />
 					</f:facet>
 					<h:outputText value="#{record.index_charge}"/>

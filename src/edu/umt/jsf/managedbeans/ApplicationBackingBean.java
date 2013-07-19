@@ -4,8 +4,12 @@ import edu.umt.db.*;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 public class ApplicationBackingBean {
+	private Logger log = Logger.getLogger(ApplicationBackingBean.class);
 	private List<Application> applications;
+	private int application_id;
 	private Application application;
 	private String index_charge;
 	private String balance;
@@ -26,6 +30,12 @@ public class ApplicationBackingBean {
 	}
 	public void setApplications(List<Application> applications) {
 		this.applications = applications;
+	}
+	public int getApplication_id() {
+		return application_id;
+	}
+	public void setApplication_id(int application_id) {
+		this.application_id = application_id;
 	}
 	public Application getApplication() {
 		return application;
@@ -107,6 +117,7 @@ public class ApplicationBackingBean {
 	}
 	
 	public String newApplicationAction() throws Exception{
+		
 		Application a = new Application();
 		a.setIndex_charge(this.index_charge);
 		a.setBalance(this.balance);
@@ -119,9 +130,16 @@ public class ApplicationBackingBean {
 		a.setProvided_by(this.provided_by);
 		a.setPilot(this.pilot);
 		a.setPilot_summary(this.pilot_summary);
-		a.setUser(DatabaseManager.getUser(this.user));
+		a.setUser(DatabaseManager.getUser(this.user)); 
 		
-		DatabaseManager.insertApplication(a);
+		try{
+			DatabaseManager.insertApplication(a);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		
+		//TODO: try catch
+		log.debug("I'm in the new app method");
 		
 		return "list-applications";
 		
