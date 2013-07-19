@@ -60,7 +60,7 @@
 				<h:outputLabel id="new_connectionsLabel" value="New Connections:"
 					for="new_connections" />
 				<p:selectOneRadio id="new_connections"
-					value="#{applicationBackingBean.new_connections}" required="true">
+					value="#{applicationBackingBean.new_connections}"> <!--required="true">  -->
 					<f:selectItem itemLabel="Yes" itemValue="Yes" />
 					<f:selectItem itemLabel="No" itemValue="No" />
 				</p:selectOneRadio>
@@ -71,8 +71,10 @@
 					value="#{applicationBackingBean.provided_by}" />
 
 				<h:outputLabel id="pilotLabel" value="Is this a pilot:" for="pilot" />
-				<p:selectOneRadio id="pilot" value="#{applicationBackingBean.pilot}"
-					required="true">
+
+		<!-- TODO: See if this works if it is not a button setup. -->
+				<p:selectOneRadio id="pilot" value="#{applicationBackingBean.pilot}">
+					<!--required="true">-->
 					<f:selectItem itemLabel="Yes" itemValue="Yes" />
 					<f:selectItem itemLabel="No" itemValue="No" />
 				</p:selectOneRadio>
