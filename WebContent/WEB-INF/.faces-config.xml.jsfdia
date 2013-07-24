@@ -67,11 +67,15 @@
   PATH="/applications.xhtml" SHAPE="240,593,0,0" model-entity="JSFProcessGroup"/>
  <PROCESS-ITEM NAME="rules::8" SHAPE="32,689,0,0" model-entity="JSFProcessGroup">
   <PROCESS-ITEM ID="rules::8" NAME="item" model-entity="JSFProcessItem">
-   <PROCESS-ITEM-OUTPUT ID="delete-usertype::#deleteusertype.xhtml"
-    NAME="output" PATH="/deleteusertype.xhtml"
-    TARGET="rules:#deleteusertype.xhtml" TITLE="delete-usertype" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="delete-usertype::#usertypes.xhtml"
+    NAME="output" PATH="/usertypes.xhtml"
+    TARGET="rules:#usertypes.xhtml" TITLE="delete-usertype" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
- <PROCESS-ITEM NAME="rules:#deleteusertype.xhtml"
-  PATH="/deleteusertype.xhtml" SHAPE="240,705,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::9" SHAPE="32,801,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::9" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="delete-users::#users.xhtml" NAME="output"
+    PATH="/users.xhtml" TARGET="rules:#users.xhtml" TITLE="delete-users" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
 </PROCESS>

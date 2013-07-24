@@ -99,4 +99,9 @@ public class UserBackingBean {
 		return "new-user-created";
 	}
 	
+	public String deleteUserAction(User u) throws Exception{
+		DatabaseManager.deleteUser(u);
+		return null;
+	}
+	
 }
