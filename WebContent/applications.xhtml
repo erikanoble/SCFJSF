@@ -1,64 +1,80 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:p="http://primefaces.org/ui"> 
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
 
-<h:head>Applications</h:head> 
-<h:body> 
+<h:head>Applications</h:head>
+<h:body>
 	<f:view>
 		<h:form>
-			<p:dataTable id="applications" var="record" value="#{applicationBackingBean.applications}">
-				<p:column>
-					<f:facet name="header">
-						<h:outputText value="Application Id:"/>
-					</f:facet>
-					<h:outputText value="#{record.application_id}"/>
+			<p:dataTable id="applications" var="record"
+				value="#{applicationBackingBean.applications}"
+				widgetVar="applicationsTable"
+				emptyMessage="No cars found with given criteria"
+				filteredValue="#{applicationBackingBean.filteredApplications}">
+
+				<f:facet name="header">
+					<p:outputPanel>
+						<h:outputText value="Search all fields:" />
+						<p:inputText id="globalFilter" onkeyup="PF('applicationsTable').filter()"
+							style="width:150px" />
+					</p:outputPanel>
+				</f:facet>
+				
+				<p:column id="idColumn" filterBy="#{record.application_id}"
+					headerText="Application ID" footerText="contains"
+					filterMatchMode="contains">
+					<!-- 					<f:facet name="header"> -->
+					<!-- 						<h:outputText value="Application Id:" /> -->
+					<!-- 					</f:facet> -->
+					<h:outputText value="#{record.application_id}" />
 				</p:column>
+				
 				<p:column>
 					<f:facet name="header">
 						<h:outputText value="Index to Charge:" />
 					</f:facet>
-					<h:outputText value="#{record.index_charge}"/>
+					<h:outputText value="#{record.index_charge}" />
 				</p:column>
-				
+
 				<p:column>
 					<f:facet name="header">
 						<h:outputText value="Balance:" />
 					</f:facet>
-					<h:outputText value="#{record.balance}"/>
+					<h:outputText value="#{record.balance}" />
 				</p:column>
-				
+
 				<p:column>
 					<f:facet name="header">
 						<h:outputText value="Request Amount:" />
 					</f:facet>
-					<h:outputText value="#{record.request_amount}"/>
+					<h:outputText value="#{record.request_amount}" />
 				</p:column>
-				
+
 				<p:column>
 					<f:facet name="header">
 						<h:outputText value="Equipment Description:" />
 					</f:facet>
-					<h:outputText value="#{record.equipment_description}"/>
+					<h:outputText value="#{record.equipment_description}" />
 				</p:column>
-				
+
 				<p:column>
 					<f:facet name="header">
 						<h:outputText value="Outside Funds:" />
 					</f:facet>
-					<h:outputText value="#{record.outside_funds}"/>
+					<h:outputText value="#{record.outside_funds}" />
 				</p:column>
-				
+
 				<p:column>
 					<f:facet name="header">
 						<h:outputText value="Description of Use:" />
 					</f:facet>
-					<h:outputText value="#{record.use_description}"/>
+					<h:outputText value="#{record.use_description}" />
 				</p:column>
-				
-		<!-- 		<p:column>
+
+				<!-- 		<p:column>
 					<f:facet name="header">
 						<h:outputText value="Maintenance Responsibility:" />
 					</f:facet>
@@ -92,8 +108,9 @@
 					</f:facet>
 					<h:outputText value="#{record.pilot_summary}"/>
 				</p:column> -->
+				
 			</p:dataTable>
 		</h:form>
 	</f:view>
-</h:body> 
+</h:body>
 </html>
