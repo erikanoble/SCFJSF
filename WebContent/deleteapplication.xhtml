@@ -1,11 +1,69 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
 
-<h:head></h:head> 
-<body> 
+<h:head></h:head>
+<h:body>
+	<h:form>
+		<p:dataTable value="#{applicationBackingBean.applications}"
+			var="record">
+			<p:column>
+				<f:facet name="header">Application ID</f:facet>
+				<h:outputText value="#{record.application_id}" />
+			</p:column>
 
-</body> 
+			<p:column>
+				<f:facet name="header">
+					<h:outputText value="Index to Charge:" />
+				</f:facet>
+				<h:outputText value="#{record.index_charge}" />
+			</p:column>
+
+			<p:column>
+				<f:facet name="header">
+					<h:outputText value="Balance:" />
+				</f:facet>
+				<h:outputText value="#{record.balance}" />
+			</p:column>
+
+			<p:column>
+				<f:facet name="header">
+					<h:outputText value="Request Amount:" />
+				</f:facet>
+				<h:outputText value="#{record.request_amount}" />
+			</p:column>
+
+			<p:column>
+				<f:facet name="header">
+					<h:outputText value="Equipment Description:" />
+				</f:facet>
+				<h:outputText value="#{record.equipment_description}" />
+			</p:column>
+
+			<p:column>
+				<f:facet name="header">
+					<h:outputText value="Outside Funds:" />
+				</f:facet>
+				<h:outputText value="#{record.outside_funds}" />
+			</p:column>
+
+			<p:column>
+				<f:facet name="header">
+					<h:outputText value="Description of Use:" />
+				</f:facet>
+				<h:outputText value="#{record.use_description}" />
+			</p:column>
+
+			<p:column>
+				<f:facet name="header">Action</f:facet>
+				<!-- TODO: Make this into a button at the bottom of the form -->
+				<p:commandLink value="Delete"
+					action="#{applicationBackingBean.deleteApplicationAction(record)}" />
+			</p:column>
+		</p:dataTable>
+	</h:form>
+</h:body>
 </html>

@@ -174,6 +174,11 @@ public class ApplicationBackingBean {
 		return "list-applications";
 
 	}
+	
+	public String deleteApplicationAction(Application a) throws Exception{
+		DatabaseManager.deleteApplication(a);
+		return null;
+	}
 
 	//new to test out search filters.
 	private List<Application> filteredApplications;

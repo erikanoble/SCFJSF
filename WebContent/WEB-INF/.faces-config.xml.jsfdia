@@ -78,4 +78,11 @@
     PATH="/users.xhtml" TARGET="rules:#users.xhtml" TITLE="delete-users" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::10" SHAPE="32,913,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::10" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="delete-applications::#applications.xhtml"
+    NAME="output" PATH="/applications.xhtml"
+    TARGET="rules:#applications.xhtml" TITLE="delete-applications" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
 </PROCESS>
