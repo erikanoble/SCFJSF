@@ -18,8 +18,8 @@
 				editable="true">
 
 
-<!-- 				<p:ajax event="rowEdit" update="@this" listener="#{userBackingBean.editUserAction}" /> -->
-<!-- 				<p:ajax event="rowEditCancel" listener="#{userBackingBean.onCancel}" /> -->
+				<p:ajax event="rowEdit" listener="#{userBackingBean.onEdit}" />
+				<p:ajax event="rowEditCancel" listener="#{userBackingBean.onCancel}" />
 
 				<p:column headerText="User ID:">
 					<h:outputText value="#{record.user_id}" />
