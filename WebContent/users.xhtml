@@ -13,41 +13,84 @@
 <h:body>
 	<f:view>
 		<h:form>
-			<p:dataTable id="users" var="record" value="#{userBackingBean.users}">
-				<p:column>
-					<f:facet name="header">
-						<h:outputText value="First Name:" />
-					</f:facet>
-					<h:outputText value="#{record.fname}" />
+			<p:growl id="growl" showDetail="true" />
+			<p:dataTable id="users" var="record" value="#{userBackingBean.users}"
+				editable="true">
+
+
+<!-- 				<p:ajax event="rowEdit" update="@this" listener="#{userBackingBean.editUserAction}" /> -->
+<!-- 				<p:ajax event="rowEditCancel" listener="#{userBackingBean.onCancel}" /> -->
+
+				<p:column headerText="User ID:">
+					<h:outputText value="#{record.user_id}" />
 				</p:column>
 
-				<p:column>
-					<f:facet name="header">
-						<h:outputText value="Last Name:" />
-					</f:facet>
-					<h:outputText value="#{record.lname}" />
+				<p:column headerText="First Name:">
+					<p:cellEditor>
+						<f:facet name="output">
+							<h:outputText value="#{record.fname}" />
+						</f:facet>
+						<f:facet name="input">
+							<p:inputText value="#{record.fname}" style="width:100%"
+								label="First Name" />
+						</f:facet>
+					</p:cellEditor>
 				</p:column>
 
-				<p:column>
-					<f:facet name="header">
-						<h:outputText value="Department:" />
-					</f:facet>
-					<h:outputText value="#{record.department}" />
+				<p:column headerText="Last Name:">
+					<p:cellEditor>
+						<f:facet name="output">
+							<h:outputText value="#{record.lname}" />
+						</f:facet>
+						<f:facet name="input">
+							<p:inputText value="#{record.lname}" style="width:100%"
+								label="Last Name" />
+						</f:facet>
+					</p:cellEditor>
 				</p:column>
 
-				<p:column>
-					<f:facet name="header">
-						<h:outputText value="Email:" />
-					</f:facet>
-					<h:outputText value="#{record.email}" />
+				<p:column headerText="Department:">
+					<p:cellEditor>
+						<f:facet name="output">
+							<h:outputText value="#{record.department}" />
+						</f:facet>
+						<f:facet name="input">
+							<p:inputText value="#{record.department}" style="width:100%"
+								label="Department" />
+						</f:facet>
+					</p:cellEditor>
 				</p:column>
 
-				<p:column>
-					<f:facet name="header">
-						<h:outputText value="Phone:" />
-					</f:facet>
-					<h:outputText value="#{record.phone}" />
+				<p:column headerText="Email:">
+					<p:cellEditor>
+						<f:facet name="output">
+							<h:outputText value="#{record.email}" />
+						</f:facet>
+						<f:facet name="input">
+							<p:inputText value="#{record.email}" style="width:100%"
+								label="Email" />
+						</f:facet>
+					</p:cellEditor>
 				</p:column>
+
+				<p:column headerText="Phone:">
+					<p:cellEditor>
+						<f:facet name="output">
+							<h:outputText value="#{record.phone}" />
+						</f:facet>
+						<f:facet name="input">
+							<p:inputText value="#{record.phone}" style="width:100%"
+								label="Phone" />
+						</f:facet>
+					</p:cellEditor>
+				</p:column>
+
+				<p:column style="width:6%">
+					<p:rowEditor value="update" actionListener="#{growlBean.save}"
+						update="growl" />
+				</p:column>
+
+
 			</p:dataTable>
 		</h:form>
 	</f:view>

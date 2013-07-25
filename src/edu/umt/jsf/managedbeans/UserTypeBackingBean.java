@@ -8,6 +8,8 @@ public class UserTypeBackingBean {
 	private UserType userType;
 	private String description;
 
+	private UserType selectedUserType;
+	
 	public List<UserType> getUserTypes() {
 		return DatabaseManager.getUserTypes();
 	}
@@ -46,4 +48,15 @@ public class UserTypeBackingBean {
 		return null;
 
 	}
+
+	
+	//Seeing if this will work
+	public UserType getSelectedUserType() {
+		return selectedUserType;
+	}
+
+	public void setSelectedUserType(UserType selectedUserType) {
+		this.selectedUserType = selectedUserType;
+	}
+	
 }

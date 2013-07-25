@@ -85,4 +85,10 @@
     TARGET="rules:#applications.xhtml" TITLE="delete-applications" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::11" SHAPE="32,1025,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::11" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="user-updated::#users.xhtml" NAME="output"
+    PATH="/users.xhtml" TARGET="rules:#users.xhtml" TITLE="user-updated" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
 </PROCESS>
