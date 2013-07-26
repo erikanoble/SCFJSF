@@ -59,10 +59,10 @@ public class MockObjectFactory {
 	private static void initializeApplication(Application application){
 		init();
 		application.setIndex_charge("MIT654");
-		application.setBalance("600");
-		application.setRequest_amount("300");
+		application.setBalance(600.00);
+		application.setRequest_amount(300.00);
 		application.setEquipment_description("Computers for student use");
-		application.setOutside_funds("N/A");
+		application.setOutside_funds(0.00);
 		application.setUse_description("Lab use");
 		application.setMaintenance_responsibility("IT Staff");
 		application.setNew_connections("none");

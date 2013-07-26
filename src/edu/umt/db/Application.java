@@ -7,10 +7,10 @@ import java.util.Set;
 public class Application {
 	private int application_id;
 	private String index_charge;
-	private String balance;
-	private String request_amount;
+	private Double balance;
+	private Double request_amount;
 	private String equipment_description;
-	private String outside_funds;
+	private Double outside_funds;
 	private String use_description;
 	private String maintenance_responsibility;
 	private String new_connections;
@@ -38,16 +38,16 @@ public class Application {
 	public void setIndex_charge(String index_charge) {
 		this.index_charge = index_charge;
 	}
-	public String getBalance() {
+	public Double getBalance() {
 		return balance;
 	}
-	public void setBalance(String balance) {
-		this.balance = balance;
+	public void setBalance(Double balance2) {
+		this.balance = balance2;
 	}
-	public String getRequest_amount() {
+	public Double getRequest_amount() {
 		return request_amount;
 	}
-	public void setRequest_amount(String request_amount) {
+	public void setRequest_amount(Double request_amount) {
 		this.request_amount = request_amount;
 	}
 	public String getEquipment_description() {
@@ -56,10 +56,10 @@ public class Application {
 	public void setEquipment_description(String equipment_description) {
 		this.equipment_description = equipment_description;
 	}
-	public String getOutside_funds() {
+	public Double getOutside_funds() {
 		return outside_funds;
 	}
-	public void setOutside_funds(String outside_funds) {
+	public void setOutside_funds(Double outside_funds) {
 		this.outside_funds = outside_funds;
 	}
 	public String getUse_description() {
