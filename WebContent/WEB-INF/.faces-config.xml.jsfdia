@@ -101,4 +101,13 @@
  </PROCESS-ITEM>
  <PROCESS-ITEM NAME="rules:#applicationdetails.xhtml"
   PATH="/applicationdetails.xhtml" SHAPE="240,1041,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::13" SHAPE="32,1137,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::13" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="user-details::#userdetails.xhtml"
+    NAME="output" PATH="/userdetails.xhtml"
+    TARGET="rules:#userdetails.xhtml" TITLE="user-details" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#userdetails.xhtml" PATH="/userdetails.xhtml"
+  SHAPE="240,1153,0,0" model-entity="JSFProcessGroup"/>
 </PROCESS>

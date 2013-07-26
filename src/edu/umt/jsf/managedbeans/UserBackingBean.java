@@ -10,12 +10,14 @@ import java.math.BigInteger;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
+import javax.servlet.http.HttpServletRequest;
 
 import org.primefaces.event.RowEditEvent;
 
 public class UserBackingBean {
 	private List<User> users;
 	private User user;
+	private User userView;
 	private int user_id;
 	private String fname;
 	private String lname;
@@ -40,6 +42,14 @@ public class UserBackingBean {
 
 	public void setUser(User user) {
 		this.user = user;
+	}
+
+	public User getUserView() {
+		return userView;
+	}
+
+	public void setUserView(User userView) {
+		this.userView = userView;
 	}
 
 	public int getUser_id() {
@@ -137,7 +147,16 @@ public class UserBackingBean {
 		return "delete-applications";
 	}
 
-	//
+	public String userDetailAction() throws Exception{
+		HttpServletRequest request = (HttpServletRequest)FacesContext.getCurrentInstance().getExternalContext().getRequest();
+		try{
+			userView=DatabaseManager.getUser(new Integer(request.getParameter("userId")));
+		}catch(Exception e){
+			if(userView == null) throw new Exception("Could not retrieve user.");
+		}
+		return "user-details";
+	}
+	
 	// public String editUserAction(RowEditEvent event) throws Exception {
 	// User u = new User();
 	// u.setFname(this.fname);
@@ -157,10 +176,8 @@ public class UserBackingBean {
 
 	public void onEdit(RowEditEvent event) {
 		User u = (User) event.getObject();
-		
-		
+
 		DatabaseManager.updateUser(u);
-		
 
 		FacesMessage m = new FacesMessage("User Edited");
 		FacesContext.getCurrentInstance().addMessage(null, m);

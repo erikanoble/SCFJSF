@@ -7,9 +7,7 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui">
 
-<h:head>
-	<title>Users</title>
-</h:head>
+<h:head></h:head>
 <h:body>
 	<f:view>
 		<h:form>
@@ -22,7 +20,9 @@
 				<p:ajax event="rowEditCancel" listener="#{userBackingBean.onCancel}" />
 
 				<p:column headerText="User ID:">
-					<h:outputText value="#{record.user_id}" />
+					<h:commandLink id="userIdLink" value="#{record.user_id}" action="#{userBackingBean.userDetailAction}">
+					<f:param name="userId" value="#{record.user_id}"/>
+					</h:commandLink>
 				</p:column>
 
 				<p:column headerText="First Name:">
