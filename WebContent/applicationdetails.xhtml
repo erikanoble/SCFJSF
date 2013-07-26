@@ -8,32 +8,32 @@
 <h:head></h:head>
 <h:body>
 	<f:view>
-		<p:panel>
+		<p:panelGrid id="appDetailsPanelGrid" columns="1">
 			<h:outputLabel value="Application Number:"/>
 			<p:inputText value="#{applicationBackingBean.applicationView.application_id}"/>
-			<br/>
+			
 			<h:outputLabel value="Submitted Date:"/>
 			<p:inputText value="#{applicationBackingBean.applicationView.created}"/>
-			<br/>
+			
 			<h:outputLabel value="Description:"/>
 			<p:inputText value="#{applicationBackingBean.applicationView.equipment_description}"/>
-			<br/>
+			
 			<h:outputLabel value="Requested Amount:"/>
 			<p:inputText value="#{applicationBackingBean.applicationView.request_amount}"/>
-			<br/>
+			
 			<h:outputLabel value="Applicant First Name:"/>
 			<p:inputText value="#{applicationBackingBean.applicationView.user.fname}"/>
-			<br/>
+			
 			<h:outputLabel value="Applicant Last Name:"/>
 			<p:inputText value="#{applicationBackingBean.applicationView.user.lname}"/>
-			<br/>
+			
 			<h:outputLabel value="Applicant School/Office:"/>
 			<p:inputText value="#{applicationBackingBean.applicationView.user.school}"/>
-			<br/>
+			
 			<h:outputLabel value="Department:"/>
 			<p:inputText value="#{applicationBackingBean.applicationView.user.department}"/>
-			<br/>
-		</p:panel>
+			
+		</p:panelGrid>
 	</f:view>
 </h:body>
 </html>
