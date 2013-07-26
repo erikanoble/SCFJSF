@@ -4,7 +4,9 @@ import edu.umt.db.*;
 
 import java.util.List;
 
+import javax.faces.context.FacesContext;
 import javax.faces.model.SelectItem;
+import javax.servlet.http.HttpServletRequest;
 
 import org.apache.log4j.Logger;
 
@@ -13,6 +15,7 @@ public class ApplicationBackingBean {
 	private List<Application> applications;
 	private int application_id;
 	private Application application;
+	private Application applicationView;
 	private String index_charge;
 	private Double balance;
 	private Double request_amount;
@@ -25,7 +28,9 @@ public class ApplicationBackingBean {
 	private String pilot;
 	private String pilot_summary;
 	private int user;
-
+	
+	
+	
 	public List<Application> getApplications() {
 		return DatabaseManager.getApplications();
 	}
@@ -48,6 +53,14 @@ public class ApplicationBackingBean {
 
 	public void setApplication(Application application) {
 		this.application = application;
+	}
+
+	public Application getApplicationView() {
+		return applicationView;
+	}
+
+	public void setApplicationView(Application applicationView) {
+		this.applicationView = applicationView;
 	}
 
 	public String getIndex_charge() {
@@ -180,26 +193,16 @@ public class ApplicationBackingBean {
 		return null;
 	}
 
-	//new to test out search filters.
-	private List<Application> filteredApplications;
-
-	public List<Application> getFilteredApplications() {
-		return filteredApplications;
-	}
-
-	public void setFilteredApplications(List<Application> filteredApplications) {
-		this.filteredApplications = filteredApplications;
-	}
-
-	private SelectItem[] createFilterOptions(String[] data) {
-		SelectItem[] options = new SelectItem[data.length + 1];
-
-		options[0] = new SelectItem("", "Select");
-		for (int i = 0; i < data.length; i++) {
-			options[i + 1] = new SelectItem(data[i], data[i]);
+	public String applicationDetailsAction() throws Exception{
+		log.debug("Navigating to application details.");
+		
+		HttpServletRequest request = (HttpServletRequest)FacesContext.getCurrentInstance().getExternalContext().getRequest();
+		try{
+			applicationView=DatabaseManager.getApplication(new Integer(request.getParameter("appId")));
+		}catch(Exception e){
+			if(applicationView == null) throw new Exception("Could not retrieve application.");
+			log.error(e);
 		}
-
-		return options;
-
+		return "application-details";
 	}
 }

@@ -91,4 +91,14 @@
     PATH="/users.xhtml" TARGET="rules:#users.xhtml" TITLE="user-updated" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::12" SHAPE="32,1025,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::12" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="application-details::#applicationdetails.xhtml" NAME="output"
+    PATH="/applicationdetails.xhtml"
+    TARGET="rules:#applicationdetails.xhtml" TITLE="application-details" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#applicationdetails.xhtml"
+  PATH="/applicationdetails.xhtml" SHAPE="240,1041,0,0" model-entity="JSFProcessGroup"/>
 </PROCESS>
