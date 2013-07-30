@@ -10,26 +10,31 @@
 	<h:form id="userform">
 		<p:growl id="growl" showDetail="true" />
 		<p:dashboard id="dashboard" model="#{userDetailBackingBean.model}">
-			<p:panel id="userDetails" header="User Details" columns="2">
-				<h:outputLabel value="First Name:" />
-				<p:inputText value="#{userBackingBean.userView.fname}" />
-				<h:outputLabel value="Last Name:" />
-				<p:inputText value="#{userBackingBean.userView.lname}" />
-				<h:outputLabel value="School/Office:" />
-				<p:inputText value="#{userBackingBean.userView.school}" />
-				<h:outputLabel value="Department:" />
-				<p:inputText value="#{userBackingBean.userView.department}" />
-				<h:outputLabel value="Email:" />
-				<p:inputText value="#{userBackingBean.userView.email}" />
-				<h:outputLabel value="Phone:" />
-				<p:inputText value="#{userBackingBean.userView.phoneAsString}" mask="(999) 999-9999"/>
-				<p:commandButton value="Submit User" action="#{userBackingBean.updateUserAction}"/>
+			<p:panel id="userDetails" header="User Details">
+				<h:panelGrid columns="2">
+					<h:outputLabel value="First Name:" />
+					<p:inputText value="#{userBackingBean.userView.fname}" />
+					<h:outputLabel value="Last Name:" />
+					<p:inputText value="#{userBackingBean.userView.lname}" />
+					<h:outputLabel value="School/Office:" />
+					<p:inputText value="#{userBackingBean.userView.school}" />
+					<h:outputLabel value="Department:" />
+					<p:inputText value="#{userBackingBean.userView.department}" />
+					<h:outputLabel value="Email:" />
+					<p:inputText value="#{userBackingBean.userView.email}" />
+					<h:outputLabel value="Phone:" />
+					<p:inputMask value="#{userBackingBean.userView.phoneAsString}"
+						mask="(999) 999-9999" />
+					<p:commandButton value="Submit User"
+						action="#{userBackingBean.updateUserAction}" />
+				</h:panelGrid>
 			</p:panel>
 			<p:panel id="userApplications" header="User's Applications">
 				<p:dataTable id="appTable"
 					value="#{userBackingBean.userView.applicationList}" var="row">
 					<p:column>
-						<h:commandLink value="#{row.equipment_description}" action="/applicationdetails.xhtml"/>
+						<h:commandLink value="#{row.equipment_description}"
+							action="#{applicationBackingBean.applicationDetailsAction}" />
 					</p:column>
 				</p:dataTable>
 			</p:panel>
