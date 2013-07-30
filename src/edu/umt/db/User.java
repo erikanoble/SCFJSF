@@ -205,9 +205,8 @@ public class User {
 	}
 
 	public void setPhoneAsString(String phoneAsString) {
-		System.out.println("BEFORE " + phoneAsString);
-		BigInteger numericPhone = new BigInteger(phoneAsString.replaceAll("[^\\d]", ""));
-		System.out.println("AFTER " + numericPhone);
+		BigInteger numericPhone = new BigInteger(phoneAsString.replaceAll(
+				"[^\\d]", ""));
 		this.phone = numericPhone;
 	}
 
