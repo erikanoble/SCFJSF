@@ -22,13 +22,14 @@
 				<h:outputLabel value="Email:" />
 				<p:inputText value="#{userBackingBean.userView.email}" />
 				<h:outputLabel value="Phone:" />
-				<p:inputText value="#{userBackingBean.userView.phone}" />
+				<p:inputText value="#{userBackingBean.userView.phoneAsString}" mask="(999) 999-9999"/>
+				<p:commandButton value="Submit User" action="#{userBackingBean.updateUserAction}"/>
 			</p:panel>
 			<p:panel id="userApplications" header="User's Applications">
 				<p:dataTable id="appTable"
 					value="#{userBackingBean.userView.applicationList}" var="row">
 					<p:column>
-						<h:commandLink value="#{row.equipment_description}" action=""/>
+<!-- 						<h:commandLink value="#{row.equipment_description}" action=""/> -->
 					</p:column>
 				</p:dataTable>
 			</p:panel>

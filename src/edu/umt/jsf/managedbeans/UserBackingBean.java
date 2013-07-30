@@ -23,10 +23,11 @@ public class UserBackingBean {
 	private String lname;
 	private String netid;
 	private String department;
-	private Integer phone;
+	private BigInteger phone;
 	private String email;
 	private String school;
 	private int usertype;
+	private String phoneAsString;
 
 	public List<User> getUsers() {
 		return DatabaseManager.getUsers();
@@ -92,12 +93,21 @@ public class UserBackingBean {
 		this.department = department;
 	}
 
-	public Integer getPhone() {
+	public BigInteger getPhone() {
 		return phone;
 	}
 
-	public void setPhone(Integer phone) {
+	public void setPhone(BigInteger phone) {
 		this.phone = phone;
+	}
+
+	public String getPhoneAsString() {
+		return phoneAsString;
+	}
+
+	public void setPhoneAsString(String phoneAsString) {
+		this.phoneAsString = phoneAsString;
+
 	}
 
 	public String getEmail() {
@@ -131,7 +141,7 @@ public class UserBackingBean {
 		u.setSchool(this.school);
 		u.setDepartment(this.department);
 		u.setEmail(this.email);
-		u.setPhone(new BigInteger(this.phone.toString()));
+		u.setPhone(this.phone);
 		u.setNetid(this.netid);
 		u.setUsertype(DatabaseManager.getUserType(this.usertype));
 		try {
@@ -142,21 +152,34 @@ public class UserBackingBean {
 		return "new-user-created";
 	}
 
+	public String updateUserAction() throws Exception {
+		try {
+			DatabaseManager.updateUser(userView);
+		} catch (Exception e) {
+
+		}
+
+		return "user-updated";
+	}
+
 	public String deleteUserAction(User u) throws Exception {
 		DatabaseManager.deleteUser(u);
 		return "delete-applications";
 	}
 
-	public String userDetailAction() throws Exception{
-		HttpServletRequest request = (HttpServletRequest)FacesContext.getCurrentInstance().getExternalContext().getRequest();
-		try{
-			userView=DatabaseManager.getUser(new Integer(request.getParameter("userId")));
-		}catch(Exception e){
-			if(userView == null) throw new Exception("Could not retrieve user.");
+	public String userDetailAction() throws Exception {
+		HttpServletRequest request = (HttpServletRequest) FacesContext
+				.getCurrentInstance().getExternalContext().getRequest();
+		try {
+			userView = DatabaseManager.getUser(new Integer(request
+					.getParameter("userId")));
+		} catch (Exception e) {
+			if (userView == null)
+				throw new Exception("Could not retrieve user.");
 		}
 		return "user-details";
 	}
-	
+
 	// public String editUserAction(RowEditEvent event) throws Exception {
 	// User u = new User();
 	// u.setFname(this.fname);
