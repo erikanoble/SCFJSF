@@ -180,36 +180,19 @@ public class UserBackingBean {
 		return "user-details";
 	}
 
-	// public String editUserAction(RowEditEvent event) throws Exception {
-	// User u = new User();
-	// u.setFname(this.fname);
-	// u.setLname(this.lname);
-	// u.setSchool(this.school);
-	// u.setDepartment(this.department);
-	// u.setEmail(this.email);
-	// u.setPhone(new BigInteger(this.phone.toString()));
-	// u.setNetid(this.netid);
-	// u.setUsertype(DatabaseManager.getUserType(this.usertype));
-	//
-	// DatabaseManager.updateUser(u);
-	//
-	// return "user-updated";
-
-	// }
 
 	public void onEdit(RowEditEvent event) {
-		User u = (User) event.getObject();
 
-		DatabaseManager.updateUser(u);
+		DatabaseManager.updateUser(userView);
 
 		FacesMessage m = new FacesMessage("User Edited");
 		FacesContext.getCurrentInstance().addMessage(null, m);
 
 	}
 
-	// public void onCancel(RowEditEvent event) {
-	// FacesMessage m = new FacesMessage("User Edit Cancelled");
-	// FacesContext.getCurrentInstance().addMessage(null, m);
-	// }
+	 public void onCancel(RowEditEvent event) {
+	 FacesMessage m = new FacesMessage("User Edit Cancelled");
+	 FacesContext.getCurrentInstance().addMessage(null, m);
+	 }
 
 }

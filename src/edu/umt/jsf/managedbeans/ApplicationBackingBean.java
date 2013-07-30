@@ -188,6 +188,17 @@ public class ApplicationBackingBean {
 
 	}
 	
+	
+	public String updateApplicationAction() throws Exception{
+		try{
+			DatabaseManager.updateApplication(applicationView);
+		}catch(Exception e){
+			
+		}
+		return "application-updated";
+	}
+	
+	
 	public String deleteApplicationAction(Application a) throws Exception{
 		DatabaseManager.deleteApplication(a);
 		return null;

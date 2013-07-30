@@ -13,13 +13,13 @@
 			<p:dataTable id="users" var="record" value="#{userBackingBean.users}"
 				editable="true">
 
-
 				<p:ajax event="rowEdit" listener="#{userBackingBean.onEdit}" />
 				<p:ajax event="rowEditCancel" listener="#{userBackingBean.onCancel}" />
 
 				<p:column headerText="User ID:">
-					<h:commandLink id="userIdLink" value="#{record.user_id}" action="#{userBackingBean.userDetailAction}">
-					<f:param name="userId" value="#{record.user_id}"/>
+					<h:commandLink id="userIdLink" value="#{record.user_id}"
+						action="#{userBackingBean.userDetailAction}">
+						<f:param name="userId" value="#{record.user_id}" />
 					</h:commandLink>
 				</p:column>
 
@@ -77,8 +77,8 @@
 							<h:outputText value="#{record.phone}" />
 						</f:facet>
 						<f:facet name="input">
-							<p:inputMask value="#{record.phone}" style="width:100%"
-								label="Phone" mask="(999) 999-9999"/>
+							<p:inputMask value="#{record.phoneAsString}" style="width:100%"
+								label="Phone" mask="(999) 999-9999" />
 						</f:facet>
 					</p:cellEditor>
 				</p:column>

@@ -93,21 +93,28 @@
  </PROCESS-ITEM>
  <PROCESS-ITEM NAME="rules::12" SHAPE="32,1025,0,0" model-entity="JSFProcessGroup">
   <PROCESS-ITEM ID="rules::12" NAME="item" model-entity="JSFProcessItem">
-   <PROCESS-ITEM-OUTPUT
-    ID="application-details::#applicationdetails.xhtml" NAME="output"
-    PATH="/applicationdetails.xhtml"
-    TARGET="rules:#applicationdetails.xhtml" TITLE="application-details" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="application-updated::#applications.xhtml"
+    NAME="output" PATH="/applications.xhtml"
+    TARGET="rules:#applications.xhtml" TITLE="application-updated" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
  <PROCESS-ITEM NAME="rules:#applicationdetails.xhtml"
   PATH="/applicationdetails.xhtml" SHAPE="240,1041,0,0" model-entity="JSFProcessGroup"/>
  <PROCESS-ITEM NAME="rules::13" SHAPE="32,1137,0,0" model-entity="JSFProcessGroup">
   <PROCESS-ITEM ID="rules::13" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="application-details::#applicationdetails.xhtml" NAME="output"
+    PATH="/applicationdetails.xhtml"
+    TARGET="rules:#applicationdetails.xhtml" TITLE="application-details" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#userdetails.xhtml" PATH="/userdetails.xhtml"
+  SHAPE="240,1153,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::14" SHAPE="32,1249,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::14" NAME="item" model-entity="JSFProcessItem">
    <PROCESS-ITEM-OUTPUT ID="user-details::#userdetails.xhtml"
     NAME="output" PATH="/userdetails.xhtml"
     TARGET="rules:#userdetails.xhtml" TITLE="user-details" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
- <PROCESS-ITEM NAME="rules:#userdetails.xhtml" PATH="/userdetails.xhtml"
-  SHAPE="240,1153,0,0" model-entity="JSFProcessGroup"/>
 </PROCESS>
