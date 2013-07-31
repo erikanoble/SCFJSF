@@ -1,6 +1,8 @@
 package edu.umt.jsf.managedbeans;
 
 import edu.umt.db.*;
+import edu.umt.exceptions.*;
+
 import java.util.List;
 
 public class UserTypeBackingBean {
@@ -34,7 +36,7 @@ public class UserTypeBackingBean {
 		this.description = description;
 	}
 
-	public String newUserTypeAction() throws Exception {
+	public String newUserTypeAction() throws UsertypeInsertException {
 		UserType ut = new UserType();
 		ut.setDescription(this.getDescription());
 
@@ -43,7 +45,7 @@ public class UserTypeBackingBean {
 		return "ok";
 	}
 
-	public String deleteUserTypeAction(UserType ut) throws Exception {
+	public String deleteUserTypeAction(UserType ut) throws UsertypeDeleteException {
 		DatabaseManager.deleteUserType(ut);
 		return null;
 

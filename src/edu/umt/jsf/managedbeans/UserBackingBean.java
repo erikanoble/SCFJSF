@@ -1,6 +1,7 @@
 package edu.umt.jsf.managedbeans;
 
 import edu.umt.db.*;
+import edu.umt.exceptions.*;
 
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -134,7 +135,7 @@ public class UserBackingBean {
 		this.usertype = usertype;
 	}
 
-	public String newUserAction() throws Exception {
+	public String newUserAction() throws UserInsertException {
 		User u = new User();
 		u.setFname(this.fname);
 		u.setLname(this.lname);
@@ -152,7 +153,7 @@ public class UserBackingBean {
 		return "new-user-created";
 	}
 
-	public String updateUserAction() throws Exception {
+	public String updateUserAction() throws UserUpdateException {
 		try {
 			DatabaseManager.updateUser(userView);
 		} catch (Exception e) {
@@ -162,12 +163,12 @@ public class UserBackingBean {
 		return "user-updated";
 	}
 
-	public String deleteUserAction(User u) throws Exception {
+	public String deleteUserAction(User u) throws UserDeleteException {
 		DatabaseManager.deleteUser(u);
 		return "delete-applications";
 	}
 
-	public String userDetailAction() throws Exception {
+	public String userDetailAction() throws UserDetailsException {
 		HttpServletRequest request = (HttpServletRequest) FacesContext
 				.getCurrentInstance().getExternalContext().getRequest();
 		try {
@@ -175,7 +176,7 @@ public class UserBackingBean {
 					.getParameter("userId")));
 		} catch (Exception e) {
 			if (userView == null)
-				throw new Exception("Could not retrieve user.");
+				throw new UserDetailsException("Could not retrieve user.");
 		}
 		return "user-details";
 	}

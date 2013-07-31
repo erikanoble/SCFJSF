@@ -1,6 +1,7 @@
 package edu.umt.jsf.managedbeans;
 
 import edu.umt.db.*;
+import edu.umt.exceptions.*;
 
 import java.util.List;
 
@@ -159,7 +160,7 @@ public class ApplicationBackingBean {
 		this.user = user;
 	}
 
-	public String newApplicationAction() throws Exception {
+	public String newApplicationAction() throws ApplicationInsertException {
 
 		Application a = new Application();
 		a.setIndex_charge(this.index_charge);
@@ -189,7 +190,7 @@ public class ApplicationBackingBean {
 	}
 	
 	
-	public String updateApplicationAction() throws Exception{
+	public String updateApplicationAction() throws ApplicationUpdateException{
 		try{
 			DatabaseManager.updateApplication(applicationView);
 		}catch(Exception e){
@@ -199,19 +200,19 @@ public class ApplicationBackingBean {
 	}
 	
 	
-	public String deleteApplicationAction(Application a) throws Exception{
+	public String deleteApplicationAction(Application a) throws ApplicationDeleteException{
 		DatabaseManager.deleteApplication(a);
 		return null;
 	}
 
-	public String applicationDetailsAction() throws Exception{
+	public String applicationDetailsAction() throws ApplicationDetailsException{
 		log.debug("Navigating to application details.");
 		
 		HttpServletRequest request = (HttpServletRequest)FacesContext.getCurrentInstance().getExternalContext().getRequest();
 		try{
 			applicationView=DatabaseManager.getApplication(new Integer(request.getParameter("appId")));
 		}catch(Exception e){
-			if(applicationView == null) throw new Exception("Could not retrieve application.");
+			if(applicationView == null) throw new ApplicationDetailsException("Could not retrieve application.");
 			log.error(e);
 		}
 		return "application-details";
