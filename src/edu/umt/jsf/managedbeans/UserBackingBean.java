@@ -184,7 +184,7 @@ public class UserBackingBean {
 
 	public void onEdit(RowEditEvent event) {
 
-		DatabaseManager.updateUser(userView);
+		DatabaseManager.updateUser((User)event.getObject());
 
 		FacesMessage m = new FacesMessage("User Edited");
 		FacesContext.getCurrentInstance().addMessage(null, m);

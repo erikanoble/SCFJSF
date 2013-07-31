@@ -29,9 +29,7 @@ public class ApplicationBackingBean {
 	private String pilot;
 	private String pilot_summary;
 	private int user;
-	
-	
-	
+
 	public List<Application> getApplications() {
 		return DatabaseManager.getApplications();
 	}
@@ -182,37 +180,36 @@ public class ApplicationBackingBean {
 			e.printStackTrace();
 		}
 
-		// TODO: try catch
+		// TODO: find out why this is duplicating!!!
 		log.debug("I'm in the new app method");
 
 		return "list-applications";
 
 	}
-	
-	
-	public String updateApplicationAction() throws ApplicationUpdateException{
-		try{
-			DatabaseManager.updateApplication(applicationView);
-		}catch(Exception e){
-			
-		}
+
+	public String updateApplicationAction() throws ApplicationUpdateException {
+		DatabaseManager.updateApplication(applicationView);
 		return "application-updated";
 	}
-	
-	
-	public String deleteApplicationAction(Application a) throws ApplicationDeleteException{
+
+	public String deleteApplicationAction(Application a)
+			throws ApplicationDeleteException {
 		DatabaseManager.deleteApplication(a);
 		return null;
 	}
 
-	public String applicationDetailsAction() throws ApplicationDetailsException{
+	public String applicationDetailAction() throws ApplicationDetailsException {
 		log.debug("Navigating to application details.");
-		
-		HttpServletRequest request = (HttpServletRequest)FacesContext.getCurrentInstance().getExternalContext().getRequest();
-		try{
-			applicationView=DatabaseManager.getApplication(new Integer(request.getParameter("appId")));
-		}catch(Exception e){
-			if(applicationView == null) throw new ApplicationDetailsException("Could not retrieve application.");
+
+		HttpServletRequest request = (HttpServletRequest) FacesContext
+				.getCurrentInstance().getExternalContext().getRequest();
+		try {
+			applicationView = DatabaseManager.getApplication(new Integer(
+					request.getParameter("appId")));
+		} catch (Exception e) {
+			if (applicationView == null)
+				throw new ApplicationDetailsException(
+						"Could not retrieve application.");
 			log.error(e);
 		}
 		return "application-details";

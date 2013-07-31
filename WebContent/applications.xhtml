@@ -9,97 +9,20 @@
 <h:body>
 	<f:view>
 		<h:form>
-			<p:dataTable id="applications" var="record"
-				value="#{applicationBackingBean.applications}">
-
-
-				<p:column id="idColumn" headerText="Application ID">
-					<h:commandLink id="appLink" value="#{record.application_id}" action="#{applicationBackingBean.applicationDetailsAction}">
-						<f:param id="appId" name="appId" value="#{record.application_id}"/>
+			
+				<p:dataTable id="applications" var="record"
+					value="#{applicationBackingBean.applications}">
+					<p:column id="idColumn" headerText="Application ID">
+						<h:commandLink id="appLink" value="#{record.application_id}"
+							action="#{applicationBackingBean.applicationDetailAction}">
+							<f:param id="appId" name="appId" value="#{record.application_id}" />
 						</h:commandLink>
-				</p:column>
-				<p:column id="descriptionColumn" headerText="Equipment Description">
-					<h:outputText value="#{record.equipment_description}" />
-				</p:column>
-
-				<!-- 				<p:column> -->
-				<!-- 					<f:facet name="header"> -->
-				<!-- 						<h:outputText value="Index to Charge:" /> -->
-				<!-- 					</f:facet> -->
-				<!-- 					<h:outputText value="#{record.index_charge}" /> -->
-				<!-- 				</p:column> -->
-
-				<!-- 				<p:column> -->
-				<!-- 					<f:facet name="header"> -->
-				<!-- 						<h:outputText value="Balance:" /> -->
-				<!-- 					</f:facet> -->
-				<!-- 					<h:outputText value="#{record.balance}" /> -->
-				<!-- 				</p:column> -->
-
-				<!-- 				<p:column> -->
-				<!-- 					<f:facet name="header"> -->
-				<!-- 						<h:outputText value="Request Amount:" /> -->
-				<!-- 					</f:facet> -->
-				<!-- 					<h:outputText value="#{record.request_amount}" /> -->
-				<!-- 				</p:column> -->
-
-				<!-- 				<p:column> -->
-				<!-- 					<f:facet name="header"> -->
-				<!-- 						<h:outputText value="Equipment Description:" /> -->
-				<!-- 					</f:facet> -->
-				<!-- 					<h:outputText value="#{record.equipment_description}" /> -->
-				<!-- 				</p:column> -->
-
-				<!-- 				<p:column> -->
-				<!-- 					<f:facet name="header"> -->
-				<!-- 						<h:outputText value="Outside Funds:" /> -->
-				<!-- 					</f:facet> -->
-				<!-- 					<h:outputText value="#{record.outside_funds}" /> -->
-				<!-- 				</p:column> -->
-
-				<!-- 				<p:column> -->
-				<!-- 					<f:facet name="header"> -->
-				<!-- 						<h:outputText value="Description of Use:" /> -->
-				<!-- 					</f:facet> -->
-				<!-- 					<h:outputText value="#{record.use_description}" /> -->
-				<!-- 				</p:column> -->
-
-				<!-- 						<p:column> -->
-				<!-- 					<f:facet name="header"> -->
-				<!-- 						<h:outputText value="Maintenance Responsibility:" /> -->
-				<!-- 					</f:facet> -->
-				<!-- 					<h:outputText value="#{record.maintenance_responsibility}"/> -->
-				<!-- 				</p:column> -->
-
-				<!-- 				<p:column> -->
-				<!-- 					<f:facet name="header"> -->
-				<!-- 						<h:outputText value="New Connections:" /> -->
-				<!-- 					</f:facet> -->
-				<!-- 					<h:outputText value="#{record.new_connections}"/> -->
-				<!-- 				</p:column> -->
-
-				<!-- 				<p:column> -->
-				<!-- 					<f:facet name="header"> -->
-				<!-- 						<h:outputText value="Connections Provided By:" /> -->
-				<!-- 					</f:facet> -->
-				<!-- 					<h:outputText value="#{record.provided_by}"/> -->
-				<!-- 				</p:column> -->
-
-				<!-- 				<p:column> -->
-				<!-- 					<f:facet name="header"> -->
-				<!-- 						<h:outputText value="Is Pilot?:" /> -->
-				<!-- 					</f:facet> -->
-				<!-- 					<h:outputText value="#{record.pilot}"/> -->
-				<!-- 				</p:column> -->
-
-				<!-- 				<p:column> -->
-				<!-- 					<f:facet name="header"> -->
-				<!-- 						<h:outputText value="Pilot Summary:" /> -->
-				<!-- 					</f:facet> -->
-				<!-- 					<h:outputText value="#{record.pilot_summary}"/> -->
-				<!-- 				</p:column> -->
-
-			</p:dataTable>
+					</p:column>
+					<p:column id="descriptionColumn" headerText="Equipment Description">
+						<h:outputText value="#{record.equipment_description}" />
+					</p:column>
+				</p:dataTable>
+		
 		</h:form>
 	</f:view>
 </h:body>
