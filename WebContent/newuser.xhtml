@@ -9,30 +9,36 @@
 <h:body> 
 	<f:view>
 		<h:form id="newuserform">
-			<p:panelGrid id="panelGrid" columns="1">
+			<p:panelGrid id="panelGrid" columns="3">
 				<f:facet name="header">New User Form</f:facet>
 			
 				<h:outputLabel id="netidLabel" value="NetID:" for="netid"/>
 				<p:inputText id="netid" value="#{userBackingBean.netid}" required="true"/>
+				<p:message id="netIDRequiredMessage" for="netid"/>
 				
 				<h:outputLabel id="fnameLabel" value="First Name:" for="fname"/>
 				<p:inputText id="fname" value="#{userBackingBean.fname}" required="true"/>
+				<p:message id="fnameRequiredMessage" for="fname"/>
 				
 				<h:outputLabel id="lnameLabel" value="Last name:" for="lname" />
 				<p:inputText id="lname" value="#{userBackingBean.lname}" required="true"/>
+				<p:message id="lnameRequiredMessage" for="lname"/>
 				
 				<h:outputLabel id="schoolLabel" value="School:" for="school" />
 				<p:inputText id="school" value="#{userBackingBean.school}" required="true"/>
+				<p:message id="schoolRequiredMessage" for="school"/>
 				
 				<h:outputLabel id="departmentLabel" value="Department:" for="department" />
 				<p:inputText id="department" value="#{userBackingBean.department}" required="true"/>
+				<p:message id="departmentRequiredMessage" for="department"/>
 				
-				<h:outputLabel id="phoneLabel" value="Phone:" for="phone" />
-				<!-- required="true" still allows the submit. It changes the blank string to 0 -->
-				<p:inputText id="phone" value="#{userBackingBean.phone}" required="true"/>
+				<h:outputLabel id="phoneLabel" value="Phone:" for="phoneAsString" />
+				<p:inputMask id="phoneAsString" value="#{userBackingBean.phoneAsString}" required="true" mask="(999) 999-9999"/>
+				<p:message id="phoneAsStringRequiredMessage" for="phoneAsString"/>
 				
 				<h:outputLabel id="emailLabel" value="Email:" />
 				<p:inputText id="email" value="#{userBackingBean.email}" required="true"/>
+				<p:message id="emailRequiredMessage" for="email"/>
 				
 				<h:outputLabel id="usertypeLabel" value="User Type:" />
 				<h:selectOneMenu id="usertypes" value="#{userBackingBean.usertype}">
@@ -41,6 +47,7 @@
 								itemLabel="#{row.description}"
 								itemValue="#{row.usertype_id}" />
 				</h:selectOneMenu>
+				<p:message id="usertypeRequiredMessage" for="usertype"/>
 				
 				<p:commandButton id="uButton" actionListener="#{userBackingBean.newUserAction}" action="#{userBackingBean.newUserAction}" ajax="false" value="Create User" />
 			</p:panelGrid>

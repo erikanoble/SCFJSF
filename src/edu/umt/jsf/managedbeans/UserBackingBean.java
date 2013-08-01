@@ -165,7 +165,7 @@ public class UserBackingBean {
 
 	public String deleteUserAction(User u) throws UserDeleteException {
 		DatabaseManager.deleteUser(u);
-		return "delete-applications";
+		return "delete-user";
 	}
 
 	public String userDetailAction() throws UserDetailsException {
