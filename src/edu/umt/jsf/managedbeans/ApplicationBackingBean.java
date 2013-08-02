@@ -186,11 +186,12 @@ public class ApplicationBackingBean {
 		return "list-applications";
 
 	}
+	
 	public String updateApplicationAction() throws ApplicationUpdateException {
 		try {
 			DatabaseManager.updateApplication(applicationView);
 		} catch (Exception e) {
-
+			e.printStackTrace();
 		}
 
 		return "application-updated";
@@ -202,18 +203,14 @@ public class ApplicationBackingBean {
 	}
 
 	public String applicationDetailAction() throws ApplicationDetailsException {
-		log.debug("Navigating to application details.");
-
 		HttpServletRequest request = (HttpServletRequest) FacesContext
 				.getCurrentInstance().getExternalContext().getRequest();
 		try {
-			applicationView = DatabaseManager.getApplication(new Integer(
-					request.getParameter("appId")));
+			applicationView = DatabaseManager.getApplication(new Integer(request
+					.getParameter("appId")));
 		} catch (Exception e) {
 			if (applicationView == null)
-				throw new ApplicationDetailsException(
-						"Could not retrieve application.");
-			log.error(e);
+				throw new ApplicationDetailsException("Could not retrieve application.");
 		}
 		return "application-details";
 	}
