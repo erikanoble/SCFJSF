@@ -158,7 +158,6 @@ public class ApplicationBackingBean {
 		this.user = user;
 	}
 
-	
 	// TODO: find out why this is duplicating!!!
 	public String newApplicationAction() throws ApplicationInsertException {
 
@@ -182,13 +181,11 @@ public class ApplicationBackingBean {
 			e.printStackTrace();
 		}
 
-		
 		log.debug("I'm in the new app method");
 
 		return "list-applications";
 
 	}
-
 	public String updateApplicationAction() throws ApplicationUpdateException {
 		try {
 			DatabaseManager.updateApplication(applicationView);
@@ -199,8 +196,7 @@ public class ApplicationBackingBean {
 		return "application-updated";
 	}
 
-	public String deleteApplicationAction(Application a)
-			throws ApplicationDeleteException {
+	public String deleteApplicationAction(Application a) throws ApplicationDeleteException {
 		DatabaseManager.deleteApplication(a);
 		return null;
 	}
