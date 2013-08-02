@@ -2,7 +2,12 @@ package edu.umt.db;
 
 
 import java.sql.Timestamp;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Set;
+import edu.umt.jsf.converters.*;
 
 public class Application {
 	private int application_id;
@@ -22,6 +27,7 @@ public class Application {
 	private int approved;
 	private Double approvedAmount;
 	private Timestamp created;
+	private String createdAsString;
 	
 	public Application(){
 		approvedAmount = new Double(0);
@@ -127,6 +133,13 @@ public class Application {
 	}
 	public void setCreated(Timestamp created) {
 		this.created = created;
+	}
+	public String getCreatedAsString() {
+		return createdAsString;
+	}
+	public void setCreatedAsString(String createdAsString) {
+		//TODO: get this converted so that it can send data to database
+		this.createdAsString = createdAsString;
 	}
 	
 	

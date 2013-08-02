@@ -17,6 +17,7 @@ public class ApplicationBackingBean {
 	private int application_id;
 	private Application application;
 	private Application applicationView;
+	private String createdAsString;
 	private String index_charge;
 	private Double balance;
 	private Double request_amount;
@@ -60,6 +61,14 @@ public class ApplicationBackingBean {
 
 	public void setApplicationView(Application applicationView) {
 		this.applicationView = applicationView;
+	}
+
+	public String getCreatedAsString() {
+		return createdAsString;
+	}
+
+	public void setCreatedAsString(String createdAsString) {
+		this.createdAsString = createdAsString;
 	}
 
 	public String getIndex_charge() {
@@ -194,7 +203,7 @@ public class ApplicationBackingBean {
 			e.printStackTrace();
 		}
 
-		return "application-updated";
+		return "application-udpated";
 	}
 
 	public String deleteApplicationAction(Application a) throws ApplicationDeleteException {
