@@ -9,10 +9,13 @@ import javax.faces.context.FacesContext;
 import javax.faces.model.SelectItem;
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.log4j.*;
 import org.apache.log4j.Logger;
 
 public class ApplicationBackingBean {
 	private Logger log = Logger.getLogger(ApplicationBackingBean.class);
+	private FileAppender appender = (FileAppender)log.getAppender("debug");
+
 	private List<Application> applications;
 	private int application_id;
 	private Application application;
@@ -197,13 +200,15 @@ public class ApplicationBackingBean {
 	}
 	
 	public String updateApplicationAction() throws ApplicationUpdateException {
+		log.debug("I'm working here...");
 		try {
 			DatabaseManager.updateApplication(applicationView);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
-		return "application-udpated";
+		log.debug("I returned the applications");
+		return "application-updated";
+		
 	}
 
 	public String deleteApplicationAction(Application a) throws ApplicationDeleteException {
