@@ -193,7 +193,7 @@ public class ApplicationBackingBean {
 			e.printStackTrace();
 		}
 
-		log.debug("I'm in the new app method");
+		log.debug("I'm testing in the new app method");
 
 		return "list-applications";
 
