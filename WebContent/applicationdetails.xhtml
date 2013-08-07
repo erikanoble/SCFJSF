@@ -15,23 +15,24 @@
 				<h:panelGrid columns="2">
 
 					<h:outputLabel value="Applicant First Name:" />
-					<p:inputText
+					<p:inputText readonly="true"
 						value="#{applicationBackingBean.applicationView.user.fname}" />
 
 					<h:outputLabel value="Applicant Last Name:" />
-					<p:inputText
+					<p:inputText readonly="true"
 						value="#{applicationBackingBean.applicationView.user.lname}" />
 
 					<h:outputLabel value="Applicant School/Office:" />
-					<p:inputText
+					<p:inputText readonly="true"
 						value="#{applicationBackingBean.applicationView.user.school}" />
 
 					<h:outputLabel value="Department:" />
-					<p:inputText
+					<p:inputText readonly="true"
 						value="#{applicationBackingBean.applicationView.user.department}" />
 
 					<h:outputLabel value="Application Number:" />
-					<p:inputText value="#{applicationBackingBean.applicationView.application_id}" />
+					<p:inputText readonly="true"
+						value="#{applicationBackingBean.applicationView.application_id}" />
 
 					<h:outputLabel value="Description:" />
 					<p:inputText
@@ -68,10 +69,7 @@
 					<h:outputLabel value="Is Pilot?:" />
 					<p:inputText
 						value="#{applicationBackingBean.applicationView.pilot}" />
-<!-- 					TODO: ITS THE TIMESTAMP BEING A LITTLE EXPLITIVE!! -->
-<!-- 					<h:outputLabel value="Submitted Date:" /> -->
-<!-- 					<p:inputText -->
-<!-- 						value="#{applicationBackingBean.applicationView.createdAsString}" /> -->
+
 					<p:commandButton value="Submit Application"
 						action="#{applicationBackingBean.updateApplicationAction}" />
 				</h:panelGrid>
