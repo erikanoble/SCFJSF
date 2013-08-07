@@ -9,12 +9,13 @@ import javax.faces.context.FacesContext;
 import javax.faces.model.SelectItem;
 import javax.servlet.http.HttpServletRequest;
 
-import org.slf4j.LoggerFactory;
-import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
+//import org.slf4j.Logger;
+import org.apache.log4j.*;
 
 public class ApplicationBackingBean {
-	private Logger log = LoggerFactory.getLogger(ApplicationBackingBean.class);
-	
+//	private Logger log = LoggerFactory.getLogger(ApplicationBackingBean.class);
+	private Logger log = Logger.getLogger(ApplicationBackingBean.class);
 
 	private List<Application> applications;
 	private int application_id;
