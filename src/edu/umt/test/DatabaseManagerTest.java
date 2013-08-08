@@ -4,6 +4,7 @@ import edu.umt.db.Application;
 import edu.umt.db.DatabaseManager;
 import edu.umt.db.User;
 import edu.umt.db.UserType;
+import edu.umt.exceptions.UserInsertException;
 import edu.umt.test.mocks.MockObjectFactory;
 import junit.framework.TestCase;
 import org.junit.Test;
@@ -98,10 +99,10 @@ public class DatabaseManagerTest extends TestCase {
 		UserType usertype = (UserType) MockObjectFactory
 				.getMockObject("USERTYPE");
 		DatabaseManager.insertUsertype(usertype);
-		utid=usertype.getUsertype_id();
-		
+		utid = usertype.getUsertype_id();
+
 		try {
-			assertTrue(DatabaseManager.getUserType(utid)!=null);
+			assertTrue(DatabaseManager.getUserType(utid) != null);
 		} catch (Exception e) {
 			System.out.println(e);
 		}
@@ -109,12 +110,15 @@ public class DatabaseManagerTest extends TestCase {
 	}
 
 	@Test
-	public void testInsertUser() {
+	public void testInsertUser() throws UserInsertException {
 		User user = (User) MockObjectFactory.getMockObject("USER");
 		user.setUsertype(DatabaseManager.getUserType(1));
-		DatabaseManager.insertUser(user);
+
 		try {
+			DatabaseManager.insertUser(user);
 			assertTrue(user != null);
+		} catch (UserInsertException uie) {
+			uie.printStackTrace();
 		} catch (Exception e) {
 			System.out.println(e);
 		}
@@ -201,11 +205,15 @@ public class DatabaseManagerTest extends TestCase {
 	}
 
 	@Test
-	public void testDeleteUser() {
+	public void testDeleteUser() throws UserInsertException {
 		int tempUserId = 0;
 		User user = (User) MockObjectFactory.getMockObject("USER");
 		user.setUsertype(DatabaseManager.getUserType(1));
-		DatabaseManager.insertUser(user);
+		try {
+			DatabaseManager.insertUser(user);
+		} catch (UserInsertException uie) {
+			uie.printStackTrace();
+		}
 		tempUserId = user.getUser_id();
 		DatabaseManager.deleteUser(user);
 		try {
@@ -217,7 +225,8 @@ public class DatabaseManagerTest extends TestCase {
 
 	@Test
 	public void testDeleteApplication() {
-		Application application = (Application)MockObjectFactory.getMockObject("APPLICATION");
+		Application application = (Application) MockObjectFactory
+				.getMockObject("APPLICATION");
 		application.setUser(DatabaseManager.getUser(1));
 		DatabaseManager.insertApplication(application);
 		int tempApplicationId = application.getApplication_id();

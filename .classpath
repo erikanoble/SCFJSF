@@ -123,11 +123,6 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/erikanoble/javaresources/all-hibernate-dependencies/log4j-1.2.17.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="lib" path="/home/erikanoble/javaresources/all-hibernate-dependencies/mysql-connector-java-5.1.23-bin.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
@@ -139,7 +134,20 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="/home/erikanoble/javaresources/slf4j-1.7.5/slf4j-api-1.7.5.jar"/>
-	<classpathentry kind="lib" path="/home/erikanoble/javaresources/slf4j-1.7.5/slf4j-log4j12-1.7.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="/home/erikanoble/javaresources/slf4j-1.7.5/slf4j-api-1.7.5.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/home/erikanoble/javaresources/slf4j-1.7.5/slf4j-log4j12-1.7.5.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/home/erikanoble/javaresources/log4j-1.2.17.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="WebContent/WEB-INF/classes"/>
 </classpath>

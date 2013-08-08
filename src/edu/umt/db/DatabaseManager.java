@@ -9,10 +9,14 @@ import edu.umt.db.Application;
 import edu.umt.db.HibernateSessionFactory;
 import edu.umt.db.User;
 import edu.umt.db.UserType;
-//Talk take 2
+import edu.umt.exceptions.UserInsertException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class DatabaseManager {
+	private static Logger log = LoggerFactory.getLogger(DatabaseManager.class);
+	
 	static Session session;
 	
 	public static UserType getUserType(int usertype_id){
@@ -75,6 +79,7 @@ public class DatabaseManager {
 	
 	public static List<User> getUsers(){
 		List<User> users = null;
+		log.debug("Entering getUsers() method.");
 		try{
 			session = HibernateSessionFactory.currentSession();
 			Query q = session.createQuery(" from User");
@@ -117,12 +122,14 @@ public class DatabaseManager {
 		}
 	}
 	
-	public static void insertUser(User user){
+	public static void insertUser(User user) throws UserInsertException{
 		try{
 			session = HibernateSessionFactory.currentSession();
 			session.save(user);
 		}catch(Exception e){
-			e.printStackTrace();
+			log.error("Failed to insert user: " + user.getLname() + ", " + user.getFname());
+			log.error(e.toString());
+			throw new UserInsertException("Could not insert the user: " + user.getFname() + " " + user.getLname());
 		}finally{
 			session.flush();
 			session.close();

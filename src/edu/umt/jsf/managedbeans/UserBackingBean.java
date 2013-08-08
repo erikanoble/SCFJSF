@@ -14,8 +14,12 @@ import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpServletRequest;
 
 import org.primefaces.event.RowEditEvent;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 public class UserBackingBean {
+	private Logger log = LoggerFactory.getLogger(UserBackingBean.class);
 	private List<User> users;
 	private User user;
 	private User userView;
@@ -135,6 +139,14 @@ public class UserBackingBean {
 		this.usertype = usertype;
 	}
 
+	public Logger getLog() {
+		return log;
+	}
+
+	public void setLog(Logger log) {
+		this.log = log;
+	}
+
 	public String newUserAction() throws UserInsertException {
 		User u = new User();
 		u.setFname(this.fname);
@@ -142,12 +154,23 @@ public class UserBackingBean {
 		u.setSchool(this.school);
 		u.setDepartment(this.department);
 		u.setEmail(this.email);
-		u.setPhone(this.phone);
+		try{
+			u.setPhone(this.phone);
+		}catch(NumberFormatException nfe){
+			log.error("Phone number entered: " + u.getPhone() + " was inalid.");
+			log.error(nfe.toString());
+			throw new UserInsertException("Invalid Phone.");
+		}
+		
 		u.setNetid(this.netid);
 		u.setUsertype(DatabaseManager.getUserType(this.usertype));
 		try {
+			log.debug("Attempting to insert new user.");
 			DatabaseManager.insertUser(u);
-		} catch (Exception e) {
+		} catch (UserInsertException uie) {
+			log.error(uie.toString());
+			return "new-user";
+		}catch(Exception e){
 			e.printStackTrace();
 		}
 		return "new-user-created";
