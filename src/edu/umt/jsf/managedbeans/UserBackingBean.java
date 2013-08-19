@@ -1,23 +1,23 @@
 package edu.umt.jsf.managedbeans;
 
-import edu.umt.db.*;
-import edu.umt.exceptions.*;
-
-import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.math.BigInteger;
-
-import javax.faces.application.FacesMessage;
-import javax.faces.context.FacesContext;
-import javax.servlet.http.HttpServletRequest;
-
+import edu.umt.db.DatabaseManager;
+import edu.umt.db.User;
+import edu.umt.exceptions.UserDeleteException;
+import edu.umt.exceptions.UserDetailsException;
+import edu.umt.exceptions.UserInsertException;
+import edu.umt.exceptions.UserUpdateException;
 import org.primefaces.event.RowEditEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
+import javax.servlet.http.HttpServletRequest;
+import java.math.BigInteger;
+import java.util.List;
 
+
+@SuppressWarnings("FieldCanBeLocal")
 public class UserBackingBean {
 	private Logger log = LoggerFactory.getLogger(UserBackingBean.class);
 	private List<User> users;
@@ -180,7 +180,7 @@ public class UserBackingBean {
 		try {
 			DatabaseManager.updateUser(userView);
 		} catch (Exception e) {
-
+                    e.printStackTrace();
 		}
 
 		return "user-updated";

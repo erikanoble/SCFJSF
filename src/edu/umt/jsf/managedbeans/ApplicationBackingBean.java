@@ -1,20 +1,34 @@
 package edu.umt.jsf.managedbeans;
 
-import edu.umt.db.*;
-import edu.umt.exceptions.*;
+import edu.umt.db.Application;
+import edu.umt.db.DatabaseManager;
+import edu.umt.exceptions.ApplicationDeleteException;
+import edu.umt.exceptions.ApplicationDetailsException;
+import edu.umt.exceptions.ApplicationInsertException;
+import edu.umt.exceptions.ApplicationUpdateException;
+import org.apache.log4j.Logger;
+import org.primefaces.event.FileUploadEvent;
+import org.primefaces.model.UploadedFile;
 
-import java.util.List;
-
+import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
-import javax.faces.model.SelectItem;
 import javax.servlet.http.HttpServletRequest;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.List;
+
+//new to test
 //import org.slf4j.LoggerFactory;
 //import org.slf4j.Logger;
-import org.apache.log4j.*;
 
+@SuppressWarnings("FieldCanBeLocal")
 public class ApplicationBackingBean {
-//	private Logger log = LoggerFactory.getLogger(ApplicationBackingBean.class);
+	// private Logger log =
+	// LoggerFactory.getLogger(ApplicationBackingBean.class);
 	private Logger log = Logger.getLogger(ApplicationBackingBean.class);
 
 	private List<Application> applications;
@@ -35,6 +49,9 @@ public class ApplicationBackingBean {
 	private String pilot_summary;
 	private int user;
 
+	private String destination="/home/erikanoble/Desktop/";
+	
+	
 	public List<Application> getApplications() {
 		return DatabaseManager.getApplications();
 	}
@@ -171,6 +188,7 @@ public class ApplicationBackingBean {
 		this.user = user;
 	}
 
+
 	// TODO: find out why this is duplicating!!!
 	public String newApplicationAction() throws ApplicationInsertException {
 
@@ -199,7 +217,7 @@ public class ApplicationBackingBean {
 		return "list-applications";
 
 	}
-	
+
 	public String updateApplicationAction() throws ApplicationUpdateException {
 		log.debug("I'm working here...");
 		try {
@@ -209,10 +227,11 @@ public class ApplicationBackingBean {
 		}
 		log.debug("I returned the applications");
 		return "application-updated";
-		
+
 	}
 
-	public String deleteApplicationAction(Application a) throws ApplicationDeleteException {
+	public String deleteApplicationAction(Application a)
+			throws ApplicationDeleteException {
 		DatabaseManager.deleteApplication(a);
 		return null;
 	}
@@ -221,12 +240,45 @@ public class ApplicationBackingBean {
 		HttpServletRequest request = (HttpServletRequest) FacesContext
 				.getCurrentInstance().getExternalContext().getRequest();
 		try {
-			applicationView = DatabaseManager.getApplication(new Integer(request
-					.getParameter("appId")));
+			applicationView = DatabaseManager.getApplication(new Integer(
+					request.getParameter("appId")));
 		} catch (Exception e) {
 			if (applicationView == null)
-				throw new ApplicationDetailsException("Could not retrieve application.");
+				throw new ApplicationDetailsException(
+						"Could not retrieve application.");
 		}
 		return "application-details";
 	}
+
+	
+	
+	
+	public void applicationFileUploadAction(FileUploadEvent event){
+		FacesMessage msg = new FacesMessage("Successful", event.getFile().getFileName() + " is uploaded.");
+		FacesContext.getCurrentInstance().addMessage(null, msg);
+	}
+	
+	public void applicationCopyFileAction(String fileName, InputStream in){
+		try{
+			//write the inputStream to a FileOutputStream
+			
+			OutputStream out = new FileOutputStream(new File(destination + fileName));
+			
+			int read = 0;
+			byte[] bytes= new byte[1024];
+			
+			while ((read = in.read(bytes)) != -1){
+				out.write(bytes, 0, read);
+			}
+			
+			in.close();
+			out.flush();
+			out.close();
+			
+			System.out.println("New File Created!");
+		}catch (IOException e){
+			System.out.println(e.getMessage());
+		}
+	}
+
 }

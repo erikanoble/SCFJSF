@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui">
 
 <h:head>Create New Application</h:head>
 <h:body>
 	<f:view>
 		<h:form id="newapplicationform">
+			<p:messages showDetail="true" />
 			<p:panelGrid id="panelGrid" columns="3">
 				<f:facet name="header">
 					<h:panelGroup>New Application</h:panelGroup>
@@ -53,11 +53,12 @@
 					for="equipment_description" />
 
 				<h:outputLabel id="use_descriptionLabel"
-					value="Use of Equipment Description:" for="use_description" />
+					value="Use of Equipment Description: (if there is a quote, please provide a brief description and attach quote)"
+					for="use_description" />
 				<p:inputTextarea id="use_description"
 					value="#{applicationBackingBean.use_description}" required="true" />
-				<p:message id="use_descriptionRequiredMessage" for="use_description" />
-
+				<p:message id="use_descriptionRequredMessage" for="use_description"/>
+				
 				<h:outputLabel id="maintenance_responsibilityLabel"
 					value="Maintenance Responsibility:"
 					for="maintenance_responsibility" />
@@ -102,6 +103,19 @@
 					action="#{applicationBackingBean.newApplicationAction}"
 					ajax="false" value="Create Application" />
 			</p:panelGrid>
+		</h:form>
+	</f:view>
+	
+	
+	<f:view>
+		<h:form>
+			<h:outputLabel id="uploaderLabel" value="Please attatch a quote: " />
+			<p:fileUpload
+				fileUploadListener="#{applicationBackingBean.applicationFileUploadAction}"
+				mode="advanced" dragDropSupport="false" update="messages"
+				sizeLimit="100000000" fileLimit="3"
+				allowTypes="/(\.|\/)(gif|jpe?g|png)$/)" />
+			<p:growl id="messages" showDetail="true" />
 		</h:form>
 	</f:view>
 </h:body>

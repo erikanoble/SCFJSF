@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Set;
 import java.math.BigInteger;
 
+@SuppressWarnings("FieldCanBeLocal")
 public class User {
 	private int user_id;
 	private String fname;
