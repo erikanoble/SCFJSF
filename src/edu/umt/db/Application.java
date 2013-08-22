@@ -7,6 +7,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Set;
+
+import org.primefaces.model.UploadedFile;
+
 import edu.umt.jsf.converters.*;
 
 public class Application {
@@ -28,6 +31,11 @@ public class Application {
 	private Double approvedAmount;
 	private Timestamp created;
 	private String createdAsString;
+	
+	//NEW
+	private UploadedFile file;
+	private String destination = "/home/erikanoble/Desktop/";
+	
 	
 	public Application(){
 		approvedAmount = new Double(0);
@@ -140,6 +148,18 @@ public class Application {
 	public void setCreatedAsString(String createdAsString) {
 		//TODO: get this converted so that it can send data to database
 		this.createdAsString = createdAsString;
+	}
+	public UploadedFile getFile() {
+		return file;
+	}
+	public void setFile(UploadedFile file) {
+		this.file = file;
+	}
+	public String getDestination() {
+		return destination;
+	}
+	public void setDestination(String destination) {
+		this.destination = destination;
 	}
 	
 	

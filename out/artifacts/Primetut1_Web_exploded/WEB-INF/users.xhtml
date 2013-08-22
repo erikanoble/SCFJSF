@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<h:body>
+	<f:view>
+		<h:form>
+		<!--  Temporary so that we can quickly navigate to new User -->
+			<p:commandButton value="Create User" url="/newuser.xhtml" action="#{indexBackingBean.addUsersAction}" />
+
+			<p:growl id="growl" showDetail="true" />
+			<p:dataTable id="users" var="record" value="#{userBackingBean.users}"
+				editable="true">
+
+				<p:ajax event="rowEdit" listener="#{userBackingBean.onEdit}" />
+				<p:ajax event="rowEditCancel" listener="#{userBackingBean.onCancel}" />
+
+				<p:column headerText="User ID:">
+					<h:commandLink id="userIdLink" value="#{record.user_id}"
+						action="#{userBackingBean.userDetailAction}">
+						<f:param name="userId" value="#{record.user_id}" />
+					</h:commandLink>
+				</p:column>
+
+				<p:column headerText="First Name:">
+					<p:cellEditor>
+						<f:facet name="output">
+							<h:outputText value="#{record.fname}" />
+						</f:facet>
+						<f:facet name="input">
+							<p:inputText value="#{record.fname}" style="width:100%"
+								label="First Name" />
+						</f:facet>
+					</p:cellEditor>
+				</p:column>
+
+				<p:column headerText="Last Name:">
+					<p:cellEditor>
+						<f:facet name="output">
+							<h:outputText value="#{record.lname}" />
+						</f:facet>
+						<f:facet name="input">
+							<p:inputText value="#{record.lname}" style="width:100%"
+								label="Last Name" />
+						</f:facet>
+					</p:cellEditor>
+				</p:column>
+
+				<p:column headerText="Department:">
+					<p:cellEditor>
+						<f:facet name="output">
+							<h:outputText value="#{record.department}" />
+						</f:facet>
+						<f:facet name="input">
+							<p:inputText value="#{record.department}" style="width:100%"
+								label="Department" />
+						</f:facet>
+					</p:cellEditor>
+				</p:column>
+
+				<p:column headerText="Email:">
+					<p:cellEditor>
+						<f:facet name="output">
+							<h:outputText value="#{record.email}" />
+						</f:facet>
+						<f:facet name="input">
+							<p:inputText value="#{record.email}" style="width:100%"
+								label="Email" />
+						</f:facet>
+					</p:cellEditor>
+				</p:column>
+
+				<p:column headerText="Phone:">
+					<p:cellEditor>
+						<f:facet name="output">
+							<h:outputText value="#{record.phone}" />
+						</f:facet>
+						<f:facet name="input">
+							<p:inputMask value="#{record.phoneAsString}" style="width:100%"
+								label="Phone" mask="(999) 999-9999" />
+						</f:facet>
+					</p:cellEditor>
+				</p:column>
+
+				<p:column style="width:6%">
+					<p:rowEditor />
+				</p:column>
+
+
+			</p:dataTable>
+		</h:form>
+	</f:view>
+</h:body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<h:body>
+	<f:view>
+		<h:form id="applicationform">
+			<p:dashboard id="appdash"
+				model="#{applicationDetailBackingBean.model}" />
+			<p:panel id="appDetailsPanelGrid" header="Application Details">
+				<h:panelGrid columns="2">
+
+					<h:outputLabel value="Applicant First Name:" />
+					<p:inputText readonly="true"
+						value="#{applicationBackingBean.applicationView.user.fname}" />
+
+					<h:outputLabel value="Applicant Last Name:" />
+					<p:inputText readonly="true"
+						value="#{applicationBackingBean.applicationView.user.lname}" />
+
+					<h:outputLabel value="Applicant School/Office:" />
+					<p:inputText readonly="true"
+						value="#{applicationBackingBean.applicationView.user.school}" />
+
+					<h:outputLabel value="Department:" />
+					<p:inputText readonly="true"
+						value="#{applicationBackingBean.applicationView.user.department}" />
+
+					<h:outputLabel value="Application Number:" />
+					<p:inputText readonly="true"
+						value="#{applicationBackingBean.applicationView.application_id}" />
+
+					<h:outputLabel value="Description:" />
+					<p:inputText
+						value="#{applicationBackingBean.applicationView.equipment_description}" />
+
+					<h:outputLabel value="Requested Amount:" />
+					<p:inputText
+						value="#{applicationBackingBean.applicationView.request_amount}" />
+
+					<h:outputLabel value="Index:" />
+					<p:inputText
+						value="#{applicationBackingBean.applicationView.index_charge}" />
+
+					<h:outputLabel value="Available Balance:" />
+					<p:inputText
+						value="#{applicationBackingBean.applicationView.balance}" />
+
+					<h:outputLabel value="Outside Funds Provided:" />
+					<p:inputText
+						value="#{applicationBackingBean.applicationView.outside_funds}" />
+
+					<h:outputLabel value="Description of use:" />
+					<p:inputTextarea
+						value="#{applicationBackingBean.applicationView.use_description}" />
+
+					<h:outputLabel value="Maintenance Responsibility:" />
+					<p:inputText
+						value="#{applicationBackingBean.applicationView.maintenance_responsibility}" />
+
+					<h:outputLabel value="New Connections:" />
+					<p:inputText
+						value="#{applicationBackingBean.applicationView.new_connections}" />
+
+					<h:outputLabel value="Is Pilot?:" />
+					<p:inputText
+						value="#{applicationBackingBean.applicationView.pilot}" />
+
+					<p:commandButton value="Submit Application"
+						action="#{applicationBackingBean.updateApplicationAction}" />
+				</h:panelGrid>
+			</p:panel>
+
+		</h:form>
+	</f:view>
+</h:body>
+</html>

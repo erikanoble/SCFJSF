@@ -8,17 +8,15 @@ import edu.umt.exceptions.ApplicationInsertException;
 import edu.umt.exceptions.ApplicationUpdateException;
 import org.apache.log4j.Logger;
 import org.primefaces.event.FileUploadEvent;
-import org.primefaces.model.UploadedFile;
 
 import javax.faces.application.FacesMessage;
+import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpServletRequest;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.util.List;
 
 //new to test
@@ -49,9 +47,22 @@ public class ApplicationBackingBean {
 	private String pilot_summary;
 	private int user;
 
-	private String destination="/home/erikanoble/Desktop/";
-	
-	
+	private static final int BUFFER_SIZE = 6124;
+
+    public String getFolderToUpload() {
+        return folderToUpload;
+    }
+
+    public void setFolderToUpload(String folderToUpload) {
+        this.folderToUpload = folderToUpload;
+    }
+
+    public static int getBufferSize() {
+        return BUFFER_SIZE;
+    }
+
+    private String folderToUpload;
+
 	public List<Application> getApplications() {
 		return DatabaseManager.getApplications();
 	}
@@ -189,6 +200,7 @@ public class ApplicationBackingBean {
 	}
 
 
+
 	// TODO: find out why this is duplicating!!!
 	public String newApplicationAction() throws ApplicationInsertException {
 
@@ -205,6 +217,7 @@ public class ApplicationBackingBean {
 		a.setPilot(this.pilot);
 		a.setPilot_summary(this.pilot_summary);
 		a.setUser(DatabaseManager.getUser(this.user));
+
 
 		try {
 			DatabaseManager.insertApplication(a);
@@ -250,35 +263,72 @@ public class ApplicationBackingBean {
 		return "application-details";
 	}
 
-	
-	
-	
-	public void applicationFileUploadAction(FileUploadEvent event){
-		FacesMessage msg = new FacesMessage("Successful", event.getFile().getFileName() + " is uploaded.");
-		FacesContext.getCurrentInstance().addMessage(null, msg);
-	}
-	
-	public void applicationCopyFileAction(String fileName, InputStream in){
-		try{
-			//write the inputStream to a FileOutputStream
-			
-			OutputStream out = new FileOutputStream(new File(destination + fileName));
-			
-			int read = 0;
-			byte[] bytes= new byte[1024];
-			
-			while ((read = in.read(bytes)) != -1){
-				out.write(bytes, 0, read);
-			}
-			
-			in.close();
-			out.flush();
-			out.close();
-			
-			System.out.println("New File Created!");
-		}catch (IOException e){
-			System.out.println(e.getMessage());
-		}
-	}
+
+    public void applicationFileUploadAction(FileUploadEvent event){
+        ExternalContext extContext = FacesContext.getCurrentInstance().getExternalContext();
+        File result = new File(extContext.getRealPath("/home/erikanoble/" + event.getFile().getFileName()));
+        System.out.println(extContext.getRealPath("/home/erikanoble/" + event.getFile().getFileName()));
+
+        try{
+            FileOutputStream fileOutputStream= new FileOutputStream(result);
+
+            byte[] buffer = new byte [BUFFER_SIZE];
+
+            int bulk;
+            InputStream inputStream = event.getFile().getInputstream();
+            while(true){
+                bulk = inputStream.read(buffer);
+                if(bulk<0){
+                    break;
+                }
+                fileOutputStream.write(buffer, 0, bulk);
+                fileOutputStream.flush();
+            }
+            fileOutputStream.close();
+            inputStream.close();
+
+            FacesMessage msg = new FacesMessage("File Description", "file name: " + event.getFile().getFileName() + "file size: " + event.getFile().getSize() /1024 + "Kb content type: " + event.getFile().getContentType() + "The File was Uploaded.");
+            FacesContext.getCurrentInstance().addMessage(null, msg);
+        }catch (IOException e){
+            e.printStackTrace();
+
+            FacesMessage error = new FacesMessage(FacesMessage.SEVERITY_ERROR, "The Files were not uploaded!", "");
+            FacesContext.getCurrentInstance().addMessage(null, error);
+        }
+
+    }
+
+
+//	// TODO: Make upload...
+//	public void applicationFileUploadAction(FileUploadEvent event) {
+//		FacesMessage msg = new FacesMessage("Successful", event.getFile()
+//				.getFileName() + " is uploaded.");
+//		FacesContext.getCurrentInstance().addMessage(null, msg);
+//	}
+//
+//	// // TODO: this is to turn it into a byte to store on the database....figure it out
+//	public void applicationCopyFileAction(String fileName, InputStream in) {
+//		try {
+//            /* write the inputStream to a FileOutputStream */
+//
+//			OutputStream out = new FileOutputStream(new File(destination
+//					+ fileName));
+//
+//			int read = 0;
+//			byte[] bytes = new byte[(int) getFile().getSize()];
+//
+//			while ((read = in.read(bytes)) != -1) {
+//				out.write(bytes, 0, read);
+//			}
+//
+//			in.close();
+//			out.flush();
+//			out.close();
+//
+//			System.out.println("New File Created!");
+//		} catch (IOException e) {
+//			System.out.println(e.getMessage());
+//		}
+//	}
 
 }

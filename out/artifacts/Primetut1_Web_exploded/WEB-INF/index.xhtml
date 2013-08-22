@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>Go to your Destination</h:head> 
+<h:body styleClass="body"> 
+	<f:view>
+		<h:form>
+			<p:tabMenu activeIndex="0">
+			<p:menuitem value="List User-Types" url="/usertypes.xhtml" icon="ui-icon-search" action="#{indexBackingBean.listUserTypesAction}"/>
+			<p:menuitem value="List Users" url="/users.xhtml" icon="ui-icon-search" action="#{indexBackingBean.listUsersAction}"/>
+			<p:menuitem value="List Applications" url="/applications.xhtml" icon="ui-icon-search" action="#{indexBackingBean.listApplicationsAction}"/>
+			<p:menuitem value="Create User-Types" url="/newusertype.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addUserTypesAction}"/>
+			<p:menuitem value="Create User" url="/newuser.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addUsersAction}" />
+			<p:menuitem value="Create Application" url="/newapplication.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addApplicationsAction}"/>
+			</p:tabMenu>
+
+		</h:form>
+	</f:view>
+</h:body> 
+</html>
