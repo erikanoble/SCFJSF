@@ -2,21 +2,24 @@ package edu.umt.jsf.managedbeans;
 
 import edu.umt.db.Application;
 import edu.umt.db.DatabaseManager;
+import edu.umt.db.User;
 import edu.umt.exceptions.ApplicationDeleteException;
 import edu.umt.exceptions.ApplicationDetailsException;
 import edu.umt.exceptions.ApplicationInsertException;
 import edu.umt.exceptions.ApplicationUpdateException;
 import org.apache.log4j.Logger;
 import org.primefaces.event.FileUploadEvent;
+import org.primefaces.model.UploadedFile;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
+import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
-import java.io.File;
-import java.io.FileOutputStream;
+import javax.servlet.http.HttpServletResponse;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.List;
 
 //new to test
@@ -45,25 +48,21 @@ public class ApplicationBackingBean {
 	private String provided_by;
 	private String pilot;
 	private String pilot_summary;
+    private User approvedUser;
 	private int user;
+    private byte[] attachment;
+    private UploadedFile file;
 
-	private static final int BUFFER_SIZE = 6124;
 
-    public String getFolderToUpload() {
-        return folderToUpload;
+    public User getApprovedUser() {
+        return approvedUser;
     }
 
-    public void setFolderToUpload(String folderToUpload) {
-        this.folderToUpload = folderToUpload;
+    public void setApprovedUser(User approvedUser) {
+        this.approvedUser = approvedUser;
     }
 
-    public static int getBufferSize() {
-        return BUFFER_SIZE;
-    }
-
-    private String folderToUpload;
-
-	public List<Application> getApplications() {
+    public List<Application> getApplications() {
 		return DatabaseManager.getApplications();
 	}
 
@@ -199,9 +198,23 @@ public class ApplicationBackingBean {
 		this.user = user;
 	}
 
+    public byte[] getAttachment() {
+        return attachment;
+    }
 
+    public void setAttachment(byte[] attachment) {
+        this.attachment = attachment;
+    }
 
-	// TODO: find out why this is duplicating!!!
+    public UploadedFile getFile() {
+        return file;
+    }
+
+    public void setFile(UploadedFile file) {
+        this.file = file;
+    }
+
+    // TODO: find out why this is duplicating!!!
 	public String newApplicationAction() throws ApplicationInsertException {
 
 		Application a = new Application();
@@ -217,7 +230,9 @@ public class ApplicationBackingBean {
 		a.setPilot(this.pilot);
 		a.setPilot_summary(this.pilot_summary);
 		a.setUser(DatabaseManager.getUser(this.user));
-
+        if(attachment !=null){
+            a.setAttachment(this.attachment);
+        }
 
 		try {
 			DatabaseManager.insertApplication(a);
@@ -264,71 +279,58 @@ public class ApplicationBackingBean {
 	}
 
 
-    public void applicationFileUploadAction(FileUploadEvent event){
-        ExternalContext extContext = FacesContext.getCurrentInstance().getExternalContext();
-        File result = new File(extContext.getRealPath("/home/erikanoble/" + event.getFile().getFileName()));
-        System.out.println(extContext.getRealPath("/home/erikanoble/" + event.getFile().getFileName()));
 
+
+	public void applicationFileUploadAction(FileUploadEvent event) {
+		FacesMessage msg = new FacesMessage("Successful", event.getFile()
+				.getFileName() + " is uploaded.");
+		FacesContext.getCurrentInstance().addMessage(null, msg);
+	}
+
+    public void viewFileAction(){
         try{
-            FileOutputStream fileOutputStream= new FileOutputStream(result);
+            ByteArrayOutputStream baosPDF = new ByteArrayOutputStream();
 
-            byte[] buffer = new byte [BUFFER_SIZE];
+            if (applicationView.getAttachment()!=null){
+                baosPDF.write(applicationView.getAttachment());
 
-            int bulk;
-            InputStream inputStream = event.getFile().getInputstream();
-            while(true){
-                bulk = inputStream.read(buffer);
-                if(bulk<0){
-                    break;
-                }
-                fileOutputStream.write(buffer, 0, bulk);
-                fileOutputStream.flush();
+                HttpServletResponse response = (HttpServletResponse)FacesContext.getCurrentInstance().getExternalContext().getResponse();
+                response.setContentType("application/pdf");
+                response.setHeader("Content-disposition", "attachment; filename=tempPDF.pdf");
+                response.setHeader("Cache-Control", "no-cache");
+                response.setContentLength(baosPDF.size());
+                response.setHeader("Pragma", "public");
+
+                ServletOutputStream sos;
+                sos = response.getOutputStream();
+                baosPDF.writeTo(sos);
+                sos.flush();
+
+                FacesContext.getCurrentInstance().responseComplete();
+
+            } else{
+                FacesContext.getCurrentInstance().responseComplete();
             }
-            fileOutputStream.close();
-            inputStream.close();
-
-            FacesMessage msg = new FacesMessage("File Description", "file name: " + event.getFile().getFileName() + "file size: " + event.getFile().getSize() /1024 + "Kb content type: " + event.getFile().getContentType() + "The File was Uploaded.");
-            FacesContext.getCurrentInstance().addMessage(null, msg);
-        }catch (IOException e){
-            e.printStackTrace();
-
-            FacesMessage error = new FacesMessage(FacesMessage.SEVERITY_ERROR, "The Files were not uploaded!", "");
-            FacesContext.getCurrentInstance().addMessage(null, error);
+        } catch (IOException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
-
     }
 
+    public void viewAttachment() throws IOException{
+        ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
+        ByteArrayOutputStream baosPDF = new ByteArrayOutputStream();
 
-//	// TODO: Make upload...
-//	public void applicationFileUploadAction(FileUploadEvent event) {
-//		FacesMessage msg = new FacesMessage("Successful", event.getFile()
-//				.getFileName() + " is uploaded.");
-//		FacesContext.getCurrentInstance().addMessage(null, msg);
-//	}
-//
-//	// // TODO: this is to turn it into a byte to store on the database....figure it out
-//	public void applicationCopyFileAction(String fileName, InputStream in) {
-//		try {
-//            /* write the inputStream to a FileOutputStream */
-//
-//			OutputStream out = new FileOutputStream(new File(destination
-//					+ fileName));
-//
-//			int read = 0;
-//			byte[] bytes = new byte[(int) getFile().getSize()];
-//
-//			while ((read = in.read(bytes)) != -1) {
-//				out.write(bytes, 0, read);
-//			}
-//
-//			in.close();
-//			out.flush();
-//			out.close();
-//
-//			System.out.println("New File Created!");
-//		} catch (IOException e) {
-//			System.out.println(e.getMessage());
-//		}
-//	}
+        if(applicationView.getAttachment()!=null) baosPDF.write(applicationView.getAttachment());
+        ec.responseReset();
+        ec.setResponseContentType("application/pdf");
+        ec.setResponseContentLength(baosPDF.size());
+        ec.addResponseHeader("Content-Disposition", "inline; filename=tempPDF.pdf");
+
+        OutputStream output = ec.getResponseOutputStream();
+        baosPDF.writeTo(output);
+
+        FacesContext.getCurrentInstance().responseComplete();
+
+    }
 
 }

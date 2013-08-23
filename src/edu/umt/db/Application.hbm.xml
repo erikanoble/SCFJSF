@@ -22,8 +22,7 @@
 		<property name="approvedAmount" column="approved_amount"
 			type="double" />
 		<property name="approved" column="approved" type="int" />
-
-
+        <property name="attachment" type="binary" column="attachment"/>
 		<many-to-one name="user" class="edu.umt.db.User" fetch="select"
 			lazy="false">
 			<column name="user_id" />

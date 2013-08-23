@@ -1,16 +1,9 @@
 package edu.umt.db;
 
 
-import java.sql.Timestamp;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Set;
-
 import org.primefaces.model.UploadedFile;
 
-import edu.umt.jsf.converters.*;
+import java.sql.Timestamp;
 
 public class Application {
 	private int application_id;
@@ -31,6 +24,8 @@ public class Application {
 	private Double approvedAmount;
 	private Timestamp created;
 	private String createdAsString;
+    private byte[] attachment;
+
 	
 	//NEW
 	private UploadedFile file;
@@ -161,8 +156,13 @@ public class Application {
 	public void setDestination(String destination) {
 		this.destination = destination;
 	}
-	
-	
-	
+
+    public byte[] getAttachment() {
+        return attachment;
+    }
+
+    public void setAttachment(byte[] attachment) {
+        this.attachment = attachment;
+    }
 }
 
