@@ -102,17 +102,22 @@
 				<h:outputLabel id="uploaderLabel" value="Please attatch a quote: " />
 
 			</p:panelGrid>
-			<p:fileUpload
-				fileUploadListener="#{applicationBackingBean.applicationFileUploadAction}"
-				mode="advanced" dragDropSupport="false" multple="true"
-				update="messages" sizeLimit="2000000"
-				allowTypes="/(\.|\/)(gif|jpe?g|png)$/" />
+
+
+
+            <p:fileUpload
+				fileUploadListener="#{applicationBackingBean.uploadFile}"
+				    mode="advanced"
+                    auto="false"
+                    update="messages"
+                    allowTypes="/(\.|\/)(pdf)$/"
+                    fileLimit="1"/>
+
 			<p:growl id="messages" showDetail="true" />
 
 			<br />
 			<p:commandButton id="uButton"
-				actionListener="#{applicationBackingBean.newApplicationAction}"
-				action="#{applicationBackingBean.newApplicationAction}" ajax="false"
+				action="#{applicationBackingBean.newApplicationAction}"
 				value="Create Application" />
 		</h:form>
 	</f:view>

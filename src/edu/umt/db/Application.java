@@ -1,7 +1,6 @@
 package edu.umt.db;
 
 
-import org.primefaces.model.UploadedFile;
 
 import java.sql.Timestamp;
 
@@ -26,10 +25,6 @@ public class Application {
 	private String createdAsString;
     private byte[] attachment;
 
-	
-	//NEW
-	private UploadedFile file;
-	private String destination = "/home/erikanoble/Desktop/";
 	
 	
 	public Application(){
@@ -144,18 +139,7 @@ public class Application {
 		//TODO: get this converted so that it can send data to database
 		this.createdAsString = createdAsString;
 	}
-	public UploadedFile getFile() {
-		return file;
-	}
-	public void setFile(UploadedFile file) {
-		this.file = file;
-	}
-	public String getDestination() {
-		return destination;
-	}
-	public void setDestination(String destination) {
-		this.destination = destination;
-	}
+
 
     public byte[] getAttachment() {
         return attachment;

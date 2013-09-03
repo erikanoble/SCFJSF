@@ -49,7 +49,8 @@ public class ApplicationBackingBean {
 	private String pilot;
 	private String pilot_summary;
     private User approvedUser;
-	private int user;
+	private int userID;
+    private User user;
     private byte[] attachment;
     private UploadedFile file;
 
@@ -190,13 +191,21 @@ public class ApplicationBackingBean {
 		this.pilot_summary = pilot_summary;
 	}
 
-	public int getUser() {
-		return user;
-	}
+    public int getUserID() {
+        return userID;
+    }
 
-	public void setUser(int user) {
-		this.user = user;
-	}
+    public void setUserID(int userID) {
+        this.userID = userID;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 
     public byte[] getAttachment() {
         return attachment;
@@ -214,7 +223,7 @@ public class ApplicationBackingBean {
         this.file = file;
     }
 
-    // TODO: find out why this is duplicating!!!
+
 	public String newApplicationAction() throws ApplicationInsertException {
 
 		Application a = new Application();
@@ -229,7 +238,7 @@ public class ApplicationBackingBean {
 		a.setProvided_by(this.provided_by);
 		a.setPilot(this.pilot);
 		a.setPilot_summary(this.pilot_summary);
-		a.setUser(DatabaseManager.getUser(this.user));
+		a.setUser(DatabaseManager.getUser(this.userID));
         if(attachment !=null){
             a.setAttachment(this.attachment);
         }
@@ -281,10 +290,11 @@ public class ApplicationBackingBean {
 
 
 
-	public void applicationFileUploadAction(FileUploadEvent event) {
+	public void uploadFile(FileUploadEvent event) {
 		FacesMessage msg = new FacesMessage("Successful", event.getFile()
 				.getFileName() + " is uploaded.");
 		FacesContext.getCurrentInstance().addMessage(null, msg);
+        this.attachment = event.getFile().getContents();
 	}
 
     public void viewFileAction(){

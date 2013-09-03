@@ -24,6 +24,10 @@
 		<property name="approved" column="approved" type="int" />
 
 
+
+        <property name="attachment" type="binary" >
+        <column name="attachment"/>
+        </property>
 		<many-to-one name="user" class="edu.umt.db.User" fetch="select"
 			lazy="false">
 			<column name="user_id" />
