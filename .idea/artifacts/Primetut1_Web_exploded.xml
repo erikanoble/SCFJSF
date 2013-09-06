@@ -20,7 +20,6 @@
           <element id="library" level="module" name="commons-collections-3.1.jar" module-name="Primetut1" />
           <element id="library" level="module" name="commons-digester-1.6.jar" module-name="Primetut1" />
           <element id="library" level="module" name="commons-el-1.0.jar" module-name="Primetut1" />
-          <element id="library" level="module" name="commons-io-1.2.jar" module-name="Primetut1" />
           <element id="library" level="module" name="commons-lang-2.3.jar" module-name="Primetut1" />
           <element id="library" level="module" name="commons-logging-1.0.4.jar" module-name="Primetut1" />
           <element id="library" level="module" name="dom4j.jar" module-name="Primetut1" />

@@ -207,13 +207,6 @@ public class ApplicationBackingBean {
         this.user = user;
     }
 
-    public byte[] getAttachment() {
-        return attachment;
-    }
-
-    public void setAttachment(byte[] attachment) {
-        this.attachment = attachment;
-    }
 
     public UploadedFile getFile() {
         return file;
@@ -223,6 +216,13 @@ public class ApplicationBackingBean {
         this.file = file;
     }
 
+    public byte[] getAttachment(){
+        return attachment;
+    }
+
+    public void setAttachment(byte[] attachment){
+        this.attachment = attachment;
+    }
 
 	public String newApplicationAction() throws ApplicationInsertException {
 
@@ -239,7 +239,7 @@ public class ApplicationBackingBean {
 		a.setPilot(this.pilot);
 		a.setPilot_summary(this.pilot_summary);
 		a.setUser(DatabaseManager.getUser(this.userID));
-        if(attachment !=null){
+        if(attachment != null){
             a.setAttachment(this.attachment);
         }
 
@@ -296,6 +296,8 @@ public class ApplicationBackingBean {
 		FacesContext.getCurrentInstance().addMessage(null, msg);
         this.attachment = event.getFile().getContents();
 	}
+
+
 
     public void viewFileAction(){
         try{
