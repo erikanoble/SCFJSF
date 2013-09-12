@@ -21,7 +21,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.List;
-
 //new to test
 //import org.slf4j.LoggerFactory;
 //import org.slf4j.Logger;
@@ -207,6 +206,13 @@ public class ApplicationBackingBean {
         this.user = user;
     }
 
+    public byte[] getAttachment() {
+        return attachment;
+    }
+
+    public void setAttachment(byte[] attachment) {
+        this.attachment = attachment;
+    }
 
     public UploadedFile getFile() {
         return file;
@@ -216,15 +222,7 @@ public class ApplicationBackingBean {
         this.file = file;
     }
 
-    public byte[] getAttachment(){
-        return attachment;
-    }
-
-    public void setAttachment(byte[] attachment){
-        this.attachment = attachment;
-    }
-
-	public String newApplicationAction() throws ApplicationInsertException {
+    public String newApplicationAction() throws ApplicationInsertException {
 
 		Application a = new Application();
 		a.setIndex_charge(this.index_charge);
@@ -290,11 +288,13 @@ public class ApplicationBackingBean {
 
 
 
-	public void uploadFile(FileUploadEvent event) {
-		FacesMessage msg = new FacesMessage("Successful", event.getFile()
+	public void handleFileUpload(FileUploadEvent event) {
+        this.attachment = event.getFile().getContents();
+
+        FacesMessage msg = new FacesMessage("Successful", event.getFile()
 				.getFileName() + " is uploaded.");
 		FacesContext.getCurrentInstance().addMessage(null, msg);
-        this.attachment = event.getFile().getContents();
+
 	}
 
 

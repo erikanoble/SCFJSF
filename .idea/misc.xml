@@ -47,6 +47,9 @@
     <entry_points version="2.0" />
   </component>
   <component name="IdProvider" IDEtalkID="041C2196D8DC5CA8FAC7329CD44824EE" />
+  <component name="JsfProjectComponent">
+    <option name="faceletsSupport" value="ENABLED" />
+  </component>
   <component name="ProjectFacetManager">
     <default-configurations>
       <entry facet-type="jsf">

@@ -104,16 +104,10 @@
 
             </p:panelGrid>
 
-
-            <p:fileUpload
-                    fileUploadListener="#{applicationBackingBean.uploadFile}"
-                    mode="advanced"
-                    auto="false"
-                    update="messages"
-                    allowTypes="/(\.|\/)(pdf)$/"
-                    fileLimit="1"/>
-
-            <p:growl id="messages" showDetail="true"/>
+            <p:fileUpload fileUploadListener="#{applicationBackingBean.handleFileUpload}"
+                          update="messages"
+                          fileLimit="1" />
+            <p:growl id="messages" showDetail="true" />
 
             <br/>
             <p:commandButton id="submitButton"
