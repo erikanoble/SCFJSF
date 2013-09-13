@@ -27,15 +27,12 @@ import java.util.List;
 
 @SuppressWarnings("FieldCanBeLocal")
 public class ApplicationBackingBean {
-	// private Logger log =
-	// LoggerFactory.getLogger(ApplicationBackingBean.class);
-	private Logger log = Logger.getLogger(ApplicationBackingBean.class);
 
+	private Logger log = Logger.getLogger(ApplicationBackingBean.class);
 	private List<Application> applications;
 	private int application_id;
 	private Application application;
 	private Application applicationView;
-	private String createdAsString;
 	private String index_charge;
 	private Double balance;
 	private Double request_amount;
@@ -52,6 +49,7 @@ public class ApplicationBackingBean {
     private User user;
     private byte[] attachment;
     private UploadedFile file;
+    private String createdAsString;
 
 
     public User getApprovedUser() {
@@ -225,6 +223,7 @@ public class ApplicationBackingBean {
     public String newApplicationAction() throws ApplicationInsertException {
 
 		Application a = new Application();
+        a.setUser(DatabaseManager.getUser(this.userID));
 		a.setIndex_charge(this.index_charge);
 		a.setBalance(this.balance);
 		a.setRequest_amount(this.request_amount);
@@ -236,7 +235,6 @@ public class ApplicationBackingBean {
 		a.setProvided_by(this.provided_by);
 		a.setPilot(this.pilot);
 		a.setPilot_summary(this.pilot_summary);
-		a.setUser(DatabaseManager.getUser(this.userID));
         if(attachment != null){
             a.setAttachment(this.attachment);
         }
