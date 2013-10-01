@@ -6,6 +6,17 @@
 
 <h:head></h:head>
 <h:body>
+    <h:form>
+        <p:tabMenu activeIndex="0">
+            <p:menuitem value="List User-Types" url="/usertypes.xhtml" icon="ui-icon-search" action="#{indexBackingBean.listUserTypesAction}"/>
+            <p:menuitem value="List Users" url="/users.xhtml" icon="ui-icon-search" action="#{indexBackingBean.listUsersAction}"/>
+            <p:menuitem value="List Applications" url="/applications.xhtml" icon="ui-icon-search" action="#{indexBackingBean.listApplicationsAction}"/>
+            <p:menuitem value="Create User-Types" url="/newusertype.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addUserTypesAction}"/>
+            <p:menuitem value="Create User" url="/newuser.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addUsersAction}" />
+            <p:menuitem value="Create Application" url="/newapplication.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addApplicationsAction}"/>
+        </p:tabMenu>
+
+    </h:form>
 	<h:form>
 		<!-- TODO: Fix this so that hibernate doesn't have an error when deleting -->
 		<!-- This highlights the rows to be selected for deletion. -->
