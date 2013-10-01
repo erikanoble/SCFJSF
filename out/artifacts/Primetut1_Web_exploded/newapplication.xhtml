@@ -28,7 +28,7 @@
                 </f:facet>
 
                 <h:outputLabel id="userLabel" value="Requester:" for="user"/>
-                <h:selectOneMenu id="users" value="#{applicationBackingBean.userID}">
+                <h:selectOneMenu id="users" value="#{applicationBackingBean.userID}" >
                     <f:selectItems id="user" value="#{userBackingBean.users}" var="row"
                                    itemLabel="#{row.netid}" itemValue="#{row.user_id}"/>
                 </h:selectOneMenu>

@@ -14,9 +14,7 @@ import org.primefaces.model.UploadedFile;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
-import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -245,7 +243,6 @@ public class ApplicationBackingBean {
 			e.printStackTrace();
 		}
 
-		log.debug("I'm testing in the new app method");
 
 		return "list-applications";
 
@@ -296,35 +293,6 @@ public class ApplicationBackingBean {
 	}
 
 
-
-    public void viewFileAction(){
-        try{
-            ByteArrayOutputStream baosPDF = new ByteArrayOutputStream();
-
-            if (applicationView.getAttachment()!=null){
-                baosPDF.write(applicationView.getAttachment());
-
-                HttpServletResponse response = (HttpServletResponse)FacesContext.getCurrentInstance().getExternalContext().getResponse();
-                response.setContentType("application/pdf");
-                response.setHeader("Content-disposition", "attachment; filename=tempPDF.pdf");
-                response.setHeader("Cache-Control", "no-cache");
-                response.setContentLength(baosPDF.size());
-                response.setHeader("Pragma", "public");
-
-                ServletOutputStream sos;
-                sos = response.getOutputStream();
-                baosPDF.writeTo(sos);
-                sos.flush();
-
-                FacesContext.getCurrentInstance().responseComplete();
-
-            } else{
-                FacesContext.getCurrentInstance().responseComplete();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
-    }
 
     public void viewAttachment() throws IOException{
         ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
