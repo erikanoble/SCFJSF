@@ -20,11 +20,9 @@
             </p:tabMenu>
 
         </h:form>
-        <h:form id="newapplicationform" enctype="multipart/form-data">
+        <h:form id="newapplicationform" >
             <p:panelGrid id="panelGrid" columns="2">
-                <f:facet name="header">
-                    <h:panelGroup>New Application</h:panelGroup>
-                </f:facet>
+                <f:facet name="header">New Applicaion</f:facet>
 
                 <h:outputLabel id="userLabel" value="Requester:" for="user"/>
                 <h:selectOneMenu id="users" value="#{applicationBackingBean.userID}" >
