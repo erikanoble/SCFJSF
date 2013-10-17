@@ -1,11 +1,11 @@
 package edu.umt.test.mocks;
 
-import java.util.Set;
-
 import edu.umt.db.Application;
+import edu.umt.db.DatabaseManager;
 import edu.umt.db.User;
 import edu.umt.db.UserType;
-import edu.umt.db.DatabaseManager;
+import edu.umt.utils.ApplicationStates;
+
 import java.math.BigInteger;
 
 public class MockObjectFactory {
@@ -72,5 +72,7 @@ public class MockObjectFactory {
 		application.setApprovedUser(dm.getUser(1));
 		application.setApproved(1);
 		application.setApprovedAmount(10.00d);
+        //this is how you will set the states
+        application.setState(ApplicationStates.IN_QUEUE);
 	}
 }

@@ -7,6 +7,7 @@ import edu.umt.exceptions.ApplicationDeleteException;
 import edu.umt.exceptions.ApplicationDetailsException;
 import edu.umt.exceptions.ApplicationInsertException;
 import edu.umt.exceptions.ApplicationUpdateException;
+import edu.umt.utils.ApplicationStates;
 import org.apache.log4j.Logger;
 import org.primefaces.event.FileUploadEvent;
 import org.primefaces.model.UploadedFile;
@@ -236,7 +237,7 @@ public class ApplicationBackingBean {
         if(attachment != null){
             a.setAttachment(this.attachment);
         }
-
+          a.setState(ApplicationStates.APPLIED);
 		try {
 			DatabaseManager.insertApplication(a);
 		} catch (Exception e) {

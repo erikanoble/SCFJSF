@@ -26,6 +26,7 @@
         <property name="attachment" type="binary">
             <column name="attachment"/>
         </property>
+        <property name="state" column="state" type="string"/>
 
         <many-to-one name="user" class="edu.umt.db.User" fetch="select"
                      lazy="false">

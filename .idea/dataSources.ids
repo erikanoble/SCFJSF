@@ -38,6 +38,8 @@
       <column name="approved" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" def="MA=="/>
       <column name="approved_amount" sqlType="DOUBLE" length="22" precision="0" nullable="true" jdbcType="8" def="MA=="/>
       <column name="attachment" sqlType="LONGBLOB" length="2147483647" precision="0" nullable="true" jdbcType="-4"/>
+      <column name="state" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12"/>
+      <column name="modified" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
       <primary-key name="PRIMARY" columns="application_id"/>
       <foreign-key name="FK5CA40550465A3020" columns="user_id" ref-table="user" ref-schema="" ref-catalog="scf_forms" ref-columns="user_id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="fk_application_to_user" columns="user_id" ref-table="user" ref-schema="" ref-catalog="scf_forms" ref-columns="user_id" update-rule="3" delete-rule="3" deferrability="2"/>

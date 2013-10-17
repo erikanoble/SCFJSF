@@ -47,7 +47,9 @@
 
 				
 				<h:outputLabel id="emailLabel" value="Email:" />
-				<p:inputText id="email" value="#{userBackingBean.email}" required="true"/>
+				<p:inputText id="email" value="#{userBackingBean.email}" required="true">
+                        <f:validator validatorID="custom.emailValidator" />
+                </p:inputText>
 
 				
 				<h:outputLabel id="usertypeLabel" value="User Type:" />
@@ -62,6 +64,21 @@
 				<p:commandButton id="uButton" actionListener="#{userBackingBean.newUserAction}" action="#{userBackingBean.newUserAction}" ajax="false" value="Create User" />
 			</p:panelGrid>
 		</h:form>
+
+        <script type="text/javascript">
+            /**
+             * JSF validator
+             */
+            PrimeFaces.validator['custom.emailValidator'] = {
+
+                pattern: /\S+@\S+/,
+
+                validate: function(element, value) {
+                    if(!this.pattern.test(value)){}
+                }
+
+            }
+        </script>
 	</f:view>
 </h:body> 
 </html>
