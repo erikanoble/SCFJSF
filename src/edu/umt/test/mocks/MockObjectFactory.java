@@ -4,7 +4,6 @@ import edu.umt.db.Application;
 import edu.umt.db.DatabaseManager;
 import edu.umt.db.User;
 import edu.umt.db.UserType;
-import edu.umt.utils.ApplicationStates;
 
 import java.math.BigInteger;
 
@@ -73,6 +72,6 @@ public class MockObjectFactory {
 		application.setApproved(1);
 		application.setApprovedAmount(10.00d);
         //this is how you will set the states
-        application.setState(ApplicationStates.IN_QUEUE);
+//        application.setState(ApplicationStates.IN_QUEUE);
 	}
 }

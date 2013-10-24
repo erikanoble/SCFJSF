@@ -1,18 +1,12 @@
 package edu.umt.db;
 
-import java.util.List;
-
+import edu.umt.exceptions.UserInsertException;
 import org.hibernate.Query;
 import org.hibernate.Session;
-
-import edu.umt.db.Application;
-import edu.umt.db.HibernateSessionFactory;
-import edu.umt.db.User;
-import edu.umt.db.UserType;
-import edu.umt.exceptions.UserInsertException;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.List;
 
 public class DatabaseManager {
 	private static Logger log = LoggerFactory.getLogger(DatabaseManager.class);
@@ -76,7 +70,7 @@ public class DatabaseManager {
 		}
 		return userTypes;
 	}
-	
+
 	public static List<User> getUsers(){
 		List<User> users = null;
 		log.debug("Entering getUsers() method.");
@@ -235,4 +229,5 @@ public class DatabaseManager {
 			session.close();
 		}
 	}
+
 }

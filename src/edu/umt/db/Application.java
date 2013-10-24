@@ -25,7 +25,7 @@ public class Application {
 	private Timestamp created;
 	private String createdAsString;
     private byte[] attachment;
-    private ApplicationStates state;
+    private ApplicationStates applicationStates;
 
 
 	
@@ -152,12 +152,12 @@ public class Application {
         this.attachment = attachment;
     }
 
-    public ApplicationStates getState() {
-        return state;
+    public ApplicationStates getApplicationStates() {
+        return applicationStates;
     }
 
-    public void setState(ApplicationStates state) {
-        this.state = state;
+    public void setApplicationStates(ApplicationStates applicationStates) {
+        this.applicationStates = applicationStates;
     }
 }
 

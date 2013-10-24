@@ -50,6 +50,10 @@ public class ApplicationBackingBean {
     private UploadedFile file;
     private String createdAsString;
 
+    //test//
+    private ApplicationStates applicationStates;
+
+
 
     public User getApprovedUser() {
         return approvedUser;
@@ -219,9 +223,18 @@ public class ApplicationBackingBean {
         this.file = file;
     }
 
+    public ApplicationStates getApplicationStates() {
+        return applicationStates;
+    }
+
+    public void setApplicationStates(ApplicationStates applicationStates) {
+        this.applicationStates = applicationStates;
+    }
+
     public String newApplicationAction() throws ApplicationInsertException {
 
 		Application a = new Application();
+
         a.setUser(DatabaseManager.getUser(this.userID));
 		a.setIndex_charge(this.index_charge);
 		a.setBalance(this.balance);
@@ -237,7 +250,7 @@ public class ApplicationBackingBean {
         if(attachment != null){
             a.setAttachment(this.attachment);
         }
-          a.setState(ApplicationStates.APPLIED);
+        a.setApplicationStates(ApplicationStates.APPLIED);
 		try {
 			DatabaseManager.insertApplication(a);
 		} catch (Exception e) {
