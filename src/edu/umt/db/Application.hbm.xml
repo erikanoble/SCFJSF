@@ -26,11 +26,11 @@
         <property name="attachment" type="binary">
             <column name="attachment"/>
         </property>
-  <!--      <property name="applicationStates" column="state">
-                <type name = "edu.umt.utils.ApplicationStates">
-                    <param name = "type">12</param>
-                </type>
-        </property>-->
+        <property name="applicationStates" column="state">
+            <type name = "edu.umt.utils.EnumUserType">
+                <param name="enumClassName">edu.umt.utils.ApplicationStates</param>
+            </type>
+        </property>
 
         <many-to-one name="user" class="edu.umt.db.User" fetch="select"
                      lazy="false">

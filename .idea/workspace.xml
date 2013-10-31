@@ -7,18 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0295b87a-640a-47d0-8db1-a5c8afa6ca50" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/umt/utils/EnumUserType.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/umt/db/Application.hbm.xml" afterPath="$PROJECT_DIR$/src/edu/umt/db/Application.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/umt/db/Application.java" afterPath="$PROJECT_DIR$/src/edu/umt/db/Application.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/ApplicationBackingBean.java" afterPath="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/ApplicationBackingBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/umt/utils/ApplicationStates.java" afterPath="$PROJECT_DIR$/src/edu/umt/utils/ApplicationStates.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/umt/db/DatabaseManager.java" afterPath="$PROJECT_DIR$/src/edu/umt/db/DatabaseManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/umt/test/mocks/MockObjectFactory.java" afterPath="$PROJECT_DIR$/src/edu/umt/test/mocks/MockObjectFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/newuser.xhtml" afterPath="$PROJECT_DIR$/WebContent/newuser.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Primetut1.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1382628611515" ignored="false" />
+    <file path="/Dummy.txt" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1383241448271" ignored="false" />
     <file path="/UserBackingBean.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1376663966737" ignored="false" />
     <file path="/Primetut1.iml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1378503341990" ignored="false" />
     <file path="$PROJECT_DIR$/WebContent/WEB-INF/classes/edu/umt/db/Application.hbm.xml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1376664440989" ignored="false" />
@@ -26,9 +23,9 @@
     <file path="$PROJECT_DIR$/WebContent/WEB-INF/classes/edu/umt/db/UserType.hbm.xml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1376664440989" ignored="false" />
     <file path="$PROJECT_DIR$/../scf/scf.iml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1376669439028" ignored="false" />
     <file path="$PROJECT_DIR$/../scf/src/edu/umt/db/Application.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1376669550060" ignored="false" />
-    <file path="/ApplicationBackingBean.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1382634191048" ignored="false" />
+    <file path="/ApplicationBackingBean.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1383241875136" ignored="false" />
     <file path="/newapplication.xhtml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1380811294873" ignored="false" />
-    <file path="/Application.hbm.xml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1382634247303" ignored="false" />
+    <file path="/Application.hbm.xml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1383087512957" ignored="false" />
     <file path="/Application.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1382634166825" ignored="false" />
     <file path="/FileBlobConverter.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1377294705167" ignored="false" />
     <file path="/applicationdetails.xhtml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1379109523901" ignored="false" />
@@ -36,10 +33,11 @@
     <file path="/web.xml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1378496717532" ignored="false" />
     <file path="/test.xhtml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1379002203467" ignored="false" />
     <file path="/newuser.xhtml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1381426351185" ignored="false" />
-    <file path="/ApplicationStates.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1382632911421" ignored="false" />
+    <file path="/ApplicationStates.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1383087978190" ignored="false" />
     <file path="/HelloWorld.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1381866531534" ignored="false" />
     <file path="/MockObjectFactory.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1381867190779" ignored="false" />
     <file path="/DatabaseManager.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1382471630586" ignored="false" />
+    <file path="/EnhancedUserType.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1383086999808" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +62,7 @@
     <sortChildren value="false" />
   </component>
   <component name="DebuggerManager">
+    <method_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -100,9 +99,24 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/edu/umt/utils/EnumUserType.java" line="65" class="edu.umt.utils.EnumUserType" package="edu.umt.utils">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <method_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -119,10 +133,8 @@
       <file leaf-file-name="ApplicationBackingBean.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/ApplicationBackingBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="225" column="0" selection-start="5179" selection-end="5407" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="256" column="63" selection-start="6318" selection-end="6318" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -130,7 +142,7 @@
       <file leaf-file-name="newuser.xhtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/newuser.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="104" selection-start="2601" selection-end="2601" vertical-scroll-proportion="-24.291666">
+            <state line="49" column="104" selection-start="2601" selection-end="2601" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -139,10 +151,8 @@
       <file leaf-file-name="Application.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/umt/db/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="154" column="48" selection-start="3873" selection-end="3873" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="155" column="23" selection-start="3902" selection-end="3902" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -150,16 +160,61 @@
       <file leaf-file-name="ApplicationStates.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/umt/utils/ApplicationStates.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="36" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
+            <state line="13" column="90" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.hbm.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AbstractEntityPersister.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/javaresources/all-hibernate-dependencies/hibernate.jar!/org/hibernate/persister/entity/AbstractEntityPersister.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="675" column="0" selection-start="39142" selection-end="39142" vertical-scroll-proportion="-22.56">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Enum.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///opt/java/64/jdk1.7.0_21/src.zip!/java/lang/Enum.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="235" column="0" selection-start="8058" selection-end="8058" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserBackingBean.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/UserBackingBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="0" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Application.hbm.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/umt/db/Application.hbm.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="88" selection-start="1864" selection-end="1864" vertical-scroll-proportion="0.8425787">
+            <state line="28" column="3" selection-start="1408" selection-end="1642" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EnumUserType.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/edu/umt/utils/EnumUserType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="65" column="0" selection-start="1779" selection-end="1779" vertical-scroll-proportion="0.33230293">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseManager.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/umt/db/DatabaseManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="78" column="58" selection-start="1922" selection-end="1922" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -183,8 +238,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/WebContent/deleteusertype.xhtml" />
-        <option value="$PROJECT_DIR$/WebContent/newusertype.xhtml" />
         <option value="$PROJECT_DIR$/WebContent/userdetails.xhtml" />
         <option value="$PROJECT_DIR$/WebContent/users.xhtml" />
         <option value="$PROJECT_DIR$/WebContent/usertypes.xhtml" />
@@ -193,12 +246,14 @@
         <option value="$PROJECT_DIR$/src/edu/umt/test/HelloWorld.java" />
         <option value="$PROJECT_DIR$/src/edu/umt/db/DatabaseManager.java" />
         <option value="$PROJECT_DIR$/src/edu/umt/test/mocks/MockObjectFactory.java" />
-        <option value="$PROJECT_DIR$/src/edu/umt/utils/ApplicationStates.java" />
         <option value="$PROJECT_DIR$/src/org/hibernate/type/EnumType.java" />
         <option value="$PROJECT_DIR$/WebContent/newuser.xhtml" />
         <option value="$PROJECT_DIR$/src/edu/umt/db/Application.java" />
-        <option value="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/ApplicationBackingBean.java" />
+        <option value="$PROJECT_DIR$/src/edu/umt/utils/EnhancedUserType.java" />
+        <option value="$PROJECT_DIR$/src/edu/umt/utils/EnumUserType.java" />
         <option value="$PROJECT_DIR$/src/edu/umt/db/Application.hbm.xml" />
+        <option value="$PROJECT_DIR$/src/edu/umt/utils/ApplicationStates.java" />
+        <option value="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/ApplicationBackingBean.java" />
       </list>
     </option>
   </component>
@@ -268,6 +323,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -458,7 +514,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -923,16 +978,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1175" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20265152" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.67015207" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328807" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32889125" sideWeight="0.67182964" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.67015207" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39883834" sideWeight="0.891258" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3986421" sideWeight="0.8909091" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.328807" sideWeight="0.33368984" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -947,11 +1001,12 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32889125" sideWeight="0.67015207" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17540108" sideWeight="0.671193" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328807" sideWeight="0.66631013" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.328807" sideWeight="0.66631013" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32889125" sideWeight="0.67015207" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328807" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32994652" sideWeight="0.67045456" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913843" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Duplicates" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32954547" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -1023,18 +1078,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/WebContent/newapplication.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="33" selection-start="4536" selection-end="4538" vertical-scroll-proportion="-51.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/javaresources/all-hibernate-dependencies/hibernate.jar!/org/hibernate/Query.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="19" selection-start="762" selection-end="762" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/umt/db/HibernateSessionFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="13" selection-start="330" selection-end="330" vertical-scroll-proportion="0.022488756">
@@ -1063,20 +1106,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/umt/db/DatabaseManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="0" selection-start="1923" selection-end="1923" vertical-scroll-proportion="0.3328336">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/UserBackingBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="1058" selection-end="1058" vertical-scroll-proportion="-3.2953522">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/umt/db/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="13" selection-start="201" selection-end="201" vertical-scroll-proportion="0.022488756">
@@ -1093,39 +1122,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/newuser.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="104" selection-start="2601" selection-end="2601" vertical-scroll-proportion="-24.291666">
+        <state line="49" column="104" selection-start="2601" selection-end="2601" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/ApplicationBackingBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="225" column="0" selection-start="5179" selection-end="5407" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/umt/db/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="154" column="48" selection-start="3873" selection-end="3873" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="155" column="23" selection-start="3902" selection-end="3902" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/javaresources/all-hibernate-dependencies/hibernate.jar!/org/hibernate/persister/entity/AbstractEntityPersister.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="675" column="0" selection-start="39142" selection-end="39142" vertical-scroll-proportion="-22.56">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///opt/java/64/jdk1.7.0_21/src.zip!/java/lang/Enum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="235" column="0" selection-start="8058" selection-end="8058" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/UserBackingBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/umt/db/DatabaseManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="58" selection-start="1922" selection-end="1922" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/umt/utils/ApplicationStates.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="36" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
+        <state line="13" column="90" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/umt/db/Application.hbm.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="88" selection-start="1864" selection-end="1864" vertical-scroll-proportion="0.8425787">
+        <state line="28" column="3" selection-start="1408" selection-end="1642" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/ApplicationBackingBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="256" column="63" selection-start="6318" selection-end="6318" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/umt/utils/EnumUserType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="0" selection-start="1779" selection-end="1779" vertical-scroll-proportion="0.33230293">
           <folding />
         </state>
       </provider>

@@ -250,7 +250,7 @@ public class ApplicationBackingBean {
         if(attachment != null){
             a.setAttachment(this.attachment);
         }
-        a.setApplicationStates(ApplicationStates.APPLIED);
+        a.setApplicationStates(ApplicationStates.valueOf("APPLIED"));
 		try {
 			DatabaseManager.insertApplication(a);
 		} catch (Exception e) {

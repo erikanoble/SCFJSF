@@ -8,6 +8,8 @@ package edu.umt.utils;
  * To change this template use File | Settings | File Templates.
  */
 public enum ApplicationStates {
-    APPLIED, APPROVED_BY_SPONSOR, IN_QUEUE, SCF_APPROVED, SCF_REVISION, SCF_REJECTED
+    APPLIED, APPROVED_BY_SPONSOR, IN_QUEUE, SCF_APPROVED, SCF_REVISION, SCF_REJECTED;
+
+
 
 }
