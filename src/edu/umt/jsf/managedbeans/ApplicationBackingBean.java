@@ -51,7 +51,7 @@ public class ApplicationBackingBean {
     private String createdAsString;
 
     //test//
-    private ApplicationStates applicationStates;
+    private String applicationStates;
 
 
 
@@ -223,11 +223,11 @@ public class ApplicationBackingBean {
         this.file = file;
     }
 
-    public ApplicationStates getApplicationStates() {
+    public String getApplicationStates() {
         return applicationStates;
     }
 
-    public void setApplicationStates(ApplicationStates applicationStates) {
+    public void setApplicationStates(String applicationStates) {
         this.applicationStates = applicationStates;
     }
 
@@ -250,7 +250,7 @@ public class ApplicationBackingBean {
         if(attachment != null){
             a.setAttachment(this.attachment);
         }
-        a.setApplicationStates(ApplicationStates.valueOf("APPLIED"));
+        a.setApplicationStates(ApplicationStates.APPLIED.getApplicationStatus());
 		try {
 			DatabaseManager.insertApplication(a);
 		} catch (Exception e) {

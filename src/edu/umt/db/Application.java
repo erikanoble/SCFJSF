@@ -1,8 +1,6 @@
 package edu.umt.db;
 
 
-import edu.umt.utils.ApplicationStates;
-
 import java.sql.Timestamp;
 
 public class Application {
@@ -25,7 +23,7 @@ public class Application {
 	private Timestamp created;
 	private String createdAsString;
     private byte[] attachment;
-    private ApplicationStates applicationStates;
+    private String applicationStates;
 
 
 	
@@ -152,11 +150,11 @@ public class Application {
         this.attachment = attachment;
     }
 
-    public ApplicationStates getApplicationStates() {
+    public String getApplicationStates() {
         return applicationStates;
     }
 
-    public void setApplicationStates(ApplicationStates applicationStates) {
+    public void setApplicationStates(String applicationStates) {
         this.applicationStates = applicationStates;
     }
 }
