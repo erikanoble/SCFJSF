@@ -31,6 +31,9 @@
 					<p:column id="descriptionColumn" headerText="Equipment Description">
 						<h:outputText value="#{record.equipment_description}" />
 					</p:column>
+                    <p:column id = "statusColumn" headerText="Status">
+                        <h:outputText value ="#{record.applicationStates}"/>
+                    </p:column>
 				</p:dataTable>
 		
 		</h:form>
