@@ -16,8 +16,13 @@ public enum ApplicationStates {
             applicationStatus = s;
         }
 
-        public String getApplicationStatus() {
+    public void setApplicationStatus(String applicationStatus) {
+        this.applicationStatus = applicationStatus;
+    }
+
+    public String getApplicationStatus() {
         return applicationStatus;
+
     }
 
 }

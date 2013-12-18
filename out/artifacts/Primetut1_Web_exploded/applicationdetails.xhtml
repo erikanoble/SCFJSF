@@ -79,7 +79,12 @@
                     <p:inputText
                             value="#{applicationBackingBean.applicationView.pilot}" />
 
-                    <p:commandButton value="Submit Application"
+                    <h:outputLabel value ="Status of Application:"/>
+                    <h:selectOneMenu id="appStates" value="#{applicationBackingBean.applicationStates}" >
+                    <f:selectItem itemLabel="Test" itemValue="Test"/>
+                    </h:selectOneMenu>
+
+                    <p:commandButton value="Update Application"
                                      action="#{applicationBackingBean.updateApplicationAction}" />
                 </h:panelGrid>
             </p:panel>

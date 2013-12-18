@@ -49,10 +49,10 @@ public class ApplicationBackingBean {
     private byte[] attachment;
     private UploadedFile file;
     private String createdAsString;
-
-    //test//
     private String applicationStates;
 
+    //Test
+    private String applicationStatus;
 
 
     public User getApprovedUser() {
@@ -230,6 +230,21 @@ public class ApplicationBackingBean {
     public void setApplicationStates(String applicationStates) {
         this.applicationStates = applicationStates;
     }
+
+
+    //Test
+
+    public String getApplicationStatus() {
+        return applicationStatus;
+    }
+
+    public void setApplicationStatus(String applicationStatus) {
+        this.applicationStatus = applicationStatus;
+    }
+
+
+    //
+
 
     public String newApplicationAction() throws ApplicationInsertException {
 
