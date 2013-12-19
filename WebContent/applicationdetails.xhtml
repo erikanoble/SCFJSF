@@ -80,9 +80,10 @@
                             value="#{applicationBackingBean.applicationView.pilot}" />
 
                     <h:outputLabel value ="Status of Application:"/>
-                    <h:selectOneMenu id="appStates" value="#{applicationBackingBean.applicationStates}" >
-                    <f:selectItem itemLabel="Test" itemValue="Test"/>
-                    </h:selectOneMenu>
+                    <!--<h:selectOneMenu id="appStates" value="" >-->
+                    <!--<f:selectItems id="appState" value="" var="state"-->
+                    <!--itemLabel="" itemValue="" />-->
+                    <!--</h:selectOneMenu>-->
 
                     <p:commandButton value="Update Application"
                                      action="#{applicationBackingBean.updateApplicationAction}" />

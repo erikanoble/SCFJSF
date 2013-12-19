@@ -35,6 +35,9 @@
           <element id="library" level="module" name="log4j-1.2.17.jar" module-name="Primetut1" />
           <element id="library" level="application" name="lib" />
           <element id="file-copy" path="$USER_HOME$/javaresources/commons-io-2.4/commons-io-2.4.jar" />
+          <element id="file-copy" path="$USER_HOME$/javaresources/lucene-dependencies/lucene-analyzers-common-4.6.0.jar" />
+          <element id="file-copy" path="$USER_HOME$/javaresources/lucene-dependencies/lucene-core-4.6.0.jar" />
+          <element id="file-copy" path="$USER_HOME$/javaresources/lucene-dependencies/lucene-queryparser-4.6.0.jar" />
         </element>
         <element id="library" level="project" name="Java EE 6-Java EE 6" />
         <element id="javaee-facet-resources" facet="Primetut1/web/Web" />
