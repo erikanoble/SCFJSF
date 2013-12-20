@@ -3,6 +3,7 @@ package edu.umt.jsf.managedbeans;
 import edu.umt.db.Application;
 import edu.umt.db.DatabaseManager;
 import edu.umt.db.User;
+import edu.umt.db.UserType;
 import edu.umt.exceptions.ApplicationDeleteException;
 import edu.umt.exceptions.ApplicationDetailsException;
 import edu.umt.exceptions.ApplicationInsertException;
@@ -53,6 +54,7 @@ public class ApplicationBackingBean {
 
     //Test
     private String applicationStatus;
+
 
 
     public User getApprovedUser() {
@@ -243,6 +245,7 @@ public class ApplicationBackingBean {
     }
 
 
+
     //
 
 
@@ -298,14 +301,31 @@ public class ApplicationBackingBean {
     public String applicationDetailAction() throws ApplicationDetailsException {
         HttpServletRequest request = (HttpServletRequest) FacesContext
                 .getCurrentInstance().getExternalContext().getRequest();
+
+        //Testing
+        UserType admin = null;
         try {
             applicationView = DatabaseManager.getApplication(new Integer(
                     request.getParameter("appId")));
-        } catch (Exception e) {
+            //test
+            approvedUser = DatabaseManager.getUser(30);
+            admin = DatabaseManager.getUserType(2);
+
+            if(approvedUser.getUsertype() == admin){
+                return "application-details";
+            }
+            /////
+            } catch (Exception e) {
             if (applicationView == null)
                 throw new ApplicationDetailsException(
                         "Could not retrieve application.");
+                 //////test
+            if (approvedUser.getUsertype() != admin) {
+                throw new ApplicationDetailsException(
+                        "Could not retrieve application.");
+            }              ///////test
         }
+
         return "application-details";
     }
 
@@ -339,5 +359,25 @@ public class ApplicationBackingBean {
         FacesContext.getCurrentInstance().responseComplete();
 
     }
+
+    //////////////////////////////////////////////  TEST  //////////////////////////////////////////////////////////////
+//
+//    public String userRole() throws ApplicationDetailsException {
+//        UserType admin = null;
+//        try{
+//            approvedUser = DatabaseManager.getUser(30);
+//            admin = DatabaseManager.getUserType(2);
+//
+//        if(approvedUser.getUsertype() == admin){
+//            return "application-details";
+//        }
+//        }catch (Exception e){
+//            if (approvedUser.getUsertype() != admin) {
+//                throw new ApplicationDetailsException(
+//                        "Could not retrieve application.");
+//            }
+//        }
+//        return "application-details";
+//    }
 
 }
