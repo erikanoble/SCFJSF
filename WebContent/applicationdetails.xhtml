@@ -23,7 +23,7 @@
             <p:panel id="appDetailsPanelGrid" header="Application Details">
                 <h:panelGrid columns="2">
 
-                    <h:outputLabel value="Applicant First Name:" />
+                    <h:outputLabel value="Applicant First Name:"/>
                     <p:inputText readonly="true"
                                  value="#{applicationBackingBean.applicationView.user.fname}" />
 
@@ -44,7 +44,7 @@
                                  value="#{applicationBackingBean.applicationView.application_id}" />
 
                     <h:outputLabel value="Description:" />
-                    <p:inputText
+                    <p:inputText readonly = "true"
                             value="#{applicationBackingBean.applicationView.equipment_description}" />
 
                     <h:outputLabel value="Requested Amount:" />
