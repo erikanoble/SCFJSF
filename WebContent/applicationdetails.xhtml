@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui" xmlns:c="http://java.sun.com/jstl/core">
 
 <h:head></h:head>
 <h:body>
@@ -36,9 +36,15 @@
                                  value="#{applicationBackingBean.applicationView.user.school}" />
 
                     <h:outputLabel value="Department:" />
-                    <p:inputText readonly="true"
+                    <c:if test="#{applicationBackingBean.userRole()}" >
+                    <p:inputText readonly="false"
                                  value="#{applicationBackingBean.applicationView.user.department}" />
-
+                    </c:if>
+                    <c:otherwise>
+                        <!--fix this-->
+                        <p:outputLabel
+                                     value="#{applicationBackingBean.applicationView.user.department}" />
+                    </c:otherwise>
                     <h:outputLabel value="Application Number:" />
                     <p:inputText readonly="true"
                                  value="#{applicationBackingBean.applicationView.application_id}" />
