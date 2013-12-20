@@ -36,15 +36,10 @@
                                  value="#{applicationBackingBean.applicationView.user.school}" />
 
                     <h:outputLabel value="Department:" />
-                    <c:if test="#{applicationBackingBean.userRole()}" >
-                    <p:inputText readonly="false"
-                                 value="#{applicationBackingBean.applicationView.user.department}" />
-                    </c:if>
-                    <c:otherwise>
-                        <!--fix this-->
-                        <p:outputLabel
+
+                        <p:inputText readonly="true"
                                      value="#{applicationBackingBean.applicationView.user.department}" />
-                    </c:otherwise>
+
                     <h:outputLabel value="Application Number:" />
                     <p:inputText readonly="true"
                                  value="#{applicationBackingBean.applicationView.application_id}" />

@@ -350,8 +350,8 @@ public class ApplicationBackingBean {
     public String userRole() throws ApplicationDetailsException {
         UserType admin = null;
         try{
-            approvedUser = DatabaseManager.getUser(30);
-            admin = DatabaseManager.getUserType(2);
+            approvedUser = DatabaseManager.getUser(1);
+            admin = DatabaseManager.getUserType(3);
 
         if(approvedUser.getUsertype() == admin){
             return "application-details";
