@@ -18,7 +18,7 @@ import java.util.List;
 
 
 @SuppressWarnings("FieldCanBeLocal")
-public class UserBackingBean {
+public class UserBackingBean extends SCFBackingBean{
 	private Logger log = LoggerFactory.getLogger(UserBackingBean.class);
 	private List<User> users;
 	private User user;

@@ -6,7 +6,7 @@ import edu.umt.exceptions.*;
 import java.util.List;
 
 @SuppressWarnings("FieldCanBeLocal")
-public class UserTypeBackingBean {
+public class UserTypeBackingBean extends SCFBackingBean{
 	private List<UserType> userTypes;
 	private UserType userType;
 	private String description;

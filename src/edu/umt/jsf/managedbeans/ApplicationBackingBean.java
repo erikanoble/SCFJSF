@@ -21,12 +21,14 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.List;
+
+//import edu.umt.db.UserType;
 //new to test
 //import org.slf4j.LoggerFactory;
 //import org.slf4j.Logger;
 
 @SuppressWarnings("FieldCanBeLocal")
-public class ApplicationBackingBean {
+public class ApplicationBackingBean extends SCFBackingBean{
 
     private Logger log = Logger.getLogger(ApplicationBackingBean.class);
     private List<Application> applications;
@@ -55,7 +57,9 @@ public class ApplicationBackingBean {
     //Test
     private String applicationStatus;
 
-
+    public ApplicationBackingBean(){
+        super();
+    }
 
     public User getApprovedUser() {
         return approvedUser;
@@ -310,6 +314,7 @@ public class ApplicationBackingBean {
                 throw new ApplicationDetailsException(
                         "Could not retrieve application.");
         }
+//       return userRole();
 
         return "application-details";
     }
@@ -345,17 +350,25 @@ public class ApplicationBackingBean {
 
     }
 
-    ////////////////////////////////////////////  TEST  //////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////  TEST  //////////////////////////////////////////////////////////////
 
     public String userRole() throws ApplicationDetailsException {
         UserType admin = null;
         try{
             approvedUser = DatabaseManager.getUser(1);
-            admin = DatabaseManager.getUserType(3);
+//            System.out.println(approvedUser.getNetid());
+//            System.out.println(approvedUser.getUsertype().getDescription());
+            admin = DatabaseManager.getUserType(4);
+//            System.out.print(admin.getDescription());
 
-        if(approvedUser.getUsertype() == admin){
+
+        if(approvedUser.getUsertype().getUsertype_id() == admin.getUsertype_id()){
             return "application-details";
         }
+            else if
+            (approvedUser.getUsertype().getUsertype_id() != admin.getUsertype_id()) {
+                return "list-applications";        }
+
         }catch (Exception e){
             if (approvedUser.getUsertype() != admin) {
                 throw new ApplicationDetailsException(
