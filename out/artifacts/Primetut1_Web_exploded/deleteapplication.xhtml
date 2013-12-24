@@ -14,8 +14,10 @@
             <p:menuitem rendered="#{applicationBackingBean.currentUserSCFAdmin}" value="Create User-Types" url="/newusertype.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addUserTypesAction}"/>
             <p:menuitem value="Create User" url="/newuser.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addUsersAction}" />
             <p:menuitem rendered="#{applicationBackingBean.currentUserApplicant}" value="Create Application" url="/newapplication.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addApplicationsAction}"/>
+            <p:menuitem rendered="#{applicationBackingBean.currentUserAdmin}" value="Delete Application" url="/deleteapplication.xhtml" icon="ui-icon-document" action="#{indexBackingBean.deleteApplicationsAction}"/>
+            <p:menuitem rendered="#{applicationBackingBean.currentUserAdmin}" value="Delete User-Types" url="/deleteuser.xhtml" icon="ui-icon-document" action="#{indexBackingBean.deleteUsersAction}"/>
+            <p:menuitem rendered="#{applicationBackingBean.currentUserAdmin}" value="Delete Users" url="/deleteusertype.xhtml" icon="ui-icon-document" action="#{indexBackingBean.deleteUserTypesAction}"/>
         </p:tabMenu>
-
     </h:form>
 	<h:form>
 		<p:dataTable value="#{applicationBackingBean.applications}"
@@ -69,7 +71,6 @@
 
 			<p:column>
 				<f:facet name="header">Action</f:facet>
-				<!-- TODO: Make this into a button at the bottom of the form -->
 				<p:commandLink value="Delete"
 					action="#{applicationBackingBean.deleteApplicationAction(record)}" />
 			</p:column>

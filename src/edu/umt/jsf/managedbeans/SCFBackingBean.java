@@ -19,7 +19,7 @@ public class SCFBackingBean {
 
     public SCFBackingBean(){
         currentUser = new User();
-        currentUser = DatabaseManager.getUser(24);
+        currentUser = DatabaseManager.getUser(11);
 //        FacesContext.getCurrentInstance().getExternalContext().getSes
     }
 

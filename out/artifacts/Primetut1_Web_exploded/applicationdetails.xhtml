@@ -84,13 +84,15 @@
 
                     <h:outputLabel rendered="#{applicationBackingBean.currentUserSCFAdmin}"
                             value ="Status of Application:"/>
-                    <!--<h:selectOneMenu id="appStates" value="" >-->
+                    <h:selectOneMenu id="appStates" rendered="#{applicationBackingBean.currentUserSCFAdmin}" value="" >
                     <!--<f:selectItems id="appState" value="" var="state"-->
                     <!--itemLabel="" itemValue="" />-->
-                    <!--</h:selectOneMenu>-->
+                    </h:selectOneMenu>
 
                     <p:commandButton value="Update Application"
                                      action="#{applicationBackingBean.updateApplicationAction}" />
+                    <p:commandButton value="Delete Application"
+                                     action="#{applicationBackingBean.deleteApplicationAction}"/>
                 </h:panelGrid>
             </p:panel>
         </h:form>

@@ -25,5 +25,17 @@ public class IndexBackingBean {
 		public String addApplicationsAction(){
 			return "new-application";
 		}
-	
+
+        public String deleteApplicationsAction(){
+            return "delete-application";
+        }
+
+        public String deleteUsersAction(){
+            return "delete-users";
+        }
+
+        public String deleteUserTypesAction(){
+            return "delete-usertype";
+        }
+
 }

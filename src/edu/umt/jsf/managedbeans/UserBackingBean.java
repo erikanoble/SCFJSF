@@ -110,10 +110,11 @@ public class UserBackingBean extends SCFBackingBean{
 		return phoneAsString;
 	}
 
-	public void setPhoneAsString(String phoneAsString) {
-		this.phoneAsString = phoneAsString;
-
-	}
+    public void setPhoneAsString(String phoneAsString) {
+        BigInteger numericPhone = new BigInteger(phoneAsString.replaceAll(
+                "[^\\d]", ""));
+        this.phone = numericPhone;
+    }
 
 	public String getEmail() {
 		return email;

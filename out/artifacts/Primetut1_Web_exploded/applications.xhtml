@@ -10,8 +10,8 @@
         <h:form>
             <p:tabMenu activeIndex="0">
                 <p:menuitem rendered="#{applicationBackingBean.currentUserAdmin}" value="List User-Types" url="/usertypes.xhtml" icon="ui-icon-search" action="#{indexBackingBean.listUserTypesAction}"/>
-                <p:menuitem rendered="#{applicationBackingBean.currentUserAdmin}" value="List Users" url="/users.xhtml" icon="ui-icon-search" action="#{indexBackingBean.listUsersAction}"/>
-                <p:menuitem rendered="#{applicationBackingBean.currentUserAdmin}" value="List Applications" url="/applications.xhtml" icon="ui-icon-search" action="#{indexBackingBean.listApplicationsAction}"/>
+                <p:menuitem rendered="#{applicationBackingBean.currentUserApplicant}" value="List Users" url="/users.xhtml" icon="ui-icon-search" action="#{indexBackingBean.listUsersAction}"/>
+                <p:menuitem rendered="#{applicationBackingBean.currentUserApplicant}" value="List Applications" url="/applications.xhtml" icon="ui-icon-search" action="#{indexBackingBean.listApplicationsAction}"/>
                 <p:menuitem rendered="#{applicationBackingBean.currentUserSCFAdmin}" value="Create User-Types" url="/newusertype.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addUserTypesAction}"/>
                 <p:menuitem value="Create User" url="/newuser.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addUsersAction}" />
                 <p:menuitem rendered="#{applicationBackingBean.currentUserApplicant}" value="Create Application" url="/newapplication.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addApplicationsAction}"/>

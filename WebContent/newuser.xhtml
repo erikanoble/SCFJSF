@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui" xmlns:c="http://java.sun.com/jstl/core">
 
 <h:head><title>Create New User</title></h:head> 
 <h:body> 
@@ -16,7 +16,6 @@
                 <p:menuitem value="Create User" url="/newuser.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addUsersAction}" />
                 <p:menuitem rendered="#{applicationBackingBean.currentUserApplicant}" value="Create Application" url="/newapplication.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addApplicationsAction}"/>
             </p:tabMenu>
-
         </h:form>
 		<h:form id="newuserform">
 			<p:panelGrid id="panelGrid" columns="2">
@@ -53,10 +52,18 @@
 				
 				<h:outputLabel id="usertypeLabel" value="User Type:" />
 				<h:selectOneMenu id="usertypes" value="#{userBackingBean.usertype}">
-					<f:selectItems id="usertype" value="#{usertypeBackingBean.userTypes}"
+					<c:if test="#{userBackingBean.currentUserSCFAdmin}">
+                    <f:selectItems id="usertype-admin" render="#{userBackingBean.currentUserSCFAdmin}" value="#{usertypeBackingBean.userTypes}"
 								var="row"
 								itemLabel="#{row.description}"
 								itemValue="#{row.usertype_id}" />
+                    </c:if>
+                    <c:otherwise>
+                        <f:selectItem id="usertype" render="#{userBackingBean.currentUserApplicant}"
+                                       var="row"
+                                       itemLabel="Applicant"
+                                       itemValue="4"/>
+                    </c:otherwise>
 				</h:selectOneMenu>
 
 				

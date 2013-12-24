@@ -15,7 +15,6 @@
             <p:menuitem value="Create User" url="/newuser.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addUsersAction}" />
             <p:menuitem rendered="#{applicationBackingBean.currentUserApplicant}" value="Create Application" url="/newapplication.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addApplicationsAction}"/>
         </p:tabMenu>
-
     </h:form>
 	<h:form>
 		<!-- TODO: Fix this so that hibernate doesn't have an error when deleting -->
