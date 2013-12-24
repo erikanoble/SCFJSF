@@ -18,6 +18,9 @@
           <root url="file://$MODULE_DIR$/WebContent" relative="/" />
         </webroots>
       </configuration>
+      <facet type="jsf" name="JSF">
+        <configuration />
+      </facet>
     </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="false">
