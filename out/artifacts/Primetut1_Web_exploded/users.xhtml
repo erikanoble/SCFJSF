@@ -18,7 +18,6 @@
                     <p:menuitem value="Create User" url="/newuser.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addUsersAction}" />
                     <p:menuitem rendered="#{applicationBackingBean.currentUserApplicant}" value="Create Application" url="/newapplication.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addApplicationsAction}"/>
                 </p:tabMenu>
-
             </h:form>
 
             <p:growl id="growl" showDetail="true"/>

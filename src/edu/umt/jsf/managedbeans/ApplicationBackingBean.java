@@ -3,7 +3,6 @@ package edu.umt.jsf.managedbeans;
 import edu.umt.db.Application;
 import edu.umt.db.DatabaseManager;
 import edu.umt.db.User;
-import edu.umt.db.UserType;
 import edu.umt.exceptions.ApplicationDeleteException;
 import edu.umt.exceptions.ApplicationDetailsException;
 import edu.umt.exceptions.ApplicationInsertException;
@@ -305,7 +304,7 @@ public class ApplicationBackingBean extends SCFBackingBean{
     public String applicationDetailAction() throws ApplicationDetailsException {
         HttpServletRequest request = (HttpServletRequest) FacesContext
                 .getCurrentInstance().getExternalContext().getRequest();
-
+        //userRole();
         try {
             applicationView = DatabaseManager.getApplication(new Integer(
                     request.getParameter("appId")));
@@ -314,7 +313,6 @@ public class ApplicationBackingBean extends SCFBackingBean{
                 throw new ApplicationDetailsException(
                         "Could not retrieve application.");
         }
-//       return userRole();
 
         return "application-details";
     }
@@ -352,30 +350,30 @@ public class ApplicationBackingBean extends SCFBackingBean{
 
     //////////////////////////////////////////////  TEST  //////////////////////////////////////////////////////////////
 
-    public String userRole() throws ApplicationDetailsException {
-        UserType admin = null;
-        try{
-            approvedUser = DatabaseManager.getUser(1);
-//            System.out.println(approvedUser.getNetid());
-//            System.out.println(approvedUser.getUsertype().getDescription());
-            admin = DatabaseManager.getUserType(4);
-//            System.out.print(admin.getDescription());
-
-
-        if(approvedUser.getUsertype().getUsertype_id() == admin.getUsertype_id()){
-            return "application-details";
-        }
-            else if
-            (approvedUser.getUsertype().getUsertype_id() != admin.getUsertype_id()) {
-                return "list-applications";        }
-
-        }catch (Exception e){
-            if (approvedUser.getUsertype() != admin) {
-                throw new ApplicationDetailsException(
-                        "Could not retrieve application.");
-            }
-        }
-        return "application-details";
-    }
+//    public String userRole() throws ApplicationDetailsException {
+//        UserType admin = null;
+//        try{
+//            approvedUser = DatabaseManager.getUser(1);
+////            System.out.println(approvedUser.getNetid());
+////            System.out.println(approvedUser.getUsertype().getDescription());
+//            admin = DatabaseManager.getUserType(4);
+////            System.out.print(admin.getDescription());
+//
+//
+//        if(approvedUser.getUsertype().getUsertype_id() == admin.getUsertype_id()){
+//            return "application-details";
+//        }
+//            else if
+//            (approvedUser.getUsertype().getUsertype_id() != admin.getUsertype_id()) {
+//                return "list-applications";        }
+//
+//        }catch (Exception e){
+//            if (approvedUser.getUsertype() != admin) {
+//                throw new ApplicationDetailsException(
+//                        "Could not retrieve application.");
+//            }
+//        }
+//        return "application-details";
+//    }
 
 }

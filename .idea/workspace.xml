@@ -7,27 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0295b87a-640a-47d0-8db1-a5c8afa6ca50" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/IndexBackingBean.java" afterPath="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/IndexBackingBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/SCFBackingBean.java" afterPath="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/SCFBackingBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/UserBackingBean.java" afterPath="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/UserBackingBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/ApplicationBackingBean.java" afterPath="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/ApplicationBackingBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/applicationdetails.xhtml" afterPath="$PROJECT_DIR$/WebContent/applicationdetails.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/applications.xhtml" afterPath="$PROJECT_DIR$/WebContent/applications.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/deleteapplication.xhtml" afterPath="$PROJECT_DIR$/WebContent/deleteapplication.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/deleteuser.xhtml" afterPath="$PROJECT_DIR$/WebContent/deleteuser.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/deleteusertype.xhtml" afterPath="$PROJECT_DIR$/WebContent/deleteusertype.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/faces-config.xml" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/faces-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/index.xhtml" afterPath="$PROJECT_DIR$/WebContent/index.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/newapplication.xhtml" afterPath="$PROJECT_DIR$/WebContent/newapplication.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/newuser.xhtml" afterPath="$PROJECT_DIR$/WebContent/newuser.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/newusertype.xhtml" afterPath="$PROJECT_DIR$/WebContent/newusertype.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/userdetails.xhtml" afterPath="$PROJECT_DIR$/WebContent/userdetails.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/users.xhtml" afterPath="$PROJECT_DIR$/WebContent/users.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/usertypes.xhtml" afterPath="$PROJECT_DIR$/WebContent/usertypes.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Primetut1.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1387904878176" ignored="false" />
+    <file path="/Dummy.txt" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1388163415912" ignored="false" />
     <file path="/UserBackingBean.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1387908325249" ignored="false" />
     <file path="/Primetut1.iml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1378503341990" ignored="false" />
     <file path="$PROJECT_DIR$/WebContent/WEB-INF/classes/edu/umt/db/Application.hbm.xml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1376664440989" ignored="false" />
@@ -62,6 +50,7 @@
     <file path="/deleteapplication.xhtml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1387911572092" ignored="false" />
     <file path="/IndexBackingBean.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1387910159921" ignored="false" />
     <file path="/index.xhtml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1387914418589" ignored="false" />
+    <file path="/userdetails.xhtml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1388163994327" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,43 +75,6 @@
     <sortChildren value="false" />
   </component>
   <component name="DebuggerManager">
-    <method_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </breakpoint_any>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint url="file://$PROJECT_DIR$/src/edu/umt/test/TestCompare.java" line="17" class="edu.umt.test.TestCompare" package="edu.umt.test">
         <option name="ENABLED" value="true" />
@@ -170,60 +122,46 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </line_breakpoints>
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <method_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
-  </component>
-  <component name="DockManager">
-    <window id="2">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="faces-config.xml" pinned="false" current="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/faces-config.xml">
-                <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider">
-                  <state />
-                </provider>
-                <provider editor-type-id="com.intellij.jsf.ui.FacesConfigEditorProvider">
-                  <state />
-                </provider>
-                <provider selected="true" editor-type-id="text-editor">
-                  <state line="125" column="26" selection-start="4114" selection-end="4114" vertical-scroll-proportion="-38.041668">
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="deleteapplication.xhtml" pinned="false" current="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/WebContent/deleteapplication.xhtml">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state line="74" column="91" selection-start="3458" selection-end="3606" vertical-scroll-proportion="0.77619046">
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="User.java" pinned="false" current="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/src/edu/umt/db/User.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state line="203" column="0" selection-start="3316" selection-end="3562" vertical-scroll-proportion="0.61769116">
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
   </component>
   <component name="ErrorTreeViewConfiguration">
     <option name="hideWarnings" value="true" />
@@ -235,97 +173,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="deleteusertype.xhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/deleteusertype.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="13" selection-start="1553" selection-end="1553" vertical-scroll-proportion="-10.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="deleteuser.xhtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/deleteuser.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="13" selection-start="1554" selection-end="1554" vertical-scroll-proportion="-10.625">
+            <state line="57" column="52" selection-start="2631" selection-end="2631" vertical-scroll-proportion="-18.75">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="applications.xhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/applications.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="335" selection-end="1603" vertical-scroll-proportion="-5.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="applicationdetails.xhtml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/WebContent/applicationdetails.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="17" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.28451002">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users.xhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/users.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="21" selection-start="1671" selection-end="1671" vertical-scroll-proportion="-12.5">
-              <folding>
-                <marker date="1387916083919" expanded="true" signature="2722:2732" placeholder="{...}" />
-                <marker date="1387916083919" expanded="true" signature="3252:3262" placeholder="{...}" />
-                <marker date="1387916083919" expanded="true" signature="3792:3802" placeholder="{...}" />
-                <marker date="1387916083919" expanded="true" signature="4318:4328" placeholder="{...}" />
-                <marker date="1387916083919" expanded="true" signature="4847:4857" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userdetails.xhtml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="userdetails.xhtml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebContent/userdetails.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="13" selection-start="1553" selection-end="1553" vertical-scroll-proportion="-10.625">
+            <state line="37" column="71" selection-start="2538" selection-end="2538" vertical-scroll-proportion="0.5">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="newusertype.xhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/newusertype.xhtml">
+      <file leaf-file-name="UserBackingBean.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/UserBackingBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="17" selection-start="1640" selection-end="1640" vertical-scroll-proportion="-12.5">
+            <state line="191" column="22" selection-start="3990" selection-end="3996" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="newuser.xhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/newuser.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="17" selection-start="1675" selection-end="1675" vertical-scroll-proportion="-11.25">
-              <folding />
-            </state>
+      <file leaf-file-name="faces-config.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/faces-config.xml">
+          <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider">
+            <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="newapplication.xhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/newapplication.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="17" selection-start="1649" selection-end="1649" vertical-scroll-proportion="-12.5">
-              <folding />
-            </state>
+          <provider editor-type-id="com.intellij.jsf.ui.FacesConfigEditorProvider">
+            <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.xhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/index.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="17" selection-start="1622" selection-end="1622" vertical-scroll-proportion="-11.25">
+            <state line="89" column="38" selection-start="3052" selection-end="3057" vertical-scroll-proportion="-21.791666">
               <folding />
             </state>
           </provider>
@@ -350,7 +234,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/UserBackingBean.java" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/faces-config.xml" />
         <option value="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/IndexBackingBean.java" />
         <option value="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/SCFBackingBean.java" />
@@ -358,7 +241,6 @@
         <option value="$PROJECT_DIR$/WebContent/applications.xhtml" />
         <option value="$PROJECT_DIR$/WebContent/usertypes.xhtml" />
         <option value="$PROJECT_DIR$/WebContent/users.xhtml" />
-        <option value="$PROJECT_DIR$/WebContent/userdetails.xhtml" />
         <option value="$PROJECT_DIR$/WebContent/newusertype.xhtml" />
         <option value="$PROJECT_DIR$/WebContent/newuser.xhtml" />
         <option value="$PROJECT_DIR$/WebContent/newapplication.xhtml" />
@@ -366,6 +248,8 @@
         <option value="$PROJECT_DIR$/WebContent/deleteusertype.xhtml" />
         <option value="$PROJECT_DIR$/WebContent/deleteuser.xhtml" />
         <option value="$PROJECT_DIR$/WebContent/applicationdetails.xhtml" />
+        <option value="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/ApplicationBackingBean.java" />
+        <option value="$PROJECT_DIR$/WebContent/userdetails.xhtml" />
       </list>
     </option>
   </component>
@@ -435,7 +319,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -483,6 +366,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Primetut1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Primetut1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -569,6 +466,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -588,9 +486,9 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -896,6 +794,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -922,19 +833,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -980,24 +878,10 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote">
-      <option name="LOCAL" value="false" />
-      <deployment />
-      <server-settings>
-        <data>
-          <option name="transportHostId" />
-        </data>
-      </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="58726" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="false" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
@@ -1065,10 +949,24 @@
       </ConfigurationWrapper>
       <method />
     </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote">
+      <option name="LOCAL" value="false" />
+      <deployment />
+      <server-settings>
+        <data>
+          <option name="transportHostId" />
+        </data>
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="58726" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
     <configuration default="false" name="Tomcat 7.0" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0">
@@ -1242,7 +1140,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.671193" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17540108" sideWeight="0.671193" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328807" sideWeight="0.66631013" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.328807" sideWeight="0.66631013" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1318,36 +1216,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/SCFBackingBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="48" selection-start="595" selection-end="595" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/IndexBackingBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="35" selection-start="769" selection-end="769" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/UserBackingBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="191" column="22" selection-start="3990" selection-end="3996" vertical-scroll-proportion="0.4333996">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/ApplicationBackingBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="300" column="36" selection-start="7808" selection-end="7808" vertical-scroll-proportion="0.41749504">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/usertypes.xhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="17" selection-start="1629" selection-end="1629" vertical-scroll-proportion="-11.25">
@@ -1357,83 +1225,117 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/users.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="21" selection-start="1671" selection-end="1671" vertical-scroll-proportion="-12.5">
+        <state line="20" column="21" selection-start="1671" selection-end="1671" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1387916083919" expanded="true" signature="2722:2732" placeholder="{...}" />
-            <marker date="1387916083919" expanded="true" signature="3252:3262" placeholder="{...}" />
-            <marker date="1387916083919" expanded="true" signature="3792:3802" placeholder="{...}" />
-            <marker date="1387916083919" expanded="true" signature="4318:4328" placeholder="{...}" />
-            <marker date="1387916083919" expanded="true" signature="4847:4857" placeholder="{...}" />
+            <marker date="1387916083919" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1387916083919" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1387916083919" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1387916083919" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1387916083919" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/userdetails.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="13" selection-start="1553" selection-end="1553" vertical-scroll-proportion="-10.625">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/newusertype.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="17" selection-start="1640" selection-end="1640" vertical-scroll-proportion="-12.5">
+        <state line="20" column="17" selection-start="1640" selection-end="1640" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/newuser.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="17" selection-start="1675" selection-end="1675" vertical-scroll-proportion="-11.25">
+        <state line="18" column="17" selection-start="1675" selection-end="1675" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/newapplication.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="17" selection-start="1649" selection-end="1649" vertical-scroll-proportion="-12.5">
+        <state line="20" column="17" selection-start="1649" selection-end="1649" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/index.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="17" selection-start="1622" selection-end="1622" vertical-scroll-proportion="-11.25">
+        <state line="18" column="17" selection-start="1622" selection-end="1622" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/deleteusertype.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="13" selection-start="1553" selection-end="1553" vertical-scroll-proportion="-10.625">
+        <state line="17" column="13" selection-start="1553" selection-end="1553" vertical-scroll-proportion="0.30952382">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/deleteapplication.xhtml">
+    <entry file="file://$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/ApplicationBackingBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="91" selection-start="3458" selection-end="3606" vertical-scroll-proportion="0.77619046">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/deleteuser.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="13" selection-start="1554" selection-end="1554" vertical-scroll-proportion="-10.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/applications.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="335" selection-end="1603" vertical-scroll-proportion="-5.625">
+        <state line="368" column="30" selection-start="10327" selection-end="10327" vertical-scroll-proportion="1.4197901">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/applicationdetails.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="17" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.28451002">
+        <state line="81" column="57" selection-start="5516" selection-end="5516" vertical-scroll-proportion="0.3015873">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/applications.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="335" selection-end="1603" vertical-scroll-proportion="0.0952381">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/deleteuser.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="52" selection-start="2631" selection-end="2631" vertical-scroll-proportion="-18.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/UserBackingBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="191" column="22" selection-start="3990" selection-end="3996" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/faces-config.xml">
+      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.jsf.ui.FacesConfigEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="38" selection-start="3052" selection-end="3057" vertical-scroll-proportion="-21.791666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/umt/db/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="203" column="0" selection-start="3316" selection-end="3562" vertical-scroll-proportion="0.61769116">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/deleteapplication.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="91" selection-start="3458" selection-end="3606" vertical-scroll-proportion="0.7380952">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/userdetails.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="71" selection-start="2538" selection-end="2538" vertical-scroll-proportion="0.5">
           <folding />
         </state>
       </provider>

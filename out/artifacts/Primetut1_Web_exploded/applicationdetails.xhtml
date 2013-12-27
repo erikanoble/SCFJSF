@@ -16,7 +16,6 @@
                 <p:menuitem value="Create User" url="/newuser.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addUsersAction}" />
                 <p:menuitem rendered="#{applicationBackingBean.currentUserApplicant}" value="Create Application" url="/newapplication.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addApplicationsAction}"/>
             </p:tabMenu>
-
         </h:form>
         <h:form id="applicationform">
 
@@ -84,15 +83,14 @@
 
                     <h:outputLabel rendered="#{applicationBackingBean.currentUserSCFAdmin}"
                             value ="Status of Application:"/>
-                    <h:selectOneMenu id="appStates" rendered="#{applicationBackingBean.currentUserSCFAdmin}" value="" >
-                    <!--<f:selectItems id="appState" value="" var="state"-->
-                    <!--itemLabel="" itemValue="" />-->
+                    <h:selectOneMenu id="appStates" rendered="#{applicationBackingBean.currentUserSCFAdmin}" value="#{applicationBackingBean.applicationStatus}" >
+                    <!--<f:selectItems id="appState" value="# {applicationBackingBean}}" var="state"-->
+                    <!--itemLabel="# {state}" itemValue="# {state}" />-->
                     </h:selectOneMenu>
 
                     <p:commandButton value="Update Application"
                                      action="#{applicationBackingBean.updateApplicationAction}" />
-                    <p:commandButton value="Delete Application"
-                                     action="#{applicationBackingBean.deleteApplicationAction}"/>
+
                 </h:panelGrid>
             </p:panel>
         </h:form>
