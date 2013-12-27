@@ -24,15 +24,15 @@ public class Application {
 	private String createdAsString;
     private byte[] attachment;
     private String applicationStates;
-    private int isDeleted;
+    private int is_deleted;
 
 
-    public int getDeleted() {
-        return isDeleted;
+    public int getIs_deleted() {
+        return is_deleted;
     }
 
-    public void setDeleted(int deleted) {
-        isDeleted = deleted;
+    public void setIs_deleted(int is_deleted) {
+        this.is_deleted = is_deleted;
     }
 
     public Application(){

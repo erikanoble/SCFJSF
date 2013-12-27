@@ -52,7 +52,7 @@ public class ApplicationBackingBean extends SCFBackingBean{
     private UploadedFile file;
     private String createdAsString;
     private String applicationStates;
-    private int isDeleted;
+    private int is_deleted;
 
     //Test
     private String applicationStatus;
@@ -250,12 +250,13 @@ public class ApplicationBackingBean extends SCFBackingBean{
         this.applicationStatus = applicationStatus;
     }
 
-    public int getDeleted() {
-        return isDeleted;
+    public int getIs_deleted() {
+        return is_deleted;
     }
 
-    public void setDeleted(int deleted) {
-        isDeleted = deleted;
+    public void setIs_deleted(int is_deleted) {
+        this.is_deleted = is_deleted;
+        is_deleted = 0;
     }
 
 //
@@ -277,6 +278,7 @@ public class ApplicationBackingBean extends SCFBackingBean{
         a.setProvided_by(this.provided_by);
         a.setPilot(this.pilot);
         a.setPilot_summary(this.pilot_summary);
+        a.setIs_deleted(this.is_deleted);
         if(attachment != null){
             a.setAttachment(this.attachment);
         }
@@ -360,7 +362,13 @@ public class ApplicationBackingBean extends SCFBackingBean{
     //////////////////////////////////////////////  TEST  //////////////////////////////////////////////////////////////
     public String softDeleteApplicationAction()
             throws ApplicationDeleteException {
-        DatabaseManager.softDeleteApplication(applicationView);
+        try {
+            applicationView.setIs_deleted(1);
+            DatabaseManager.updateApplication(applicationView);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        log.debug("I returned the applications");
         return "delete-applications";
     }
 
