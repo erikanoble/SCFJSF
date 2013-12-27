@@ -28,6 +28,7 @@
         </property>
 
         <property name="applicationStates" column="state" type="string"/>
+        <property name="isDeleted" type="int" column="is_deleted"/>
 
 
         <many-to-one name="user" class="edu.umt.db.User" fetch="select"

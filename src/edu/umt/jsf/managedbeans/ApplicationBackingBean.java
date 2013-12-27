@@ -52,7 +52,7 @@ public class ApplicationBackingBean extends SCFBackingBean{
     private UploadedFile file;
     private String createdAsString;
     private String applicationStates;
-    private boolean isDeleted;
+    private int isDeleted;
 
     //Test
     private String applicationStatus;
@@ -250,13 +250,14 @@ public class ApplicationBackingBean extends SCFBackingBean{
         this.applicationStatus = applicationStatus;
     }
 
-    public boolean isDeleted() {
+    public int getDeleted() {
         return isDeleted;
     }
 
-    public void setDeleted(boolean deleted) {
+    public void setDeleted(int deleted) {
         isDeleted = deleted;
     }
+
 //
 
 

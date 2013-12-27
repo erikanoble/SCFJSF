@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source source="LOCAL" name="jdbc/scf_forms" product="MySQL" version="5.5.31-0ubuntu0.12.10.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.26 ( Revision: ${bzr.revision-id} )" uuid="61e72778-eb20-4a9e-b8c1-714cf5bf49a1">
+  <data-source source="LOCAL" name="jdbc/scf_forms" product="MySQL" version="5.5.34-0ubuntu0.12.10.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.26 ( Revision: ${bzr.revision-id} )" uuid="61e72778-eb20-4a9e-b8c1-714cf5bf49a1">
     <extra-name-characters>#@</extra-name-characters>
     <identifier-quote-string>`</identifier-quote-string>
     <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
@@ -39,7 +39,8 @@
       <column name="approved_amount" sqlType="DOUBLE" length="22" precision="0" nullable="true" jdbcType="8" def="MA=="/>
       <column name="attachment" sqlType="LONGBLOB" length="2147483647" precision="0" nullable="true" jdbcType="-4"/>
       <column name="state" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12"/>
-      <column name="modified" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="modified" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="is_deleted" sqlType="VARCHAR" length="1" precision="0" nullable="false" jdbcType="12" def="JzAn"/>
       <primary-key name="PRIMARY" columns="application_id"/>
       <foreign-key name="FK5CA40550465A3020" columns="user_id" ref-table="user" ref-schema="" ref-catalog="scf_forms" ref-columns="user_id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="fk_application_to_user" columns="user_id" ref-table="user" ref-schema="" ref-catalog="scf_forms" ref-columns="user_id" update-rule="3" delete-rule="3" deferrability="2"/>
@@ -69,12 +70,10 @@
     <table name="usertype" schema="" catalog="scf_forms" type="TABLE">
       <column name="usertype_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="description" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12"/>
-      <column name="usertypecol" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
-      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
       <column name="created" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <column name="usertypecol" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="usertype_id"/>
       <exported-key name="fk_usertype_user" table="user" schema="" catalog="scf_forms" columns="usertype_id"/>
-      <index name="FKF02C9D85465A3020" unique="false" columns="user_id"/>
     </table>
   </data-source>
   <data-source source="LOCAL" name="Data Source" product="MySQL" version="5.5.31-0ubuntu0.12.10.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.26 ( Revision: ${bzr.revision-id} )" uuid="5e3ae89b-fc82-4f94-95ef-7cd578b62e1d">

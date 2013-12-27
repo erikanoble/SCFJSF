@@ -24,12 +24,18 @@ public class Application {
 	private String createdAsString;
     private byte[] attachment;
     private String applicationStates;
-    private boolean isDeleted;
+    private int isDeleted;
 
 
-	
-	
-	public Application(){
+    public int getDeleted() {
+        return isDeleted;
+    }
+
+    public void setDeleted(int deleted) {
+        isDeleted = deleted;
+    }
+
+    public Application(){
 		approvedAmount = new Double(0);
 	}
 	public int getApplication_id() {
@@ -159,12 +165,5 @@ public class Application {
         this.applicationStates = applicationStates;
     }
 
-    public boolean isDeleted() {
-        return isDeleted;
-    }
-
-    public void setDeleted(boolean deleted) {
-        isDeleted = deleted;
-    }
 }
 
