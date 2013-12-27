@@ -52,6 +52,7 @@ public class ApplicationBackingBean extends SCFBackingBean{
     private UploadedFile file;
     private String createdAsString;
     private String applicationStates;
+    private boolean isDeleted;
 
     //Test
     private String applicationStatus;
@@ -60,6 +61,8 @@ public class ApplicationBackingBean extends SCFBackingBean{
         super();
     }
 
+
+    //
     public User getApprovedUser() {
         return approvedUser;
     }
@@ -247,9 +250,14 @@ public class ApplicationBackingBean extends SCFBackingBean{
         this.applicationStatus = applicationStatus;
     }
 
+    public boolean isDeleted() {
+        return isDeleted;
+    }
 
-
-    //
+    public void setDeleted(boolean deleted) {
+        isDeleted = deleted;
+    }
+//
 
 
     public String newApplicationAction() throws ApplicationInsertException {
@@ -298,7 +306,7 @@ public class ApplicationBackingBean extends SCFBackingBean{
     public String deleteApplicationAction()
             throws ApplicationDeleteException {
         DatabaseManager.deleteApplication(applicationView);
-        return "";
+        return "delete-applications";
     }
 
     public String applicationDetailAction() throws ApplicationDetailsException {
@@ -312,7 +320,7 @@ public class ApplicationBackingBean extends SCFBackingBean{
             if (applicationView == null)
                 throw new ApplicationDetailsException(
                         "Could not retrieve application.");
-        }
+            }
 
         return "application-details";
     }
@@ -349,6 +357,10 @@ public class ApplicationBackingBean extends SCFBackingBean{
     }
 
     //////////////////////////////////////////////  TEST  //////////////////////////////////////////////////////////////
-
+    public String softDeleteApplicationAction()
+            throws ApplicationDeleteException {
+        DatabaseManager.softDeleteApplication(applicationView);
+        return "delete-applications";
+    }
 
 }

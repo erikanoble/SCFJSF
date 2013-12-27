@@ -7,11 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0295b87a-640a-47d0-8db1-a5c8afa6ca50" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/umt/db/Application.java" afterPath="$PROJECT_DIR$/src/edu/umt/db/Application.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/ApplicationBackingBean.java" afterPath="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/ApplicationBackingBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/SCFBackingBean.java" afterPath="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/SCFBackingBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/UserBackingBean.java" afterPath="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/UserBackingBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/umt/db/DatabaseManager.java" afterPath="$PROJECT_DIR$/src/edu/umt/db/DatabaseManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/applicationdetails.xhtml" afterPath="$PROJECT_DIR$/WebContent/applicationdetails.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Primetut1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,12 +22,12 @@
     <file path="$PROJECT_DIR$/WebContent/WEB-INF/classes/edu/umt/db/UserType.hbm.xml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1376664440989" ignored="false" />
     <file path="$PROJECT_DIR$/../scf/scf.iml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1376669439028" ignored="false" />
     <file path="$PROJECT_DIR$/../scf/src/edu/umt/db/Application.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1376669550060" ignored="false" />
-    <file path="/ApplicationBackingBean.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1388166988831" ignored="false" />
+    <file path="/ApplicationBackingBean.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1388172745831" ignored="false" />
     <file path="/newapplication.xhtml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1387385858574" ignored="false" />
     <file path="/Application.hbm.xml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1383333142357" ignored="false" />
-    <file path="/Application.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1383333414894" ignored="false" />
+    <file path="/Application.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1388170196058" ignored="false" />
     <file path="/FileBlobConverter.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1377294705167" ignored="false" />
-    <file path="/applicationdetails.xhtml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1388167916473" ignored="false" />
+    <file path="/applicationdetails.xhtml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1388172699275" ignored="false" />
     <file path="/hibernate.cfg.xml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1379001278200" ignored="false" />
     <file path="/web.xml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1378496717532" ignored="false" />
     <file path="/test.xhtml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1379002203467" ignored="false" />
@@ -36,7 +35,7 @@
     <file path="/ApplicationStates.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1387394744210" ignored="false" />
     <file path="/HelloWorld.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1381866531534" ignored="false" />
     <file path="/MockObjectFactory.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1381867190779" ignored="false" />
-    <file path="/DatabaseManager.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1382471630586" ignored="false" />
+    <file path="/DatabaseManager.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1388170317256" ignored="false" />
     <file path="/EnhancedUserType.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1383086999808" ignored="false" />
     <file path="/applications.xhtml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1387905545767" ignored="false" />
     <file path="/applicationstatus.xhtml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1387393650030" ignored="false" />
@@ -176,7 +175,7 @@
       <file leaf-file-name="DatabaseManager.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/umt/db/DatabaseManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="186" column="22" selection-start="4404" selection-end="4404" vertical-scroll-proportion="0.0">
+            <state line="181" column="0" selection-start="4241" selection-end="4241" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -196,7 +195,18 @@
       <file leaf-file-name="ApplicationBackingBean.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/ApplicationBackingBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="300" column="16" selection-start="7807" selection-end="7807" vertical-scroll-proportion="0.82008994">
+            <state line="323" column="12" selection-start="8589" selection-end="8589" vertical-scroll-proportion="-0.082706764">
+              <folding>
+                <element signature="e#903#939#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Application.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/umt/db/Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="139" column="133" selection-start="4144" selection-end="4151" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -205,7 +215,7 @@
       <file leaf-file-name="applicationdetails.xhtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/applicationdetails.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="85" selection-start="4422" selection-end="4422" vertical-scroll-proportion="-7.0">
+            <state line="93" column="97" selection-start="6411" selection-end="6411" vertical-scroll-proportion="-23.25">
               <folding />
             </state>
           </provider>
@@ -230,8 +240,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/IndexBackingBean.java" />
-        <option value="$PROJECT_DIR$/WebContent/deleteapplication.xhtml" />
         <option value="$PROJECT_DIR$/WebContent/applications.xhtml" />
         <option value="$PROJECT_DIR$/WebContent/usertypes.xhtml" />
         <option value="$PROJECT_DIR$/WebContent/users.xhtml" />
@@ -243,9 +251,11 @@
         <option value="$PROJECT_DIR$/WebContent/deleteuser.xhtml" />
         <option value="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/UserBackingBean.java" />
         <option value="$PROJECT_DIR$/WebContent/userdetails.xhtml" />
-        <option value="$PROJECT_DIR$/WebContent/applicationdetails.xhtml" />
         <option value="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/SCFBackingBean.java" />
+        <option value="$PROJECT_DIR$/src/edu/umt/db/Application.java" />
+        <option value="$PROJECT_DIR$/src/edu/umt/db/DatabaseManager.java" />
         <option value="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/ApplicationBackingBean.java" />
+        <option value="$PROJECT_DIR$/WebContent/applicationdetails.xhtml" />
       </list>
     </option>
   </component>
@@ -265,8 +275,10 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1920" />
-    <option name="height" value="1175" />
+    <option name="x" value="3" />
+    <option name="y" value="-1" />
+    <option name="width" value="1914" />
+    <option name="height" value="1173" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -1133,7 +1145,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1175" extended-state="0" />
+    <frame x="3" y="-1" width="1914" height="1173" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20174588" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1157,8 +1169,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.671193" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17540108" sideWeight="0.671193" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.328807" sideWeight="0.66631013" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17596567" sideWeight="0.6705539" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32944608" sideWeight="0.66631013" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1234,13 +1246,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/WebContent/newuser.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="17" selection-start="1675" selection-end="1675" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/newapplication.xhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="17" selection-start="1649" selection-end="1649" vertical-scroll-proportion="0.0">
@@ -1265,19 +1270,6 @@
     <entry file="file://$PROJECT_DIR$/WebContent/applications.xhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="335" selection-end="1603" vertical-scroll-proportion="0.0952381">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/faces-config.xml">
-      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.jsf.ui.FacesConfigEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="38" selection-start="3052" selection-end="3057" vertical-scroll-proportion="-21.791666">
           <folding />
         </state>
       </provider>
@@ -1324,13 +1316,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/umt/db/DatabaseManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="186" column="22" selection-start="4404" selection-end="4404" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/SCFBackingBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="55" column="15" selection-start="1722" selection-end="1722" vertical-scroll-proportion="0.0">
@@ -1340,17 +1325,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/faces-config.xml">
+      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.jsf.ui.FacesConfigEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="43" selection-start="3211" selection-end="3230" vertical-scroll-proportion="0.324493">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/umt/db/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="139" column="133" selection-start="4144" selection-end="4151" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/applicationdetails.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="85" selection-start="4422" selection-end="4422" vertical-scroll-proportion="-7.0">
+        <state line="93" column="97" selection-start="6411" selection-end="6411" vertical-scroll-proportion="-23.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/umt/db/DatabaseManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="181" column="0" selection-start="4241" selection-end="4241" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/ApplicationBackingBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="300" column="16" selection-start="7807" selection-end="7807" vertical-scroll-proportion="0.82008994">
-          <folding />
+        <state line="323" column="12" selection-start="8589" selection-end="8589" vertical-scroll-proportion="-0.082706764">
+          <folding>
+            <element signature="e#903#939#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

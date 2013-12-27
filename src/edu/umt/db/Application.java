@@ -24,6 +24,7 @@ public class Application {
 	private String createdAsString;
     private byte[] attachment;
     private String applicationStates;
+    private boolean isDeleted;
 
 
 	
@@ -156,6 +157,14 @@ public class Application {
 
     public void setApplicationStates(String applicationStates) {
         this.applicationStates = applicationStates;
+    }
+
+    public boolean isDeleted() {
+        return isDeleted;
+    }
+
+    public void setDeleted(boolean deleted) {
+        isDeleted = deleted;
     }
 }
 

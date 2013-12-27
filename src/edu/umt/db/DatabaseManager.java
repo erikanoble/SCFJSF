@@ -179,7 +179,21 @@ public class DatabaseManager {
 			session.close();
 		}
 	}
-	
+
+    //////////////////////////test
+    public static void softDeleteApplication(Application application){
+        try{
+            session = HibernateSessionFactory.currentSession();
+            session.saveOrUpdate(application);
+        }catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            session.flush();
+            session.close();
+        }
+    }
+	//////////////////////////end-test
+
 	public static void deleteUserType(UserType usertype){
 		try{
 			session = HibernateSessionFactory.currentSession();
