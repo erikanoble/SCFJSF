@@ -187,8 +187,8 @@ public class UserBackingBean extends SCFBackingBean{
 		return "user-updated";
 	}
 
-	public String deleteUserAction(User u) throws UserDeleteException {
-		DatabaseManager.deleteUser(u);
+	public String deleteUserAction() throws UserDeleteException {
+		DatabaseManager.deleteUser(userView);
 		return "delete-user";
 	}
 

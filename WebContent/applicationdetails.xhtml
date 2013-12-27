@@ -62,23 +62,23 @@
                             value="#{applicationBackingBean.applicationView.balance}" />
 
                     <h:outputLabel value="Outside Funds Provided:" />
-                    <p:inputText    readonly="#{applicationBackingBean.currentUserApprover}"
+                    <p:inputText    readonly="#{applicationBackingBean.currentUserApplicant}"
                             value="#{applicationBackingBean.applicationView.outside_funds}" />
 
                     <h:outputLabel value="Description of use:" />
-                    <p:inputTextarea readonly="#{applicationBackingBean.currentUserApprover}"
+                    <p:inputTextarea readonly="#{applicationBackingBean.currentUserApplicant}"
                             value="#{applicationBackingBean.applicationView.use_description}" />
 
                     <h:outputLabel value="Maintenance Responsibility:" />
-                    <p:inputText  readonly="#{applicationBackingBean.currentUserApprover}"
+                    <p:inputText  readonly="#{applicationBackingBean.currentUserApplicant}"
                             value="#{applicationBackingBean.applicationView.maintenance_responsibility}" />
 
                     <h:outputLabel value="New Connections:" />
-                    <p:inputText  readonly="#{applicationBackingBean.currentUserApprover}"
+                    <p:inputText  readonly="#{applicationBackingBean.currentUserApplicant}"
                             value="#{applicationBackingBean.applicationView.new_connections}" />
 
                     <h:outputLabel value="Is Pilot?:" />
-                    <p:inputText   readonly="#{applicationBackingBean.currentUserApprover}"
+                    <p:inputText   readonly="#{applicationBackingBean.currentUserApplicant}"
                             value="#{applicationBackingBean.applicationView.pilot}" />
 
                     <h:outputLabel rendered="#{applicationBackingBean.currentUserSCFAdmin}"
@@ -90,7 +90,8 @@
 
                     <p:commandButton value="Update Application"
                                      action="#{applicationBackingBean.updateApplicationAction}" />
-
+                    <p:commandButton value="Delete Application"
+                                     action="#{applicationBackingBean.deleteApplicationAction}" />
                 </h:panelGrid>
             </p:panel>
         </h:form>

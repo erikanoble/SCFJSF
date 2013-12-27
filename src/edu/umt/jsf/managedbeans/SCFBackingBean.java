@@ -53,6 +53,6 @@ public class SCFBackingBean {
     public boolean isCurrentUserApplicant(){
         //1 is SCF Admin, 2 is Admin, 3 is Approver, 4 is Applicant
 
-        return (currentUser.getUsertype().getUsertype_id() == 1) || (currentUser.getUsertype().getUsertype_id() == 2) || (currentUser.getUsertype().getUsertype_id() == 3) || (currentUser.getUsertype().getUsertype_id() == 4);
+        return (currentUser.getUsertype().getUsertype_id() == 3) || (currentUser.getUsertype().getUsertype_id() == 4);
     }
 }

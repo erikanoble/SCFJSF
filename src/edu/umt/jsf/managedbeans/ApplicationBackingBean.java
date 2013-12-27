@@ -295,16 +295,16 @@ public class ApplicationBackingBean extends SCFBackingBean{
 
     }
 
-    public String deleteApplicationAction(Application a)
+    public String deleteApplicationAction()
             throws ApplicationDeleteException {
-        DatabaseManager.deleteApplication(a);
-        return null;
+        DatabaseManager.deleteApplication(applicationView);
+        return "";
     }
 
     public String applicationDetailAction() throws ApplicationDetailsException {
         HttpServletRequest request = (HttpServletRequest) FacesContext
                 .getCurrentInstance().getExternalContext().getRequest();
-        //userRole();
+
         try {
             applicationView = DatabaseManager.getApplication(new Integer(
                     request.getParameter("appId")));
@@ -350,30 +350,5 @@ public class ApplicationBackingBean extends SCFBackingBean{
 
     //////////////////////////////////////////////  TEST  //////////////////////////////////////////////////////////////
 
-//    public String userRole() throws ApplicationDetailsException {
-//        UserType admin = null;
-//        try{
-//            approvedUser = DatabaseManager.getUser(1);
-////            System.out.println(approvedUser.getNetid());
-////            System.out.println(approvedUser.getUsertype().getDescription());
-//            admin = DatabaseManager.getUserType(4);
-////            System.out.print(admin.getDescription());
-//
-//
-//        if(approvedUser.getUsertype().getUsertype_id() == admin.getUsertype_id()){
-//            return "application-details";
-//        }
-//            else if
-//            (approvedUser.getUsertype().getUsertype_id() != admin.getUsertype_id()) {
-//                return "list-applications";        }
-//
-//        }catch (Exception e){
-//            if (approvedUser.getUsertype() != admin) {
-//                throw new ApplicationDetailsException(
-//                        "Could not retrieve application.");
-//            }
-//        }
-//        return "application-details";
-//    }
 
 }
