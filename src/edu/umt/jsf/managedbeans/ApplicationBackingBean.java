@@ -56,6 +56,7 @@ public class ApplicationBackingBean extends SCFBackingBean{
 
     //Test
     private String applicationStatus;
+//    private int approved;
 
     public ApplicationBackingBean(){
         super();
@@ -239,6 +240,14 @@ public class ApplicationBackingBean extends SCFBackingBean{
         this.applicationStates = applicationStates;
     }
 
+    public int getIs_deleted() {
+        return is_deleted;
+    }
+
+    public void setIs_deleted(int is_deleted) {
+        this.is_deleted = is_deleted;
+        is_deleted = 0;
+    }
 
     //Test
 
@@ -250,14 +259,16 @@ public class ApplicationBackingBean extends SCFBackingBean{
         this.applicationStatus = applicationStatus;
     }
 
-    public int getIs_deleted() {
-        return is_deleted;
-    }
 
-    public void setIs_deleted(int is_deleted) {
-        this.is_deleted = is_deleted;
-        is_deleted = 0;
-    }
+//    public int getApproved() {
+//        return approved;
+//    }
+//
+//    public void setApproved(int approved) {
+//        this.approved = approved;
+//    }
+
+
 
 //
 
@@ -329,8 +340,6 @@ public class ApplicationBackingBean extends SCFBackingBean{
     }
 
 
-
-
     public void handleFileUpload(FileUploadEvent event) {
         this.attachment = event.getFile().getContents();
 
@@ -359,7 +368,6 @@ public class ApplicationBackingBean extends SCFBackingBean{
 
     }
 
-    //////////////////////////////////////////////  TEST  //////////////////////////////////////////////////////////////
     public String softDeleteApplicationAction()
             throws ApplicationDeleteException {
         try {
@@ -371,5 +379,10 @@ public class ApplicationBackingBean extends SCFBackingBean{
         log.debug("I returned the applications");
         return "delete-applications";
     }
+
+    //////////////////////////////////////////////  TEST  //////////////////////////////////////////////////////////////
+
+
+    //setApplicationStates(ApplicationStates.APPLIED.getApplicationStatus())
 
 }

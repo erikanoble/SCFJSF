@@ -83,8 +83,8 @@
 
                     <h:outputLabel rendered="#{applicationBackingBean.currentUserSCFAdmin}"
                             value ="Status of Application:"/>
-                    <h:selectOneMenu id="appStates" rendered="#{applicationBackingBean.currentUserSCFAdmin}" value="#{applicationBackingBean.applicationStatus}" >
-                    <!--<f:selectItems id="appState" value="# {applicationBackingBean}}" var="state"-->
+                    <h:selectOneMenu id="appStates" rendered="#{applicationBackingBean.currentUserSCFAdmin}" value="# {applicationBackingBean}" >
+                    <!--<f:selectItems id="appState" value="# { }" var="state"-->
                     <!--itemLabel="# {state}" itemValue="# {state}" />-->
                     </h:selectOneMenu>
 
