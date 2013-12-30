@@ -1,10 +1,13 @@
 package edu.umt.db;
 
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+
+import java.math.BigInteger;
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-import java.math.BigInteger;
 
 @SuppressWarnings("FieldCanBeLocal")
 public class User {
@@ -24,7 +27,37 @@ public class User {
 	private Timestamp created;
 	private List<Application> applicationList;
 
-	/**
+
+    //testing
+    private String username;
+    private String role;
+
+    public User(org.springframework.security.core.userdetails.User springUser) {
+        this.username = springUser.getUsername();
+        Iterator iterator = springUser.getAuthorities().iterator();
+        while(iterator.hasNext()){
+            this.role = new String (((SimpleGrantedAuthority)iterator.next()).getAuthority().toCharArray());
+
+        }
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+    //////////////////////////
+    /**
 	 * @return the user_id
 	 */
 	public int getUser_id() {

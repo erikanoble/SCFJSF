@@ -5,27 +5,26 @@
       xmlns:p="http://primefaces.org/ui">
 
 <h:head>
-	<title>~I WIN!!~</title>
+	<title>~SCFC Login Page~</title>
 </h:head>
 <body>
-	<f:view>
-		<h:form>
-			<p:panelGrid columns="2">
-				<f:facet name="header">Login</f:facet>
-			
-				<h:outputLabel for="#{bean.name}" value="UserName" />
-				<p:inputText value="#{bean.name}" label="UserName"/>
-				
-			
-				<h:outputLabel for="#{bean.password}" value="Password"/>
-				<p:password id="pass" value="#{bean.password}"/>
-				
-			
-				<f:facet name="footer">
-					<p:commandButton type="button" value="Login" icon="ui-icon-check" style="margin:0"/>
-				</f:facet>
-			</p:panelGrid>
-		</h:form>
-	</f:view>
-	</body>
+
+<f:view>
+    <form action="../j_spring_security_check" method="post">
+        <h:panelGrid columns="2">
+            <h:outputText value="Username" />
+            <h:inputText id="j_username" />
+            <h:outputText value="Password" />
+            <h:inputSecret id="j_password" />
+        </h:panelGrid>
+
+        <div class="submit">
+            <button type="submit" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+                <span class="ui-button-text">Login</span>
+            </button>
+        </div>
+    </form>
+</f:view>
+
+</body>
 </html>
