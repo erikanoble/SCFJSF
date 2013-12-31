@@ -1,10 +1,7 @@
 package edu.umt.jsf.managedbeans;
 
-import com.sun.faces.context.SessionMap;
+import edu.umt.db.DatabaseManager;
 import edu.umt.db.User;
-import org.springframework.security.core.context.SecurityContextImpl;
-
-import javax.faces.context.FacesContext;
 
 /**
  * Created with IntelliJ IDEA.
@@ -14,24 +11,27 @@ import javax.faces.context.FacesContext;
  * To change this template use File | Settings | File Templates.
  */
 public class SCFBackingBean {
-    public User currentUser;
+    public edu.umt.db.User currentUser;
     private boolean isCurrentUserSCFAdmin;
     private boolean isCurrentUserAdmin;
     private boolean isCurrentUserApprover;
     private boolean isCurrentUserApplicant;
 
-//    public SCFBackingBean(){
-//        currentUser = new User();
-//        currentUser = DatabaseManager.getUser(11);
-////        FacesContext.getCurrentInstance().getExternalContext().getSes
-//    }
-    protected edu.umt.db.User user;
-    protected edu.umt.db.User getUser(){
-        SessionMap sessionMap = (SessionMap) FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
-        SecurityContextImpl securityContext = (SecurityContextImpl)sessionMap.get("SPRING_SECURITY_CONTEXT");
-        org.springframework.security.core.userdetails.User springUser = (org.springframework.security.core.userdetails.User)securityContext.getAuthentication().getPrincipal();
-        return new edu.umt.db.User(springUser);
+    public SCFBackingBean(){
+        currentUser = new User();
+        currentUser = DatabaseManager.getUser(11);
+//        SessionMap sessionMap = (SessionMap) FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
+//        SecurityContextImpl securityContext = (SecurityContextImpl)sessionMap.get("SPRING_SECURITY_CONTEXT");
+//        org.springframework.security.core.userdetails.User springUser = (org.springframework.security.core.userdetails.User)securityContext.getAuthentication().getPrincipal();
+//        return new User(springUser);
     }
+//    protected edu.umt.db.User user;
+//    protected edu.umt.db.User getUser(){
+//        SessionMap sessionMap = (SessionMap) FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
+//        SecurityContextImpl securityContext = (SecurityContextImpl)sessionMap.get("SPRING_SECURITY_CONTEXT");
+//        org.springframework.security.core.userdetails.User springUser = (org.springframework.security.core.userdetails.User)securityContext.getAuthentication().getPrincipal();
+//        return new edu.umt.db.User(springUser);
+//    }
 
     public User getCurrentUser() {
         return currentUser;

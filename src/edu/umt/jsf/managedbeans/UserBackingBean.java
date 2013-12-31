@@ -147,7 +147,8 @@ public class UserBackingBean extends SCFBackingBean{
 	public void setLog(Logger log) {
 		this.log = log;
 	}
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //TODO: User() needs to be calling the correct User().
 	public String newUserAction() throws UserInsertException {
 		User u = new User();
 		u.setFname(this.fname);
@@ -162,7 +163,7 @@ public class UserBackingBean extends SCFBackingBean{
 			log.error(nfe.toString());
 			throw new UserInsertException("Invalid Phone.");
 		}
-		
+
 		u.setNetid(this.netid);
 		u.setUsertype(DatabaseManager.getUserType(this.usertype));
 		try {
