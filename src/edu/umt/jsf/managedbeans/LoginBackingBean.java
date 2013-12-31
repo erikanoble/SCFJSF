@@ -14,7 +14,7 @@ public class LoginBackingBean extends SCFBackingBean {
     private boolean isAdmin;
 
     public boolean isAdmin(){
-        return user.getUsertype().getDescription().equals("SCF Admin");
+        return user.getUsertype().getDescription().equals("ROLE_ADMIN");
     }
 
     public User getUser() {

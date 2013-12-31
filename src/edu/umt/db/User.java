@@ -1,13 +1,16 @@
 package edu.umt.db;
 
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+
 import java.math.BigInteger;
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
 @SuppressWarnings("FieldCanBeLocal")
-//Todo: WHAT?
+//Todo: Why the squiggle??
 public class User {
     private int user_id;
     private String fname;
@@ -25,18 +28,24 @@ public class User {
     private Timestamp created;
     private List<Application> applicationList;
 
-//    private String username;
-//    private String role;
-//
-//    public User(org.springframework.security.core.userdetails.User springUser) {
-//        this.username = springUser.getUsername();
-//        Iterator iterator = springUser.getAuthorities().iterator();
-//        while(iterator.hasNext()){
-//            this.role = new String (((SimpleGrantedAuthority)iterator.next()).getAuthority().toCharArray());
-//        }
-//    }
+
+    private String username;
+    private String role;
+
+    public User(org.springframework.security.core.userdetails.User springUser) {
+        this.username = springUser.getUsername();
+        Iterator iterator = springUser.getAuthorities().iterator();
+        while(iterator.hasNext()){
+            this.role = new String (((SimpleGrantedAuthority)iterator.next()).getAuthority().toCharArray());
+        }
+    }
 
 
+    //////////////////////////
+    public User() {
+        //To change body of created methods use File | Settings | File Templates.
+    }
+    //////////////////////////
 
     /**
      * @return the user_id
