@@ -1,7 +1,10 @@
 package edu.umt.db;
 
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 import java.math.BigInteger;
@@ -23,6 +26,17 @@ public class User {
     private User approvedUser;
     private Timestamp created;
     private List<Application> applicationList;
+
+    private String username;
+    private String role;
+
+    public User(org.springframework.security.core.userdetails.User springUser) {
+        this.username = springUser.getUsername();
+        Iterator iterator = springUser.getAuthorities().iterator();
+        while(iterator.hasNext()){
+            this.role = new String (((SimpleGrantedAuthority)iterator.next()).getAuthority().toCharArray());
+        }
+    }
 
     /**
      * @return the user_id

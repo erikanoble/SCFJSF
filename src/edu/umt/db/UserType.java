@@ -67,9 +67,8 @@ public class UserType {
     public void setCreated(Timestamp created) {
         this.created = created;
     }
-    //testing
+
     public boolean setDescription(boolean equals) {
-        // TODO Auto-generated method stub
         return false;
     }
 

@@ -144,7 +144,6 @@ public class Application {
 		return createdAsString;
 	}
 	public void setCreatedAsString(String createdAsString) {
-		//TODO: get this converted so that it can send data to database
 		this.createdAsString = createdAsString;
 	}
 
