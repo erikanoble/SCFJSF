@@ -1,10 +1,7 @@
 package edu.umt.jsf.managedbeans;
 
-import com.sun.faces.context.SessionMap;
-import org.springframework.security.core.context.SecurityContextImpl;
-import org.springframework.security.core.userdetails.User;
-
-import javax.faces.context.FacesContext;
+import edu.umt.db.DatabaseManager;
+import edu.umt.db.User;
 
 /**
  * Created with IntelliJ IDEA.
@@ -20,19 +17,14 @@ public class SCFBackingBean {
     private boolean isCurrentUserApprover;
     private boolean isCurrentUserApplicant;
 
-    public //*working here*//
-    SCFBackingBean(){
-        SessionMap sessionMap = (SessionMap) FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
-        SecurityContextImpl securityContext = (SecurityContextImpl)sessionMap.get("SPRING_SECURITY_CONTEXT");
-        User springUser = (User)securityContext.getAuthentication().getPrincipal();
-        return new edu.umt.db.User(springUser);
+    public SCFBackingBean(){
+        currentUser = new User();
+        currentUser = DatabaseManager.getUser(11);
+//        FacesContext.getCurrentInstance().getExternalContext().getSes
     }
 
     public User getCurrentUser() {
         return currentUser;
-    }
-
-    ;
     }
 
     public void setCurrentUser(User currentUser) {
@@ -41,7 +33,7 @@ public class SCFBackingBean {
 
     public boolean isCurrentUserSCFAdmin(){
         //1 is SCF Admin, 2 is Admin, 3 is Approver, 4 is Applicant
-         return (currentUser.getUsertype().getUsertype_id() == 1);
+        return (currentUser.getUsertype().getUsertype_id() == 1);
     }
 
     public boolean isCurrentUserAdmin(){
