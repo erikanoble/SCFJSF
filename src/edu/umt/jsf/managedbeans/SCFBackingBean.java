@@ -24,9 +24,20 @@ public class SCFBackingBean {
     public SCFBackingBean(){
         currentUser = new User();
         currentUser = DatabaseManager.getUser(11);
-//        SessionMap sessionMap = (SessionMap) FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
 
     }
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    protected edu.umt.db.User user;
+    protected edu.umt.db.User getUser(){
+        SessionMap sessionMap = (SessionMap) FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
+        SecurityContextImpl secConImp = (SecurityContextImpl)sessionMap.get("SPRING_SECURITY_CONTEXT");
+        org.springframework.security.core.userdetails.User springUser = (org.springframework.security.core.userdetails.User) secConImp.getAuthentication().getPrincipal();
+        return new User(springUser);
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
     public User getCurrentUser() {
         return currentUser;
