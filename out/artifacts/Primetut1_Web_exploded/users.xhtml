@@ -19,7 +19,6 @@
                     <p:menuitem rendered="#{applicationBackingBean.currentUserApplicant}" value="Create Application" url="/newapplication.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addApplicationsAction}"/>
                 </p:tabMenu>
             </h:form>
-
             <p:growl id="growl" showDetail="true"/>
             <p:dataTable id="users" var="record" value="#{userBackingBean.users}"
                          editable="true">
