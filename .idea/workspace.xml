@@ -7,35 +7,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0295b87a-640a-47d0-8db1-a5c8afa6ca50" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/umt/resources/myMessages.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/springs-database.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/applicationdetails.xhtml" afterPath="$PROJECT_DIR$/WebContent/secure/applicationdetails.xhtml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/applications.xhtml" afterPath="$PROJECT_DIR$/WebContent/secure/applications.xhtml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/deleteapplication.xhtml" afterPath="$PROJECT_DIR$/WebContent/secure/deleteapplication.xhtml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/deleteuser.xhtml" afterPath="$PROJECT_DIR$/WebContent/secure/deleteuser.xhtml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/deleteusertype.xhtml" afterPath="$PROJECT_DIR$/WebContent/secure/deleteusertype.xhtml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/index.xhtml" afterPath="$PROJECT_DIR$/WebContent/secure/index.xhtml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/newapplication.xhtml" afterPath="$PROJECT_DIR$/WebContent/secure/newapplication.xhtml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/newuser.xhtml" afterPath="$PROJECT_DIR$/WebContent/secure/newuser.xhtml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/newusertype.xhtml" afterPath="$PROJECT_DIR$/WebContent/secure/newusertype.xhtml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/userdetails.xhtml" afterPath="$PROJECT_DIR$/WebContent/secure/userdetails.xhtml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/users.xhtml" afterPath="$PROJECT_DIR$/WebContent/secure/users.xhtml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/usertypes.xhtml" afterPath="$PROJECT_DIR$/WebContent/secure/usertypes.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/umt/db/DatabaseManager.java" afterPath="$PROJECT_DIR$/src/edu/umt/db/DatabaseManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Primetut1.iml" afterPath="$PROJECT_DIR$/Primetut1.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/SCFBackingBean.java" afterPath="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/SCFBackingBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/faces-config.xml" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/faces-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/secure/applicationdetails.xhtml" afterPath="$PROJECT_DIR$/WebContent/secure/applicationdetails.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/secure/applications.xhtml" afterPath="$PROJECT_DIR$/WebContent/secure/applications.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/secure/index.xhtml" afterPath="$PROJECT_DIR$/WebContent/secure/index.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/login.xhtml" afterPath="$PROJECT_DIR$/WebContent/login.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/secure/newapplication.xhtml" afterPath="$PROJECT_DIR$/WebContent/secure/newapplication.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/secure/newuser.xhtml" afterPath="$PROJECT_DIR$/WebContent/secure/newuser.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/secure/newusertype.xhtml" afterPath="$PROJECT_DIR$/WebContent/secure/newusertype.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/secure/userdetails.xhtml" afterPath="$PROJECT_DIR$/WebContent/secure/userdetails.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/secure/users.xhtml" afterPath="$PROJECT_DIR$/WebContent/secure/users.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/secure/usertypes.xhtml" afterPath="$PROJECT_DIR$/WebContent/secure/usertypes.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Primetut1.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1389212745227" ignored="false" />
+    <file path="/Dummy.txt" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1389285011273" ignored="false" />
     <file path="/UserBackingBean.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1388518555424" ignored="false" />
     <file path="/Primetut1.iml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1378503341990" ignored="false" />
-    <file path="$PROJECT_DIR$/WebContent/WEB-INF/classes/edu/umt/db/Application.hbm.xml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1376664440989" ignored="false" />
-    <file path="$PROJECT_DIR$/WebContent/WEB-INF/classes/edu/umt/db/User.hbm.xml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1376664440989" ignored="false" />
-    <file path="$PROJECT_DIR$/WebContent/WEB-INF/classes/edu/umt/db/UserType.hbm.xml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1376664440989" ignored="false" />
     <file path="$PROJECT_DIR$/../scf/scf.iml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1376669439028" ignored="false" />
     <file path="$PROJECT_DIR$/../scf/src/edu/umt/db/Application.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1376669550060" ignored="false" />
     <file path="/ApplicationBackingBean.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1388424365638" ignored="false" />
@@ -59,15 +48,15 @@
     <file path="/MyJDBCDirectory.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1387481103253" ignored="false" />
     <file path="/Indexer.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1387482828743" ignored="false" />
     <file path="/TestCompare.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1387824778754" ignored="false" />
-    <file path="/SCFBackingBean.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1389205068298" ignored="false" />
+    <file path="/SCFBackingBean.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1389284746747" ignored="false" />
     <file path="/BeanTester.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1387830397361" ignored="false" />
     <file path="/fragment.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1388520609249" ignored="false" />
     <file path="/deleteapplication.xhtml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1387911572092" ignored="false" />
     <file path="/IndexBackingBean.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1387910159921" ignored="false" />
-    <file path="/index.xhtml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1388434896080" ignored="false" />
+    <file path="/index.xhtml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1389289287329" ignored="false" />
     <file path="/userdetails.xhtml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1388166773585" ignored="false" />
-    <file path="/login.xhtml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1388433013695" ignored="false" />
-    <file path="/spring-jsf-security.xml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1389208811435" ignored="false" />
+    <file path="/login.xhtml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1389288014138" ignored="false" />
+    <file path="/spring-jsf-security.xml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1389287599706" ignored="false" />
     <file path="/LoginBackingBean.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1388688824255" ignored="false" />
     <file path="/User.java" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1388522660421" ignored="false" />
     <file path="$PROJECT_DIR$/../SpringSecurityTest/SpringSecurityTest.iml" changelist="0295b87a-640a-47d0-8db1-a5c8afa6ca50" time="1388520524647" ignored="false" />
@@ -115,6 +104,42 @@
     <sortChildren value="false" />
   </component>
   <component name="DebuggerManager">
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint url="file://$PROJECT_DIR$/src/edu/umt/test/TestCompare.java" line="17" class="edu.umt.test.TestCompare" package="edu.umt.test">
         <option name="ENABLED" value="false" />
@@ -162,42 +187,6 @@
         <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
       </breakpoint>
     </line_breakpoints>
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <method_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
@@ -213,82 +202,97 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SCFBackingBean.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/SCFBackingBean.java">
+      <file leaf-file-name="index.xhtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/secure/index.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="45" selection-start="936" selection-end="936" vertical-scroll-proportion="0.0">
+            <state line="10" column="4" selection-start="375" selection-end="1646" vertical-scroll-proportion="-6.25">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spring-jsf-security.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/classes/spring-jsf-security.xml">
+      <file leaf-file-name="newapplication.xhtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/secure/newapplication.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="63" selection-start="1817" selection-end="1821" vertical-scroll-proportion="0.68325794">
+            <state line="19" column="24" selection-start="1673" selection-end="1673" vertical-scroll-proportion="-11.875">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spring-config.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/classes/spring-config.xml">
+      <file leaf-file-name="newuser.xhtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/secure/newuser.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="25" selection-start="572" selection-end="572" vertical-scroll-proportion="0.0">
+            <state line="17" column="24" selection-start="1699" selection-end="1699" vertical-scroll-proportion="-10.625">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="myMessages.properties" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/umt/resources/myMessages.properties">
+      <file leaf-file-name="newusertype.xhtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/secure/newusertype.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="85" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0">
+            <state line="19" column="24" selection-start="1664" selection-end="1664" vertical-scroll-proportion="-11.875">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/web.xml">
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-            <state />
-          </provider>
+      <file leaf-file-name="userdetails.xhtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/secure/userdetails.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="37" selection-start="578" selection-end="578" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-            <state />
-          </provider>
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="springs-database.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/springs-database.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="62" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0">
+            <state line="16" column="20" selection-start="1581" selection-end="1581" vertical-scroll-proportion="-10.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="context.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/META-INF/context.xml">
+      <file leaf-file-name="users.xhtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/secure/users.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="10" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0">
+            <state line="19" column="28" selection-start="1691" selection-end="1691" vertical-scroll-proportion="-11.875">
+              <folding>
+                <marker date="1389289362063" expanded="true" signature="2763:2773" placeholder="{...}" />
+                <marker date="1389289362063" expanded="true" signature="3293:3303" placeholder="{...}" />
+                <marker date="1389289362063" expanded="true" signature="3833:3843" placeholder="{...}" />
+                <marker date="1389289362063" expanded="true" signature="4359:4369" placeholder="{...}" />
+                <marker date="1389289362063" expanded="true" signature="4888:4898" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="usertypes.xhtml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WebContent/secure/usertypes.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="24" selection-start="1653" selection-end="1653" vertical-scroll-proportion="0.40669855">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/umt/db/DatabaseManager.java">
+      <file leaf-file-name="applicationdetails.xhtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/secure/applicationdetails.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="13" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0">
+            <state line="17" column="24" selection-start="1670" selection-end="1670" vertical-scroll-proportion="-10.625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="applications.xhtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/secure/applications.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="24" selection-start="1627" selection-end="1627" vertical-scroll-proportion="-10.625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deleteapplication.xhtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/secure/deleteapplication.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -313,22 +317,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/edu/umt/db/User.java" />
-        <option value="$PROJECT_DIR$/WebContent/login.xhtml" />
-        <option value="$PROJECT_DIR$/WebContent/users.xhtml" />
-        <option value="$PROJECT_DIR$/WebContent/secure/test.xhtml" />
-        <option value="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/LoginBackingBean.java" />
-        <option value="$PROJECT_DIR$/WebContent/WEB-INF/faces-config.xml" />
-        <option value="$PROJECT_DIR$/WebContent/secure/index2.xhtml" />
-        <option value="$PROJECT_DIR$/src/edu/umt/db/DatabaseManager.java" />
-        <option value="$PROJECT_DIR$/WebContent/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/WebContent/WEB-INF/springs-database.xml" />
         <option value="$PROJECT_DIR$/src/edu/umt/resources/messages.properties" />
-        <option value="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/SCFBackingBean.java" />
         <option value="$PROJECT_DIR$/WebContent/META-INF/context.xml" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/classes/spring-config.xml" />
         <option value="$PROJECT_DIR$/src/edu/umt/resources/myMessages.properties" />
+        <option value="$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/SCFBackingBean.java" />
+        <option value="$PROJECT_DIR$/WebContent/login.xhtml" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/classes/spring-jsf-security.xml" />
+        <option value="$PROJECT_DIR$/WebContent/secure/index.xhtml" />
+        <option value="$PROJECT_DIR$/WebContent/secure/applicationdetails.xhtml" />
+        <option value="$PROJECT_DIR$/WebContent/secure/applications.xhtml" />
+        <option value="$PROJECT_DIR$/WebContent/secure/newapplication.xhtml" />
+        <option value="$PROJECT_DIR$/WebContent/secure/newuser.xhtml" />
+        <option value="$PROJECT_DIR$/WebContent/secure/newusertype.xhtml" />
+        <option value="$PROJECT_DIR$/WebContent/secure/userdetails.xhtml" />
+        <option value="$PROJECT_DIR$/WebContent/secure/users.xhtml" />
+        <option value="$PROJECT_DIR$/WebContent/secure/usertypes.xhtml" />
       </list>
     </option>
   </component>
@@ -485,6 +489,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="secure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Primetut1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Primetut1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebContent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="META-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -539,7 +561,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="jsf" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -564,26 +586,8 @@
               <option name="myItemId" value="jsf" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Primetut1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Primetut1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="umt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
+              <option name="myItemId" value="managedbeans" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -611,9 +615,9 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -630,84 +634,30 @@
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.login.xhtml">
+    <configuration default="false" name="BeanTester" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="edu.umt.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="edu.umt.test.BeanTester" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Primetut1" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="false" name="applicationdetails.xhtml" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 7.0">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/applicationdetails.xhtml" />
-      <deployment>
-        <artifact name="Primetut1:Web exploded">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="_Primetut1" />
-      </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <RunnerSettings RunnerId="Cover" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="55204" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method>
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="Primetut1:Web exploded" />
-        </option>
-      </method>
-    </configuration>
-    <configuration default="false" name="index.xhtml" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 7.0">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/index.xhtml" />
       <deployment>
         <artifact name="Primetut1:Web exploded">
           <settings>
@@ -858,28 +808,6 @@
         </option>
       </method>
     </configuration>
-    <configuration default="false" name="BeanTester" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="edu.umt.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="edu.umt.test.BeanTester" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Primetut1" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
     <configuration default="false" name="login.xhtml" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 7.0">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/login.xhtml" />
       <deployment>
@@ -970,6 +898,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -996,19 +937,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1054,24 +982,10 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote">
-      <option name="LOCAL" value="false" />
-      <deployment />
-      <server-settings>
-        <data>
-          <option name="transportHostId" />
-        </data>
-      </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="58726" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="false" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
@@ -1139,14 +1053,28 @@
       </ConfigurationWrapper>
       <method />
     </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote">
+      <option name="LOCAL" value="false" />
+      <deployment />
+      <server-settings>
+        <data>
+          <option name="transportHostId" />
+        </data>
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="58726" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
     <configuration default="false" name="Tomcat 7.0" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/scfforms/index.xhtml" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/scfforms/secure/index.xhtml" />
       <deployment>
         <artifact name="Primetut1:Web exploded">
           <settings>
@@ -1222,13 +1150,89 @@
       </ConfigurationWrapper>
       <method />
     </configuration>
+    <configuration default="false" name="index.xhtml" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/secure/index.xhtml" />
+      <deployment>
+        <artifact name="Primetut1:Web exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_Primetut1" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Cover" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="55204" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Primetut1:Web exploded" />
+        </option>
+      </method>
+    </configuration>
     <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 7.0" />
-      <item index="1" class="java.lang.String" itemvalue="Tomcat Server.applicationdetails.xhtml" />
-      <item index="2" class="java.lang.String" itemvalue="Tomcat Server.index.xhtml" />
+      <item index="0" class="java.lang.String" itemvalue="Application.BeanTester" />
+      <item index="1" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 7.0" />
+      <item index="2" class="java.lang.String" itemvalue="Tomcat Server.applicationdetails.xhtml" />
       <item index="3" class="java.lang.String" itemvalue="Tomcat Server.applications.xhtml" />
-      <item index="4" class="java.lang.String" itemvalue="Application.BeanTester" />
-      <item index="5" class="java.lang.String" itemvalue="Tomcat Server.login.xhtml" />
+      <item index="4" class="java.lang.String" itemvalue="Tomcat Server.login.xhtml" />
+      <item index="5" class="java.lang.String" itemvalue="Tomcat Server.index.xhtml" />
     </list>
     <recent_temporary>
       <list size="5">
@@ -1305,10 +1309,10 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32889125" sideWeight="0.67182964" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973261" sideWeight="0.671193" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3984451" sideWeight="0.89055794" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39806762" sideWeight="0.8901919" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3352657" sideWeight="0.3336887" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3342995" sideWeight="0.0858209" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994652" sideWeight="0.671193" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944608" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32889125" sideWeight="0.67015207" order="7" side_tool="false" content_ui="tabs" />
@@ -1320,8 +1324,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.671193" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944608" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14498934" sideWeight="0.6647343" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3352657" sideWeight="0.6657783" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14498934" sideWeight="0.6657005" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3342995" sideWeight="0.9141791" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1402,107 +1406,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/edu/umt/db/UserType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="84" selection-end="84" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/ApplicationBackingBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="209" column="43" selection-start="5377" selection-end="5377" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/login.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="41" selection-start="630" selection-end="640" vertical-scroll-proportion="0.4015748">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/classes/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Primetut1.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-6.4430957" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/faces-config.xml">
-      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.jsf.ui.FacesConfigEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="57" selection-start="4441" selection-end="4441" vertical-scroll-proportion="0.6488189">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/web.xml">
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="37" selection-start="578" selection-end="578" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/META-INF/context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="10" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/SCFBackingBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="45" selection-start="936" selection-end="936" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/umt/resources/myMessages.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="85" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/springs-database.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="62" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/umt/db/DatabaseManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1514,9 +1420,106 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/secure/index2.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="59" selection-start="1656" selection-end="1750" vertical-scroll-proportion="-12.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/umt/jsf/managedbeans/LoginBackingBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/classes/spring-jsf-security.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="63" selection-start="1817" selection-end="1821" vertical-scroll-proportion="0.68325794">
+        <state line="37" column="0" selection-start="1856" selection-end="1856" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/login.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="93" selection-start="762" selection-end="762" vertical-scroll-proportion="-12.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/secure/applicationdetails.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="24" selection-start="1670" selection-end="1670" vertical-scroll-proportion="-10.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/secure/applications.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="24" selection-start="1627" selection-end="1627" vertical-scroll-proportion="-10.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/secure/deleteapplication.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/secure/index.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="4" selection-start="375" selection-end="1646" vertical-scroll-proportion="-6.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/secure/newapplication.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="24" selection-start="1673" selection-end="1673" vertical-scroll-proportion="-11.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/secure/newuser.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="24" selection-start="1699" selection-end="1699" vertical-scroll-proportion="-10.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/secure/newusertype.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="24" selection-start="1664" selection-end="1664" vertical-scroll-proportion="-11.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/secure/userdetails.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="20" selection-start="1581" selection-end="1581" vertical-scroll-proportion="-10.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/secure/users.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="28" selection-start="1691" selection-end="1691" vertical-scroll-proportion="-11.875">
+          <folding>
+            <marker date="1389289362063" expanded="true" signature="2763:2773" placeholder="{...}" />
+            <marker date="1389289362063" expanded="true" signature="3293:3303" placeholder="{...}" />
+            <marker date="1389289362063" expanded="true" signature="3833:3843" placeholder="{...}" />
+            <marker date="1389289362063" expanded="true" signature="4359:4369" placeholder="{...}" />
+            <marker date="1389289362063" expanded="true" signature="4888:4898" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/secure/usertypes.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="24" selection-start="1653" selection-end="1653" vertical-scroll-proportion="0.40669855">
           <folding />
         </state>
       </provider>

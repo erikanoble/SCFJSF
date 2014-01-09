@@ -18,11 +18,7 @@
             <h:inputSecret id="j_password" />
         </h:panelGrid>
 
-        <div class="submit">
-            <button type="submit" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
-                <span class="ui-button-text">Login</span>
-            </button>
-        </div>
+        <h:commandButton id="login" action="#{loginBackingBean.secureAction}" value="Login"/>
     </form>
 </f:view>
 

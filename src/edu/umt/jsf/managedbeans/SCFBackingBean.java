@@ -1,6 +1,7 @@
 package edu.umt.jsf.managedbeans;
 
 import com.sun.faces.context.SessionMap;
+import edu.umt.db.DatabaseManager;
 import edu.umt.db.User;
 import org.springframework.security.core.context.SecurityContextImpl;
 
@@ -25,8 +26,8 @@ public class SCFBackingBean {
 
     public SCFBackingBean(){
         currentUser = new User();
-//        currentUser = DatabaseManager.getUser(11);
-           currentUser = user;
+        currentUser = DatabaseManager.getUser(11);
+ //          currentUser = User(springUser);
     }
 
     ///////////////////////////////////////////////////begin test////////////////////////////////////////////////////////////////
