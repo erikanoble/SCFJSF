@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="jdbc/scf_forms" product="MySQL" version="5.5.34-0ubuntu0.12.10.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.26 ( Revision: ${bzr.revision-id} )" uuid="61e72778-eb20-4a9e-b8c1-714cf5bf49a1">
+    <extra-name-characters>#@</extra-name-characters>
+    <identifier-quote-string>`</identifier-quote-string>
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://localhost:3306/scf_forms</jdbc-url>
+    <user-name>root</user-name>
+    <user-password>dfe9dfcbdfc4dfcedfd3df8edfdedfcbdfd8dffadf9adfdddf99dfd8dffadfc1</user-password>
+    <schema-pattern>scf_forms.*</schema-pattern>
+    <default-schemas>scf_forms.*</default-schemas>
+    <default-dialect>MySQL</default-dialect>
+    <libraries>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.26-bin.jar!/</url>
+      </library>
+      <library>
+        <url>file://$PROJECT_DIR$/lib/mysql-connector-license.txt</url>
+      </library>
+    </libraries>
+    <schema name="" catalog="scf_forms"/>
+    <table name="application" schema="" catalog="scf_forms" type="TABLE">
+      <column name="application_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="index_charge" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12"/>
+      <column name="balance" sqlType="DECIMAL" length="6" precision="2" nullable="true" jdbcType="3"/>
+      <column name="request_amount" sqlType="DECIMAL" length="6" precision="2" nullable="true" jdbcType="3"/>
+      <column name="equipment_description" sqlType="VARCHAR" length="1500" precision="0" nullable="true" jdbcType="12"/>
+      <column name="outside_funds" sqlType="DECIMAL" length="6" precision="2" nullable="true" jdbcType="3"/>
+      <column name="use_description" sqlType="VARCHAR" length="1500" precision="0" nullable="true" jdbcType="12"/>
+      <column name="maintenance_responsibility" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12"/>
+      <column name="new_connections" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12"/>
+      <column name="provided_by" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12"/>
+      <column name="pilot" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12"/>
+      <column name="pilot_summary" sqlType="VARCHAR" length="500" precision="0" nullable="true" jdbcType="12"/>
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="created" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <column name="approved_user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="approved" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="approved_amount" sqlType="DOUBLE" length="22" precision="0" nullable="true" jdbcType="8" def="MA=="/>
+      <column name="attachment" sqlType="LONGBLOB" length="2147483647" precision="0" nullable="true" jdbcType="-4"/>
+      <column name="state" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12"/>
+      <column name="modified" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="is_deleted" sqlType="VARCHAR" length="1" precision="0" nullable="false" jdbcType="12" def="JzAn"/>
+      <primary-key name="PRIMARY" columns="application_id"/>
+      <foreign-key name="FK5CA40550465A3020" columns="user_id" ref-table="user" ref-schema="" ref-catalog="scf_forms" ref-columns="user_id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_application_to_user" columns="user_id" ref-table="user" ref-schema="" ref-catalog="scf_forms" ref-columns="user_id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="FK5CA40550E5B49698" unique="false" columns="approved_user_id"/>
+      <index name="fk_application_to_approval_user_idx" unique="false" columns="approved_user_id"/>
+      <index name="fk_application_to_user_idx" unique="false" columns="user_id"/>
+    </table>
+    <table name="user" schema="" catalog="scf_forms" type="TABLE">
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="fname" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12"/>
+      <column name="lname" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12"/>
+      <column name="netid" sqlType="VARCHAR" length="9" precision="0" nullable="false" jdbcType="12"/>
+      <column name="department" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12"/>
+      <column name="phone" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="email" sqlType="VARCHAR" length="50" precision="0" nullable="false" jdbcType="12"/>
+      <column name="school" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12"/>
+      <column name="usertype_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="created" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <primary-key name="PRIMARY" columns="user_id"/>
+      <foreign-key name="fk_usertype_user" columns="usertype_id" ref-table="usertype" ref-schema="" ref-catalog="scf_forms" ref-columns="usertype_id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="FK5CA40550465A3020" table="application" schema="" catalog="scf_forms" columns="user_id"/>
+      <exported-key name="fk_application_to_user" table="application" schema="" catalog="scf_forms" columns="user_id"/>
+      <index name="netid_UNIQUE" unique="true" columns="netid"/>
+      <index name="FK36EBCBA2B5FF00" unique="false" columns="usertype_id"/>
+      <index name="fk_usertype_user_idx" unique="false" columns="usertype_id"/>
+    </table>
+    <table name="usertype" schema="" catalog="scf_forms" type="TABLE">
+      <column name="usertype_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="description" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12"/>
+      <column name="created" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <column name="usertypecol" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="usertype_id"/>
+      <exported-key name="fk_usertype_user" table="user" schema="" catalog="scf_forms" columns="usertype_id"/>
+    </table>
+  </data-source>
+  <data-source source="LOCAL" name="Data Source" product="MySQL" version="5.5.31-0ubuntu0.12.10.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.26 ( Revision: ${bzr.revision-id} )" uuid="5e3ae89b-fc82-4f94-95ef-7cd578b62e1d">
+    <extra-name-characters>#@</extra-name-characters>
+    <identifier-quote-string>`</identifier-quote-string>
+    <synchronize>true</synchronize>
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://localhost:3306/scf_forms</jdbc-url>
+    <user-name>root</user-name>
+    <user-password>dfe9dfcbdfc4dfcedfd3df8edfdedfcbdfd8dffadf9adfdddf99dfd8dffadfc1</user-password>
+    <schema-pattern>scf_forms.*</schema-pattern>
+    <default-schemas>scf_forms.*</default-schemas>
+    <libraries>
+      <library>
+        <url>jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.26-bin.jar!/</url>
+      </library>
+      <library>
+        <url>file://$PROJECT_DIR$/lib/mysql-connector-license.txt</url>
+      </library>
+    </libraries>
+    <ssh-properties>
+      <enabled>false</enabled>
+      <proxy-host></proxy-host>
+      <proxy-port>22</proxy-port>
+      <user></user>
+      <use-password>true</use-password>
+      <password></password>
+      <private-key-path></private-key-path>
+      <passphrase></passphrase>
+      <remote-host></remote-host>
+      <remote-port></remote-port>
+      <local-port></local-port>
+    </ssh-properties>
+    <schema name="" catalog="scf_forms"/>
+    <table name="application" schema="" catalog="scf_forms" type="TABLE">
+      <column name="application_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="index_charge" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12"/>
+      <column name="balance" sqlType="DECIMAL" length="6" precision="2" nullable="true" jdbcType="3"/>
+      <column name="request_amount" sqlType="DECIMAL" length="6" precision="2" nullable="true" jdbcType="3"/>
+      <column name="equipment_description" sqlType="VARCHAR" length="1500" precision="0" nullable="true" jdbcType="12"/>
+      <column name="outside_funds" sqlType="DECIMAL" length="6" precision="2" nullable="true" jdbcType="3"/>
+      <column name="use_description" sqlType="VARCHAR" length="1500" precision="0" nullable="true" jdbcType="12"/>
+      <column name="maintenance_responsibility" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12"/>
+      <column name="new_connections" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12"/>
+      <column name="provided_by" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12"/>
+      <column name="pilot" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12"/>
+      <column name="pilot_summary" sqlType="VARCHAR" length="500" precision="0" nullable="true" jdbcType="12"/>
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="created" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <column name="approved_user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="approved" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="approved_amount" sqlType="DOUBLE" length="22" precision="0" nullable="true" jdbcType="8" def="MA=="/>
+      <column name="attachment" sqlType="LONGBLOB" length="2147483647" precision="0" nullable="true" jdbcType="-4"/>
+      <primary-key name="PRIMARY" columns="application_id"/>
+      <foreign-key name="FK5CA40550465A3020" columns="user_id" ref-table="user" ref-schema="" ref-catalog="scf_forms" ref-columns="user_id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_application_to_user" columns="user_id" ref-table="user" ref-schema="" ref-catalog="scf_forms" ref-columns="user_id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="FK5CA40550E5B49698" unique="false" columns="approved_user_id"/>
+      <index name="fk_application_to_approval_user_idx" unique="false" columns="approved_user_id"/>
+      <index name="fk_application_to_user_idx" unique="false" columns="user_id"/>
+    </table>
+    <table name="user" schema="" catalog="scf_forms" type="TABLE">
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="fname" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12"/>
+      <column name="lname" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12"/>
+      <column name="netid" sqlType="VARCHAR" length="9" precision="0" nullable="false" jdbcType="12"/>
+      <column name="department" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12"/>
+      <column name="phone" sqlType="BIGINT" length="19" precision="0" nullable="false" jdbcType="-5"/>
+      <column name="email" sqlType="VARCHAR" length="50" precision="0" nullable="false" jdbcType="12"/>
+      <column name="school" sqlType="VARCHAR" length="45" precision="0" nullable="false" jdbcType="12"/>
+      <column name="usertype_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="created" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <primary-key name="PRIMARY" columns="user_id"/>
+      <foreign-key name="fk_usertype_user" columns="usertype_id" ref-table="usertype" ref-schema="" ref-catalog="scf_forms" ref-columns="usertype_id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="FK5CA40550465A3020" table="application" schema="" catalog="scf_forms" columns="user_id"/>
+      <exported-key name="fk_application_to_user" table="application" schema="" catalog="scf_forms" columns="user_id"/>
+      <index name="netid_UNIQUE" unique="true" columns="netid"/>
+      <index name="FK36EBCBA2B5FF00" unique="false" columns="usertype_id"/>
+      <index name="fk_usertype_user_idx" unique="false" columns="usertype_id"/>
+    </table>
+    <table name="usertype" schema="" catalog="scf_forms" type="TABLE">
+      <column name="usertype_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="description" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12"/>
+      <column name="usertypecol" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12"/>
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="created" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <primary-key name="PRIMARY" columns="usertype_id"/>
+      <exported-key name="fk_usertype_user" table="user" schema="" catalog="scf_forms" columns="usertype_id"/>
+      <index name="FKF02C9D85465A3020" unique="false" columns="user_id"/>
+    </table>
+  </data-source>
+</component>

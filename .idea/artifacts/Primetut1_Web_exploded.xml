@@ -1,0 +1,48 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="Primetut1:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Primetut1_Web_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Primetut1" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="javax.faces-2.2.0.jar" module-name="Primetut1" />
+          <element id="library" level="module" name="jstl-1.2.jar" module-name="Primetut1" />
+          <element id="library" level="module" name="primefaces-3.5.jar" module-name="Primetut1" />
+          <element id="library" level="module" name="commons-fileupload-1.3.jar" module-name="Primetut1" />
+          <element id="library" level="module" name="antlr-3.5-complete.jar" module-name="Primetut1" />
+          <element id="library" level="module" name="asm.jar" module-name="Primetut1" />
+          <element id="library" level="module" name="cglib.jar" module-name="Primetut1" />
+          <element id="library" level="module" name="commons-beanutils-1.7.0.jar" module-name="Primetut1" />
+          <element id="library" level="module" name="commons-codec-1.3.jar" module-name="Primetut1" />
+          <element id="library" level="module" name="commons-collections-3.1.jar" module-name="Primetut1" />
+          <element id="library" level="module" name="commons-digester-1.6.jar" module-name="Primetut1" />
+          <element id="library" level="module" name="commons-el-1.0.jar" module-name="Primetut1" />
+          <element id="library" level="module" name="commons-lang-2.3.jar" module-name="Primetut1" />
+          <element id="library" level="module" name="commons-logging-1.0.4.jar" module-name="Primetut1" />
+          <element id="library" level="module" name="dom4j.jar" module-name="Primetut1" />
+          <element id="library" level="module" name="ehcache-1.1.jar" module-name="Primetut1" />
+          <element id="library" level="module" name="hibernate.jar" module-name="Primetut1" />
+          <element id="library" level="module" name="hibernate-jpa-2.0-api-1.0.0.Final.jar" module-name="Primetut1" />
+          <element id="library" level="module" name="jakarta-oro.jar" module-name="Primetut1" />
+          <element id="library" level="module" name="jta.jar" module-name="Primetut1" />
+          <element id="library" level="module" name="mysql-connector-java-5.1.23-bin.jar" module-name="Primetut1" />
+          <element id="library" level="module" name="oro-2.0.8.jar" module-name="Primetut1" />
+          <element id="library" level="module" name="junit4" module-name="Primetut1" />
+          <element id="library" level="module" name="slf4j-api-1.7.5.jar" module-name="Primetut1" />
+          <element id="library" level="module" name="slf4j-log4j12-1.7.5.jar" module-name="Primetut1" />
+          <element id="library" level="module" name="log4j-1.2.17.jar" module-name="Primetut1" />
+          <element id="library" level="application" name="lib" />
+          <element id="file-copy" path="$USER_HOME$/javaresources/commons-io-2.4/commons-io-2.4.jar" />
+          <element id="file-copy" path="$USER_HOME$/javaresources/lucene-dependencies/lucene-analyzers-common-4.6.0.jar" />
+          <element id="file-copy" path="$USER_HOME$/javaresources/lucene-dependencies/lucene-core-4.6.0.jar" />
+          <element id="file-copy" path="$USER_HOME$/javaresources/lucene-dependencies/lucene-queryparser-4.6.0.jar" />
+        </element>
+        <element id="library" level="project" name="Java EE 6-Java EE 6" />
+        <element id="javaee-facet-resources" facet="Primetut1/web/Web" />
+      </element>
+      <element id="javaee-facet-resources" facet="Primetut1/web/Web2" />
+    </root>
+  </artifact>
+</component>
