@@ -4,8 +4,10 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:p="http://primefaces.org/ui">
 
-<h:head></h:head>
-<h:body styleClass="body"> 
+<h:head>
+	<title>Create New Usertype</title>
+</h:head>
+<h:body>
 	<f:view>
         <h:form>
             <p:tabMenu activeIndex="0">
@@ -17,7 +19,17 @@
                 <p:menuitem rendered="#{applicationBackingBean.currentUserApplicant}" value="Create Application" url="/newapplication.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addApplicationsAction}"/>
             </p:tabMenu>
         </h:form>
+		<h:form id="newusertypeform">
+			<p:message id="usertypeRequiredMessage" for="usertype" />
+			<h:outputLabel id="descriptionLabel" value="Description:"
+				for="usertype" />
+			<p:inputText id="usertype" value="#{usertypeBackingBean.description}"
+				required="true" />
+			<p:commandButton id="utButton"
+				action="#{usertypeBackingBean.newUserTypeAction}" ajax="false"
+				value="Create Usertype" />
 
+		</h:form>
 	</f:view>
-</h:body> 
+</h:body>
 </html>

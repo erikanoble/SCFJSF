@@ -21,26 +21,12 @@ public class SCFBackingBean {
     private boolean isCurrentUserApprover;
     private boolean isCurrentUserApplicant;
 
-
-
-
     public SCFBackingBean(){
         currentUser = new User();
         currentUser = DatabaseManager.getUser(11);
- //          currentUser = User(springUser);
+//        SessionMap sessionMap = (SessionMap) FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
+
     }
-
-    ///////////////////////////////////////////////////begin test////////////////////////////////////////////////////////////////
-
-    protected edu.umt.db.User user;
-    protected edu.umt.db.User getUser(){
-        SessionMap sessionMap = (SessionMap) FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
-        SecurityContextImpl secConImp = (SecurityContextImpl)sessionMap.get("SPRING_SECURITY_CONTEXT");
-        org.springframework.security.core.userdetails.User springUser = (org.springframework.security.core.userdetails.User) secConImp.getAuthentication().getPrincipal();
-        return new User(springUser);
-    }
-
-    //////////////////////////////////////////////////end test///////////////////////////////////////////////////////////////////
 
     public User getCurrentUser() {
         return currentUser;

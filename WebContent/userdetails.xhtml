@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<f:view>
+    <h:form>
+        <p:tabMenu activeIndex="0">
+            <p:menuitem rendered="#{applicationBackingBean.currentUserAdmin}" value="List User-Types" url="/usertypes.xhtml" icon="ui-icon-search" action="#{indexBackingBean.listUserTypesAction}"/>
+            <p:menuitem rendered="#{applicationBackingBean.currentUserAdmin}" value="List Users" url="/users.xhtml" icon="ui-icon-search" action="#{indexBackingBean.listUsersAction}"/>
+            <p:menuitem rendered="#{applicationBackingBean.currentUserAdmin}" value="List Applications" url="/applications.xhtml" icon="ui-icon-search" action="#{indexBackingBean.listApplicationsAction}"/>
+            <p:menuitem rendered="#{applicationBackingBean.currentUserSCFAdmin}" value="Create User-Types" url="/newusertype.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addUserTypesAction}"/>
+            <p:menuitem value="Create User" url="/newuser.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addUsersAction}" />
+            <p:menuitem rendered="#{applicationBackingBean.currentUserApplicant}" value="Create Application" url="/newapplication.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addApplicationsAction}"/>
+        </p:tabMenu>
+    </h:form>
+	<h:form id="userform">
+		<p:growl id="growl" showDetail="true" />
+		<p:dashboard id="dashboard" model="#{userDetailBackingBean.model}">
+			<p:panel id="userDetails" header="User Details">
+				<h:panelGrid columns="2">
+					<h:outputLabel value="First Name:" />
+					<p:inputText value="#{userBackingBean.userView.fname}" />
+					<h:outputLabel value="Last Name:" />
+					<p:inputText value="#{userBackingBean.userView.lname}" />
+					<h:outputLabel value="School/Office:" />
+					<p:inputText value="#{userBackingBean.userView.school}" />
+					<h:outputLabel value="Department:" />
+					<p:inputText value="#{userBackingBean.userView.department}" />
+					<h:outputLabel value="Email:" />
+					<p:inputText value="#{userBackingBean.userView.email}" />
+					<h:outputLabel value="Phone:" />
+					<p:inputMask value="#{userBackingBean.userView.phoneAsString}"
+						mask="(999) 999-9999" />
+					<p:commandButton value="Update User"
+						action="#{userBackingBean.updateUserAction}" />
+				</h:panelGrid>
+			</p:panel>
+			<p:panel id="userApplications" header="User's Applications">
+				<p:dataTable id="appTable"
+					value="#{userBackingBean.userView.applicationList}" var="row">
+					<p:column>
+						<h:commandLink id="appLink" value="#{row.equipment_description}"
+							action="#{applicationBackingBean.applicationDetailAction}">
+							<f:param id="appId" name="appId" value="#{row.application_id}" />
+						</h:commandLink>
+					</p:column>
+				</p:dataTable>
+			</p:panel>
+		</p:dashboard>
+	</h:form>
+</f:view>
+</html>

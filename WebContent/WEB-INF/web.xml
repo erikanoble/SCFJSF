@@ -8,8 +8,7 @@
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>/WEB-INF/classes/spring-config.xml
-        /WEB-INF/classes/spring-jsf-security.xml
-        /WEB-INF/springs-database.xml</param-value>
+        /WEB-INF/classes/spring-jsf-security.xml</param-value>
     </context-param>
 
 

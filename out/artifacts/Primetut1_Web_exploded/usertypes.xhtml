@@ -4,8 +4,8 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:p="http://primefaces.org/ui">
 
-<h:head></h:head>
-<h:body styleClass="body"> 
+<h:head><title>UserTypes</title></h:head> 
+<h:body> 
 	<f:view>
         <h:form>
             <p:tabMenu activeIndex="0">
@@ -17,7 +17,14 @@
                 <p:menuitem rendered="#{applicationBackingBean.currentUserApplicant}" value="Create Application" url="/newapplication.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addApplicationsAction}"/>
             </p:tabMenu>
         </h:form>
-
+		<h:form>
+			<p:dataTable id="usertypes" var="record" value="#{usertypeBackingBean.userTypes}" liveResize="true" resizeableColumns="true">
+				<f:facet name="header">Usertypes</f:facet>
+				<p:column width="10">
+					<h:outputText value="#{record.description}" />
+				</p:column>
+			</p:dataTable>
+		</h:form>
 	</f:view>
 </h:body> 
 </html>

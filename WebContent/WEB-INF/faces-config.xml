@@ -39,91 +39,91 @@
 	<navigation-rule>
 		<navigation-case>
 			<from-outcome>ok</from-outcome>
-			<to-view-id>/secure/usertypes.xhtml</to-view-id>
+			<to-view-id>/usertypes.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
 		<navigation-case>
 			<from-outcome>new-user-created</from-outcome>
-			<to-view-id>/secure/users.xhtml</to-view-id>
+			<to-view-id>/users.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
 		<navigation-case>
 			<from-outcome>new-usertype</from-outcome>
-			<to-view-id>/secure/newusertype.xhtml</to-view-id>
+			<to-view-id>/newusertype.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
 		<navigation-case>
 			<from-outcome>new-user</from-outcome>
-			<to-view-id>/secure/newuser.xhtml</to-view-id>
+			<to-view-id>/newuser.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
 		<navigation-case>
 			<from-outcome>new-application</from-outcome>
-			<to-view-id>/secure/newapplication.xhtml</to-view-id>
+			<to-view-id>/newapplication.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
 		<navigation-case>
 			<from-outcome>list-usertypes</from-outcome>
-			<to-view-id>/secure/usertypes.xhtml</to-view-id>
+			<to-view-id>/usertypes.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
 		<navigation-case>
 			<from-outcome>list-users</from-outcome>
-			<to-view-id>/secure/users.xhtml</to-view-id>
+			<to-view-id>/users.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
 		<navigation-case>
 			<from-outcome>list-applications</from-outcome>
-			<to-view-id>/secure/applications.xhtml</to-view-id>
+			<to-view-id>/applications.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
 		<navigation-case>
 			<from-outcome>delete-usertype</from-outcome>
-			<to-view-id>/secure/usertypes.xhtml</to-view-id>
+			<to-view-id>/usertypes.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
 		<navigation-case>
 			<from-outcome>delete-users</from-outcome>
-			<to-view-id>/secure/users.xhtml</to-view-id>
+			<to-view-id>/users.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
 		<navigation-case>
 			<from-outcome>delete-applications</from-outcome>
-			<to-view-id>/secure/applications.xhtml</to-view-id>
+			<to-view-id>/applications.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
 		<navigation-case>
 			<from-outcome>user-updated</from-outcome>
-			<to-view-id>/secure/users.xhtml</to-view-id>
+			<to-view-id>/users.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 		<navigation-rule>
 		<navigation-case>
 			<from-outcome>application-updated</from-outcome>
-			<to-view-id>/secure/applications.xhtml</to-view-id>
+			<to-view-id>/applications.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
 		<navigation-case>
 			<from-outcome>application-details</from-outcome>
-			<to-view-id>/secure/applicationdetails.xhtml</to-view-id>
+			<to-view-id>/applicationdetails.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
 		<navigation-case>
 			<from-outcome>user-details</from-outcome>
-			<to-view-id>/secure/userdetails.xhtml</to-view-id>
+			<to-view-id>/userdetails.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
     <navigation-rule>
@@ -132,10 +132,5 @@
             <to-view-id>/secure/index2.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
-    <navigation-rule>
-        <navigation-case>
-            <from-outcome>logout</from-outcome>
-            <to-view-id>/login.xhtml</to-view-id>
-        </navigation-case>
-    </navigation-rule>
+
 </faces-config>

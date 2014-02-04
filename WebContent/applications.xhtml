@@ -5,7 +5,7 @@
       xmlns:p="http://primefaces.org/ui">
 
 <h:head></h:head>
-<h:body styleClass="body"> 
+<h:body>
 	<f:view>
         <h:form>
             <p:tabMenu activeIndex="0">
@@ -17,7 +17,25 @@
                 <p:menuitem rendered="#{applicationBackingBean.currentUserApplicant}" value="Create Application" url="/newapplication.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addApplicationsAction}"/>
             </p:tabMenu>
         </h:form>
-
+		<h:form>
+			
+				<p:dataTable id="applications" var="record"
+					value="#{applicationBackingBean.applications}">
+					<p:column id="idColumn" headerText="Application ID">
+						<h:commandLink id="appLink" value="#{record.application_id}"
+							action="#{applicationBackingBean.applicationDetailAction}">
+							<f:param id="appId" name="appId" value="#{record.application_id}" />
+						</h:commandLink>
+					</p:column>
+					<p:column id="descriptionColumn" headerText="Equipment Description">
+						<h:outputText value="#{record.equipment_description}" />
+					</p:column>
+                    <p:column id = "statusColumn" headerText="Status">
+                        <h:outputText value ="#{record.applicationStates}"/>
+                    </p:column>
+				</p:dataTable>
+		
+		</h:form>
 	</f:view>
-</h:body> 
+</h:body>
 </html>

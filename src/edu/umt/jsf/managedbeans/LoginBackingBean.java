@@ -1,7 +1,6 @@
 package edu.umt.jsf.managedbeans;
 
 import edu.umt.db.User;
-import org.springframework.security.core.context.SecurityContextHolder;
 
 /**
  * Created with IntelliJ IDEA.
@@ -30,10 +29,5 @@ public class LoginBackingBean extends SCFBackingBean {
         user = super.getCurrentUser();
 
         return "login";
-    }
-
-    public String logout(){
-        SecurityContextHolder.clearContext();
-        return "logout";
     }
 }

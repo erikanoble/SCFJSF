@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui" xmlns:c="http://java.sun.com/jstl/core">
+
+<h:head></h:head>
+<h:body>
+    <f:view>
+        <h:form>
+            <p:tabMenu activeIndex="0">
+                <p:menuitem rendered="#{applicationBackingBean.currentUserAdmin}" value="List User-Types" url="/usertypes.xhtml" icon="ui-icon-search" action="#{indexBackingBean.listUserTypesAction}"/>
+                <p:menuitem rendered="#{applicationBackingBean.currentUserAdmin}" value="List Users" url="/users.xhtml" icon="ui-icon-search" action="#{indexBackingBean.listUsersAction}"/>
+                <p:menuitem rendered="#{applicationBackingBean.currentUserAdmin}" value="List Applications" url="/applications.xhtml" icon="ui-icon-search" action="#{indexBackingBean.listApplicationsAction}"/>
+                <p:menuitem rendered="#{applicationBackingBean.currentUserSCFAdmin}" value="Create User-Types" url="/newusertype.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addUserTypesAction}"/>
+                <p:menuitem value="Create User" url="/newuser.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addUsersAction}" />
+                <p:menuitem rendered="#{applicationBackingBean.currentUserApplicant}" value="Create Application" url="/newapplication.xhtml" icon="ui-icon-document" action="#{indexBackingBean.addApplicationsAction}"/>
+            </p:tabMenu>
+        </h:form>
+        <h:form id="applicationform">
+
+            <p:panel id="appDetailsPanelGrid" header="Application Details">
+                <h:panelGrid columns="2">
+
+                    <h:outputLabel value="Applicant First Name:"/>
+                    <p:inputText readonly="#{applicationBackingBean.currentUserApplicant}"
+                                 value="#{applicationBackingBean.applicationView.user.fname}" />
+
+                    <h:outputLabel value="Applicant Last Name:" />
+                    <p:inputText readonly="#{applicationBackingBean.currentUserApplicant}"
+                                 value="#{applicationBackingBean.applicationView.user.lname}" />
+
+                    <h:outputLabel value="Applicant School/Office:" />
+                    <p:inputText readonly="#{applicationBackingBean.currentUserApplicant}"
+                                 value="#{applicationBackingBean.applicationView.user.school}" />
+
+                    <h:outputLabel value="Department:" />
+
+                        <p:inputText readonly="#{applicationBackingBean.currentUserApplicant}"
+                                     value="#{applicationBackingBean.applicationView.user.department}" />
+
+                    <h:outputLabel rendered="#{applicationBackingBean.currentUserAdmin}"
+                                   value="Application Number:" />
+                    <p:inputText rendered="#{applicationBackingBean.currentUserAdmin}"
+                                 readonly="#{applicationBackingBean.currentUserAdmin}"
+                                 value="#{applicationBackingBean.applicationView.application_id}" />
+
+                    <h:outputLabel value="Description:" />
+                    <p:inputText readonly="#{applicationBackingBean.currentUserApplicant}"
+                            value="#{applicationBackingBean.applicationView.equipment_description}" />
+
+                    <h:outputLabel value="Requested Amount:" />
+                    <p:inputText  readonly="#{applicationBackingBean.currentUserApplicant}"
+                            value="#{applicationBackingBean.applicationView.request_amount}" />
+
+                    <h:outputLabel value="Index:" />
+                    <p:inputText   readonly="#{applicationBackingBean.currentUserApplicant}"
+                            value="#{applicationBackingBean.applicationView.index_charge}" />
+
+                    <h:outputLabel value="Available Balance:" />
+                    <p:inputText    readonly="#{applicationBackingBean.currentUserApplicant}"
+                            value="#{applicationBackingBean.applicationView.balance}" />
+
+                    <h:outputLabel value="Outside Funds Provided:" />
+                    <p:inputText    readonly="#{applicationBackingBean.currentUserApplicant}"
+                            value="#{applicationBackingBean.applicationView.outside_funds}" />
+
+                    <h:outputLabel value="Description of use:" />
+                    <p:inputTextarea readonly="#{applicationBackingBean.currentUserApplicant}"
+                            value="#{applicationBackingBean.applicationView.use_description}" />
+
+                    <h:outputLabel value="Maintenance Responsibility:" />
+                    <p:inputText  readonly="#{applicationBackingBean.currentUserApplicant}"
+                            value="#{applicationBackingBean.applicationView.maintenance_responsibility}" />
+
+                    <h:outputLabel value="New Connections:" />
+                    <p:inputText  readonly="#{applicationBackingBean.currentUserApplicant}"
+                            value="#{applicationBackingBean.applicationView.new_connections}" />
+
+                    <h:outputLabel value="Is Pilot?:" />
+                    <p:inputText   readonly="#{applicationBackingBean.currentUserApplicant}"
+                            value="#{applicationBackingBean.applicationView.pilot}" />
+
+                    <h:outputLabel rendered="#{applicationBackingBean.currentUserSCFAdmin}"
+                            value ="Status of Application:"/>
+                    <h:selectOneMenu id="appStates" rendered="#{applicationBackingBean.currentUserSCFAdmin}" value="# {applicationBackingBean}" >
+                    <!--<f:selectItems id="appState" value="# { }" var="state"-->
+                    <!--itemLabel="# {state}" itemValue="# {state}" />-->
+                    </h:selectOneMenu>
+
+                    <p:commandButton value="Update Application"
+                                     action="#{applicationBackingBean.updateApplicationAction}" />
+                    <p:commandButton value="Delete Application"
+                                     action="#{applicationBackingBean.softDeleteApplicationAction}" />
+                </h:panelGrid>
+            </p:panel>
+        </h:form>
+        <h:form id="viewAttachmentForm" method="GET" rendered="#{!empty applicationBackingBean.applicationView.attachment}">
+            <p:panel>
+                <p:commandLink action="#{applicationBackingBean.viewAttachment()}" type="application/pdf" ajax="false">
+                    <h:outputText value="View Attachment"/>
+                </p:commandLink>
+            </p:panel>
+        </h:form>
+    </f:view>
+</h:body>
+</html>
