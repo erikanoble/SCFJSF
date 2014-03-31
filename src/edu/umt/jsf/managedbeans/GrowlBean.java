@@ -6,8 +6,7 @@ import javax.faces.event.ActionEvent;
 
 public class GrowlBean {
 
-	
-	public void save(ActionEvent actionEvent){
+  	public void save(ActionEvent actionEvent){
 		FacesContext context = FacesContext.getCurrentInstance();
 		
 		context.addMessage(null, new FacesMessage("The growl works?"));

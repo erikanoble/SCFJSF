@@ -11,18 +11,20 @@
 
 <f:view>
     <form action="../j_spring_security_check" method="post">
+        <p:panel header="Login">
         <h:panelGrid columns="2">
             <h:outputText value="Username" />
-            <h:inputText id="j_username" />
+            <p:inputText id="j_username"/>
             <h:outputText value="Password" />
-            <h:inputSecret id="j_password" />
+            <p:password id="j_password" />
         </h:panelGrid>
 
         <div class="submit">
-            <button type="submit" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+            <button type="submit" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" >
                 <span class="ui-button-text">Login</span>
             </button>
         </div>
+        </p:panel>
     </form>
 </f:view>
 
