@@ -38,6 +38,8 @@
           <element id="file-copy" path="$USER_HOME$/javaresources/lucene-dependencies/lucene-analyzers-common-4.6.0.jar" />
           <element id="file-copy" path="$USER_HOME$/javaresources/lucene-dependencies/lucene-core-4.6.0.jar" />
           <element id="file-copy" path="$USER_HOME$/javaresources/lucene-dependencies/lucene-queryparser-4.6.0.jar" />
+          <element id="library" level="project" name="spring-4.0.0.RELEASE (2)" />
+          <element id="library" level="project" name="spring-4.0.0.RELEASE" />
         </element>
         <element id="library" level="project" name="Java EE 6-Java EE 6" />
         <element id="javaee-facet-resources" facet="Primetut1/web/Web" />

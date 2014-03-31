@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="3695766574">
+  <component name="DataSourceManagerImpl" format="xml" hash="2298771648">
     <data-source source="LOCAL" name="jdbc/scf_forms" product="MySQL" version="5.5.34-0ubuntu0.12.10.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.26 ( Revision: ${bzr.revision-id} )" uuid="61e72778-eb20-4a9e-b8c1-714cf5bf49a1">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
@@ -20,7 +20,7 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="Data Source" product="MySQL" version="5.5.31-0ubuntu0.12.10.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.26 ( Revision: ${bzr.revision-id} )" uuid="5e3ae89b-fc82-4f94-95ef-7cd578b62e1d">
+    <data-source source="LOCAL" name="Data Source" product="MySQL" version="5.5.34-0ubuntu0.12.10.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.26 ( Revision: ${bzr.revision-id} )" uuid="5e3ae89b-fc82-4f94-95ef-7cd578b62e1d">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
       <synchronize>true</synchronize>
